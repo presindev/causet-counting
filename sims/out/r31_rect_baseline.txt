@@ -1,0 +1,12 @@
+N = 1000: 100 middle-band pairs x 12 seeds, ell = 0.0224; mean over seeds of the per-seed mean, +- s.e. from the seed spread
+  d/ell 0-2: rect_deep d -0.087(0.066) d2 +0.045(0.145) med|.| 0.158  rect_tip d -0.087(0.066) d2 +0.045(0.145) med|.| 0.158  bk d -0.014(0.101) d2 +0.103(0.231) med|.| 0.206  direct d +1.288(0.375) d2 +9.333(6.070) med|.| 0.998
+  d/ell 2-10: rect_deep d -0.018(0.023) d2 +0.012(0.045) med|.| 0.095  rect_tip d -0.018(0.023) d2 +0.012(0.045) med|.| 0.095  bk d +0.019(0.019) d2 +0.095(0.040) med|.| 0.131  direct d +0.332(0.009) d2 +0.857(0.032) med|.| 0.272
+  d/ell 10-inf: rect_deep d -0.034(0.021) d2 -0.039(0.039) med|.| 0.082  rect_tip d -0.034(0.021) d2 -0.039(0.039) med|.| 0.082  bk d +0.037(0.014) d2 +0.132(0.031) med|.| 0.126  direct d +0.114(0.011) d2 +0.249(0.027) med|.| 0.095
+N = 2000: 100 middle-band pairs x 12 seeds, ell = 0.0158; mean over seeds of the per-seed mean, +- s.e. from the seed spread
+  d/ell 0-2: rect_deep d -0.160(0.111) d2 -0.076(0.142) med|.| 0.298  rect_tip d -0.160(0.111) d2 -0.076(0.142) med|.| 0.298  bk d +0.162(0.109) d2 +0.574(0.310) med|.| 0.353  direct d +1.509(0.189) d2 +8.298(1.907) med|.| 1.270
+  d/ell 2-10: rect_deep d -0.014(0.010) d2 -0.003(0.020) med|.| 0.081  rect_tip d -0.014(0.010) d2 -0.003(0.020) med|.| 0.081  bk d +0.023(0.017) d2 +0.104(0.044) med|.| 0.108  direct d +0.300(0.020) d2 +0.756(0.070) med|.| 0.261
+  d/ell 10-inf: rect_deep d -0.021(0.014) d2 -0.027(0.028) med|.| 0.059  rect_tip d -0.021(0.014) d2 -0.027(0.028) med|.| 0.059  bk d +0.002(0.010) d2 +0.035(0.022) med|.| 0.093  direct d +0.089(0.004) d2 +0.191(0.009) med|.| 0.070
+N = 4000: 100 middle-band pairs x 12 seeds, ell = 0.0112; mean over seeds of the per-seed mean, +- s.e. from the seed spread
+  d/ell 0-2: rect_deep d +0.143(0.033) d2 +0.368(0.070) med|.| 0.130  rect_tip d +0.143(0.033) d2 +0.368(0.070) med|.| 0.130  bk d +0.158(nan) d2 +0.485(nan) med|.| 0.287  direct d +0.451(0.243) d2 +1.301(0.812) med|.| 0.461
+  d/ell 2-10: rect_deep d -0.010(0.009) d2 -0.004(0.015) med|.| 0.059  rect_tip d -0.010(0.009) d2 -0.004(0.015) med|.| 0.059  bk d +0.009(0.010) d2 +0.058(0.020) med|.| 0.106  direct d +0.314(0.016) d2 +0.791(0.048) med|.| 0.282
+  d/ell 10-inf: rect_deep d -0.013(0.007) d2 -0.016(0.014) med|.| 0.039  rect_tip d -0.013(0.007) d2 -0.016(0.014) med|.| 0.039  bk d +0.001(0.006) d2 +0.023(0.014) med|.| 0.075  direct d +0.065(0.003) d2 +0.137(0.007) med|.| 0.049

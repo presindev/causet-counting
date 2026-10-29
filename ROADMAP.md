@@ -94,3 +94,28 @@ which is a separate paper/note and does not block counting-full (session 13).**
 - r25 done (equal density: wall explains the whole slab gap). Roberto's paper items done; notebook public (github.com/presindev/causet-counting, `release/make_public.sh`).
 - Literature: 3+1 unequal-depth inversion and Google Scholar citers checked, nothing found; Johnston 2022 and Cunningham 2018 cited.
 - Boguñá e-mail sent; PRD assessment in `paper/REVIEW-PRD-2026-10-29.md` (refocus on 3+1 + per-pair error + one curved test, or CQG). Waiting: F_N, r27, r28, Boguñá.
+
+## 9. Future task: the methodology note → a quantitative case study (agreed 2026-10-29, Roberto)
+Current state: `paper/methodology-note-v1.tex` (~5 pp.) is an experience report. It is fit to post on arXiv (cs.CY + cs.AI; needs an endorser) as the
+citable explanation behind the AI acknowledgments of the two physics papers, but not as a journal paper: one case, no control, no measurements.
+Goal: a separate paper that turns the notebook's own record into data. Its asset is that the whole project is logged and public: 15 session journals,
+80+ timestamped commits, the mistake log (41 entries), the graveyard and "claims given back", ten reviewed drafts, four referee rounds (`paper/referee-rounds-2026-10-29/`).
+
+Plan (in order; item 1 alone is a few hours from the notebook and decides whether the rest is worth it):
+1. **Error provenance table.** For each of the 41 mistake-log entries: who introduced it (AI system / Roberto), who caught it (AI self-check, Roberto,
+   a working rule, a literature pass, a referee instance), how many sessions it survived, whether it reached a draft or the public repo, and its
+   kind (the five groups of the note's Table 1). Sources: LESSONS.md, journal/, git log -p. Mark each attribution as certain / inferred.
+2. **Claim history.** Every novelty claim made, then narrowed or withdrawn after literature passes (GRAVEYARD "claims given back", session-10 and
+   session-13 crawls), and every headline number changed by checks or referee rounds (e.g. session 15: 96–97 % → 94–97 % after re-pairing the oracle;
+   Laguerre statistic demoted after r32; oracle first run on our estimator instead of the benchmark's). Count and date them.
+3. **Effort and speed.** Hours per session (journal), results per session, cluster jobs, lines of code; time from idea to checked result for the main
+   results. State plainly that there is no counterfactual; at most compare with published timelines of comparable papers, clearly labelled as such.
+4. **Related work.** Search and verify (no citations from memory, lesson 11) published case studies and reports of AI-assisted research in physics and
+   mathematics, and work on AI referees/review; position the paper against them.
+5. **Disclosures and authorship.** Conflict of interest (SapereIA studies this question); the AI system drafting a paper about its own work; the
+   non-blind referee instances (prompts written by the authoring instance).
+6. **Venue.** Decide after items 1–2 show whether the numbers say something (e.g. "most errors were caught by rules, not by people"). Candidates to
+   check (scope and AI policies verified first): AI-for-science workshops; journals publishing case studies or perspectives on research practice.
+Timing (Roberto, 2026-10-29): start only **after the two physics papers are settled** (submitted, or at least posted on arXiv). Target: present it at an
+AI-agents-for-physics workshop in **April 2027** (name, deadlines and format to be confirmed by Roberto); work back from its submission deadline.
+Status: not started. Do not block the physics papers on it.

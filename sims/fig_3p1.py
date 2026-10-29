@@ -6,9 +6,9 @@ Poisson likelihood, from the cluster runs.
 
 Reads cluster_fetch/r14/out (r14_cluster_scale.py: johnston, ours, switch0.25) and cluster_fetch/r24/out (r24_cluster_lik.py: w_K100, poisson_only),
 paired by (n, seed). No simulation. Every number plotted is also printed, with log-log slopes over n = 6000-15000.
-Usage: .venv/bin/python sims/fig_3p1.py
+Usage: .venv/bin/python sims/fig_3p1.py          (--prd: panel (a) only, without the switch, for the split 3+1 paper -> fig_3p1_prd; session 15)
 """
-import os, glob
+import os, sys, glob
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
@@ -39,6 +39,10 @@ def main():
     methods = [("johnston", "Johnston 2025", INK, "o", "-"), ("ours", "ours alone", BLUE, "s", "-"),
                ("switch0.25", "switch ($L=0.25$)", ORANGE, "D", "--"), ("w_K100", "count-weighted fit", GREY, "v", "--"),
                ("poisson_only", "Poisson likelihood", AQUA, "^", "-")]
+    if PRD:
+        methods = [m for m in methods if m[0] != "switch0.25"]
+        relab = {"johnston": "Johnston (2025)", "ours": "overlap distances, direct", "w_K100": "weighted starting map", "poisson_only": "likelihood fit"}
+        methods = [(k, relab[k], c, mk, ls) for k, lab, c, mk, ls in methods]
     res = {m[0]: [] for m in methods}
     times = {"his min-plus": [], "our step": [], "likelihood pipeline": []}
     print("n  #univ  " + "  ".join("%-11s" % m[0] for m in methods) + "   likelihood wins  share of his residual (switch, likelihood)")
@@ -52,7 +56,7 @@ def main():
             row[m[0]] = v
             res[m[0]].append((v.mean(), v.std(ddof=1) / np.sqrt(len(v)) if len(v) > 1 else 0.0))
         wins = int(np.sum(row["poisson_only"] < row["johnston"]))
-        sh = [1 - row[m].mean() / row["johnston"].mean() for m in ("switch0.25", "poisson_only")]
+        sh = [1 - row[m].mean() / row["johnston"].mean() if m in row else np.nan for m in ("switch0.25", "poisson_only")]
         print("%5d  %d   " % (n, len(keys)) + "  ".join("%-11.4f" % res[m[0]][-1][0] for m in methods) + "   %d/%d        %.0f %%, %.0f %%" % (wins, len(keys), 100 * sh[0], 100 * sh[1]))
         tj = np.mean([tget(r14[k], "johnston") - tget(r14[k], "CC") - tget(r14[k], "eigh") for k in keys])
         to = np.mean([tget(r14[k], "ours_step") for k in keys])
@@ -67,25 +71,34 @@ def main():
     for k, v in times.items():
         print("slope of time,  n = 6000-15000: %-12s %.2f" % (k, np.polyfit(lx, np.log([v[i] for i in big]), 1)[0]))
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 2.8))
+    if PRD:
+        fig, ax1 = plt.subplots(figsize=(3.4, 2.6)); ax2 = None
+    else:
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 2.8))
     for key, lab, col, mk, ls in methods:
         mu = np.array([r[0] for r in res[key]]); se = np.array([r[1] for r in res[key]])
         ax1.errorbar(ns, mu, yerr=se, color=col, marker=mk, ms=3.5, ls=ls, lw=1.2, capsize=1.5, label=lab)
     ax1.set_xscale("log"); ax1.set_yscale("log")
-    ax1.set_xlabel("number of events $n$"); ax1.set_ylabel(r"residual $1-\rho$ (spatial)")
-    ax1.set_title("(a) embedding error", fontsize=9, loc="left")
+    ax1.set_xlabel("number of elements $n$" if PRD else "number of events $n$")
+    ax1.set_ylabel(r"residual $1-\mathcal{C}$" if PRD else r"residual $1-\rho$ (spatial)")
+    if not PRD:
+        ax1.set_title("(a) embedding error", fontsize=9, loc="left")
     ax1.set_ylim(3e-4, 0.5)                                       # room below the curves for the legend
     ax1.legend(fontsize=7, loc="lower left")
-    for (lab, v), col, mk in zip(times.items(), (INK, BLUE, AQUA), ("o", "s", "^")):
-        ax2.plot(ns, v, color=col, marker=mk, ms=3.5, lw=1.2, label=lab)
-    ax2.set_xscale("log"); ax2.set_yscale("log")
-    ax2.set_xlabel("number of events $n$"); ax2.set_ylabel("time per universe (s)")
-    ax2.set_title("(b) cost", fontsize=9, loc="left")
-    ax2.legend(fontsize=7, loc="upper left")
+    if ax2 is not None:
+        for (lab, v), col, mk in zip(times.items(), (INK, BLUE, AQUA), ("o", "s", "^")):
+            ax2.plot(ns, v, color=col, marker=mk, ms=3.5, lw=1.2, label=lab)
+        ax2.set_xscale("log"); ax2.set_yscale("log")
+        ax2.set_xlabel("number of events $n$"); ax2.set_ylabel("time per universe (s)")
+        ax2.set_title("(b) cost", fontsize=9, loc="left")
+        ax2.legend(fontsize=7, loc="upper left")
     os.makedirs(OUT, exist_ok=True)
+    name = "fig_3p1_prd" if PRD else "fig_3p1"
     for ext in ("pdf", "png"):
-        fig.savefig(os.path.join(OUT, "fig_3p1." + ext), **({"dpi": 150} if ext == "png" else {}))
-    print("wrote", os.path.join(OUT, "fig_3p1.pdf"))
+        fig.savefig(os.path.join(OUT, name + "." + ext), **({"dpi": 150} if ext == "png" else {}))
+    print("wrote", os.path.join(OUT, name + ".pdf"))
+
+PRD = "--prd" in sys.argv
 
 if __name__ == "__main__":
     main()

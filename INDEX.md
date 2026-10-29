@@ -15,10 +15,14 @@ History of earlier "next time" notes: the `journal/` entries (session 10 rewrote
 | 003 | [Bubbles of space](ideas/003-bubbles-of-space.md) | seed | Space as discrete bubbles, filled or empty; deferred to roadmap B (matter) |
 
 ## Papers / checkpoints
-- [paper/counting-full-v2.pdf](paper/counting-full-v2.pdf): **current** (2026-10-28, session 13; slab, author line, code URL, citations updated session 14; PRD assessment `paper/REVIEW-PRD-2026-10-29.md`). 1+1 counting tools + 3+1 likelihood embedding vs Johnston 2025;
+- **Split (session 15):** [paper/embedding-3p1-v1.pdf](paper/embedding-3p1-v1.pdf) (3+1, ~90 %, target PRD) and [paper/toolkit-1p1-v1.pdf](paper/toolkit-1p1-v1.pdf)
+  (1+1, ~80 %, target CQG), plus [paper/methodology-note-v1.pdf](paper/methodology-note-v1.pdf); final reviews `paper/REVIEW-*-v1-2026-10-29.md`, referee rounds in
+  `paper/referee-rounds-2026-10-29/`. These are now the working drafts.
+- [paper/counting-full-v2.pdf](paper/counting-full-v2.pdf): combined draft, kept unchanged as the source of the split; was **current** (2026-10-28, session 13; slab, author line, code URL, citations updated session 14; PRD assessment `paper/REVIEW-PRD-2026-10-29.md`). 1+1 counting tools + 3+1 likelihood embedding vs Johnston 2025;
   review `paper/REVIEW-counting-full-v2-2026-10-28.md` (~80 %). F_N / growth memory is NOT in this paper (separate line, idea 004).
 - [paper/draft-v6.pdf](paper/draft-v6.pdf): older two-part draft (2026-10-27, session 10); its Part II (growth memory) is the home of F_N. Part I "is it spacetime?" and Part II "what must a growing universe remember?"; Table 2 = what is ours
   after the literature crawl. Review against the arXiv bar: `paper/REVIEW-v6-2026-10-27.md` (Part I ~3–4 sessions from a methods preprint; Part II needs F_N to say something).
+- **Methodology case study (future, ROADMAP §9):** turn `paper/methodology-note-v1.tex` into a quantitative case study from the notebook's own record (error provenance, claim history, effort). Not started; after the two physics papers are settled; target: AI-agents-for-physics workshop, April 2027.
 - **Public copy:** github.com/presindev/causet-counting = snapshot of this notebook, built by `release/make_public.sh --push` after each wrap-up commit (no compute.md;
   cluster named only in the Acknowledgements; README/LICENSE/CITATION.cff live in `release/`).
 - `paper/archive/`: v0 ("soup"), v1–v5 and their reviews.
@@ -50,8 +54,10 @@ C6 Newton + Einstein from far away · C7 creation (and maybe destruction) of eve
 Missing so far: matter (what sources gravity?).
 
 ## Next time
-- Latest journal: `journal/2026-10-29-session14-slab-release-literature-boguna.md`. Waiting: F_N 449963, r27 450475 (N = 800 flag test), r28 450476 (clean timing);
-  fetch + analyse with the r27/r28 entry in compute.md. Boguñá e-mail sent 29 Oct (`correspondence/`), awaiting reply.
-- Then: r27 → Sec. 5, r28 → Sec. 9.5; F_N N·d ≈ 0.233 test (idea 004); Boguñá's corrections; journal choice (`paper/REVIEW-PRD-2026-10-29.md`: PRD after refocus, or CQG);
-  Roberto's language pass; arXiv. After each wrap-up commit: `release/make_public.sh --push`.
-- Gravity / rung-3 discussion still deferred.
+- Latest journal: `journal/2026-10-29-session15-split-prd-referee-loop.md`. **The laptop was switched off at the end of session 15:** first re-run the
+  interrupted r34 universe (`cd sims && ../.venv/bin/python -u r34_lnl_causal_fidelity.py 6000 1002 | tee -a out/r34_lnl_causal_fidelity.txt`, ~20 min;
+  skip if the file already has that block) and fill the 3+1 causal-fidelity `\pending`.
+- Then fetch F_N 449963, r27 450475, r28 450476 (compute.md); r27 → 1+1 Sec. VII, r28 → 3+1 Sec. VII, F_N → idea 004 (N·d ≈ 0.233).
+- Roberto: read the two drafts + note; decide on the removal candidates (journal, end); language pass; Boguñá's reply. After each wrap-up commit:
+  `release/make_public.sh --push`.
+- Later: methodology case study (ROADMAP §9), after the papers; April 2027 workshop. Gravity / rung-3 discussion still deferred.

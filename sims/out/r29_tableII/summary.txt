@@ -1,0 +1,27 @@
+1 universes, n = [1000], ell = 0.1070 (diamond height = 9.3 ell)
+  johnston   all       |dd|/ell  q50 0.29  q90 1.10  q99 3.60
+  johnston   spacelike |dd|/ell  q50 0.30  q90 1.18  q99 3.68
+  johnston   close     |dd|/ell  q50 0.20  q90 0.57  q99 1.52
+  johnston   rms position error 0.88 ell (0.88 after best global scale 1.013), corr 0.8565
+  likelihood all       |dd|/ell  q50 0.14  q90 0.38  q99 2.18
+  likelihood spacelike |dd|/ell  q50 0.14  q90 0.38  q99 2.35
+  likelihood close     |dd|/ell  q50 0.13  q90 0.34  q99 1.96
+  likelihood rms position error 0.87 ell (0.86 after best global scale 0.968), corr 0.9525
+2 universes, n = [3000], ell = 0.0813 (diamond height = 12.3 ell)
+  johnston   all       |dd|/ell  q50 0.22  q90 0.80  q99 2.94
+  johnston   spacelike |dd|/ell  q50 0.23  q90 0.87  q99 3.05
+  johnston   close     |dd|/ell  q50 0.15  q90 0.41  q99 1.04
+  johnston   rms position error 0.67 ell (0.65 after best global scale 1.047), corr 0.9515
+  likelihood all       |dd|/ell  q50 0.11  q90 0.28  q99 0.60
+  likelihood spacelike |dd|/ell  q50 0.11  q90 0.28  q99 0.65
+  likelihood close     |dd|/ell  q50 0.09  q90 0.24  q99 0.49
+  likelihood rms position error 0.52 ell (0.52 after best global scale 1.000), corr 0.9901
+4 universes, n = [6000], ell = 0.0683 (diamond height = 14.6 ell)
+  johnston   all       |dd|/ell  q50 0.17  q90 0.57  q99 2.38
+  johnston   spacelike |dd|/ell  q50 0.17  q90 0.61  q99 2.51
+  johnston   close     |dd|/ell  q50 0.12  q90 0.34  q99 0.90
+  johnston   rms position error 0.56 ell (0.54 after best global scale 1.030), corr 0.9752
+  likelihood all       |dd|/ell  q50 0.11  q90 0.26  q99 0.46
+  likelihood spacelike |dd|/ell  q50 0.11  q90 0.27  q99 0.47
+  likelihood close     |dd|/ell  q50 0.08  q90 0.20  q99 0.36
+  likelihood rms position error 0.43 ell (0.43 after best global scale 1.009), corr 0.9953

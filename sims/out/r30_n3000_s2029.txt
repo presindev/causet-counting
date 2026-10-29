@@ -1,0 +1,10 @@
+  universe 1: johnston 0.9531  J_truth_lowK_K10 0.9981  J_truth_highK_K10 0.9546  J_truth_lowK_K30 0.9993  J_truth_highK_K30 0.9539  J_truth_all 1.0000
+  universe 2: johnston 0.9574  J_truth_lowK_K10 0.9967  J_truth_highK_K10 0.9596  J_truth_lowK_K30 0.9985  J_truth_highK_K30 0.9583  J_truth_all 0.9999
+n = 3000 (2 univ., seed 2029); low-count share of spacelike pairs for K = (10, 30): 0.314, 0.558
+  arm                  spatial corr   vs johnston (paired)   share of his residual
+  johnston             0.9552         +0.0000 +- 0.0000          +0%
+  J_truth_lowK_K10     0.9974         +0.0421 +- 0.0028         +94%
+  J_truth_highK_K10    0.9571         +0.0018 +- 0.0004          +4%
+  J_truth_lowK_K30     0.9989         +0.0436 +- 0.0025         +97%
+  J_truth_highK_K30    0.9561         +0.0008 +- 0.0001          +2%
+  J_truth_all          1.0000         +0.0447 +- 0.0021        +100%

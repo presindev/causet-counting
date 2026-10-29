@@ -484,3 +484,8 @@ stress quartiles are fluctuation-level differences; classical reweighting misses
 - 2026-10-28 (session 13) — r24 large n: Poisson-only likelihood keeps +79–83 % of Johnston's residual at n = 3000–15000 (no decay); binomial term costs 15–20 points; weighted fits fade.
 - 2026-10-28 (session 13) — slab: Poisson likelihood +43 % all pairs / +69 % interior (diamond +79 / +68); oracle wall correction → +64 / +74 %: the clipped intervals at the side wall cost about half.
 - 2026-10-29 (session 14) — r25 equal density: slab Poisson +58 / +65 % (all, n = 6000 / 12000) vs diamond +75 / +80 %; the oracle wall correction closes the whole gap (+80 / +86 %). Wall cost ~21 points, independent of n; slab at n = 600 fails (−92 %, 1 universe).
+- 2026-10-29 (session 15) — split paper + referee loop: r30 low-count oracle on Johnston's own detours (truth on k < 10: 97 % / 94 % of his residual at
+  n = 1500 / 3000; rest 3–4 %); r29 per-pair errors on Table II universes (n = 3000: median 0.22 → 0.11 ℓ, q90 0.80 → 0.28 ℓ; n = 6000 0.17 → 0.11, 0.57 → 0.26);
+  r33 position rms dominated by the tenth of elements with fewest related partners (not time, not scale); r34 truth-start lnL higher (+105–549) ⇒ start's
+  local optimum; causal fidelity 0.5–0.7 % misclassified vs 1.3–2.1 % for Johnston. Paper: `paper/embedding-3p1-v1.tex` (~90 %, PRD).
+  1+1 side (r31): rectangle estimator unbiased for d² above 2ℓ, beats BK equal-depth and the past–future interval. Paper: `paper/toolkit-1p1-v1.tex` (~80 %, CQG).

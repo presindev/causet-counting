@@ -1,0 +1,4 @@
+johnston 274 s
+start + fit 485 s
+johnston   corr 0.9757  |dd|/ell q50/q90/q99 all [0.15 0.52 2.36]  spacelike [0.15 0.57 2.48]  close [0.12 0.31 0.89]  rms pos 0.56 ell (0.55 after scale 1.029)
+likelihood corr 0.9945  |dd|/ell q50/q90/q99 all [0.13 0.3  0.51]  spacelike [0.13 0.31 0.53]  close [0.08 0.21 0.37]  rms pos 0.47 ell (0.47 after scale 1.014)

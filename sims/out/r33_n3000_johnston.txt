@@ -1,0 +1,4 @@
+n = 3000 seed 1001: Johnston time error rms 0.07 ell (median |.| 0.05 ell)
+  Johnston's map, per element: median 0.24 q90 0.57 q99 2.76 max 6.2 ell; rms 0.63 (fewest-partner 10% 1.79, rest 0.29)
+n = 3000 seed 1002: Johnston time error rms 0.08 ell (median |.| 0.05 ell)
+  Johnston's map, per element: median 0.30 q90 0.75 q99 2.99 max 6.4 ell; rms 0.71 (fewest-partner 10% 1.97, rest 0.36)

@@ -347,3 +347,10 @@ conference abstract books, Bombelli 1987 and Meyer 1988 theses, Myrheim 1978, Br
 - **Johnston 2008, citing articles searched for "Laguerre"** (Scholar: 1): Gorard 2023 arXiv:2303.07282, Laguerre polynomials as a numerical nodal basis (discontinuous
   Galerkin), unrelated. Laguerre target still not found.
 - Verdict: nothing anticipates our claims. — 005, paper v2
+
+## Session 15 (2026-10-29): references added to the split papers
+- J. Myrheim, "Statistical geometry", CERN TH-2538 (1978); D. A. Meyer, "The dimension of causal sets", PhD thesis, MIT (1988) — the ordering-fraction
+  dimension, cited in the 1+1 paper (standard references; **(unverified this session)**, check details before submission).
+- G. Szegő, *Orthogonal Polynomials*, AMS Colloq. Publ. 23 (1939) — Hilb-type asymptotic of L_n behind the Bessel form of Eq. (lag) **(unverified this session)**.
+- OEIS A002720 — n! L_n(−1), all increasing subsequences (already used in session 10).
+- Referee flags to re-check at submission: HMM25 (J. Math. Phys. 66 (2025) with arXiv:2601.03280; checked session 13), Madsen arXiv:2610.36695 (checked session 12).

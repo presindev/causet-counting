@@ -112,3 +112,11 @@ Mistakes made in this notebook and the rule that prevents each one. Claude reads
 39. **Check what the draft already promises before offering choices about it.** (Session 14: I offered "sims/ only" for the code release; the paper's Availability paragraph
     already promised "the code and the full notebook", and Roberto had to remember it.) → Before asking Roberto to decide anything about a paper's release, data or wording,
     grep the draft for the matching promise (availability, code, data, AI statement) and show it next to the question.
+40. **Run an oracle on the method whose error you claim to locate.** (Session 15: the 3+1 draft said Johnston's error sits on low-count pairs; the oracle
+    (r18) had replaced *our* overlap distances, not his detours. A referee caught it; r30 on his detours confirmed it, 94–97 %.) → Before writing "X's error
+    comes from Y", check that the substitution was made inside X's pipeline.
+41. **A distance-preserving map can still fail an alignment metric.** (Session 15: Procrustes restricted to rotations charged a mirror-image embedding
+    ~4 ℓ; the result contradicted the distance errors, which exposed it.) → Allow reflections when only distances are fitted; compare any position
+    metric with the distance errors before believing it.
+42. **Copy numbers from the output file, not from memory or grep order.** (Session 15: an invented eigenvalue normalization, and two oracle percentages
+    swapped between n = 1500 and 3000 after reading a multi-file grep.) → Quote each number next to its file name while writing; grep one file at a time.

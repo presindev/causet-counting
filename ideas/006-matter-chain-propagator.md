@@ -165,3 +165,6 @@ Hinrichsen–Kastrati 2604.24812 has k!-series without Laguerre. The identity Σ
 - 2026-10-27 (session 10) — INSPIRE crawl: Laguerre form not found in 99 citers; present as known identity applied.
 - 2026-10-27 (session 10) — fixed-n curvature: g₂ ≈ 0.027 (Hτ)², K no more sensitive than c₂ ⇒ J₂ probe dropped as a claim (known chain-count route).
 - 2026-10-27 (session 11) — 3+1 fixed-n target: links break the closed form; $E[P_2|n]\to3\pi$ reproduces the continuum mass term $m^2/8\pi$ (MC confirms, $O(n^{-1/2})$ approach).
+- 2026-10-29 (session 15, r32) — Laguerre statistic S_K vs fixed-n related fraction S_f on 60 N = 400 states (null: 40 random orders): S_f separates the
+  layered states as well (z 50–58 vs 39–62) and flags all six 4–7-layer crystals (>100σ); S_K misses one 4-layer state (z = +1.2). As a phase diagnostic
+  the target is not stronger than its first term. Kept as an exact, density-free check of the propagator (1+1 paper Sec. V).
