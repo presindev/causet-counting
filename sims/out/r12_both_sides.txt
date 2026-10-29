@@ -1,0 +1,5 @@
+Both-sides estimator in Johnston's pipeline. Spatial corr / Minkowski corr; whole 4D interval; paired differences vs Johnston
+  n = 500: Johnston 0.7960/0.8337 | both-sides capped 0.6544/0.7252 | uncapped 0.6268/0.6780 | paired (capped - Johnston) -0.1416 +- 0.0213
+  n = 1000: Johnston 0.8837/0.8942 | both-sides capped 0.7554/0.7896 | uncapped 0.7269/0.7353 | paired (capped - Johnston) -0.1283 +- 0.0151
+  n = 1500: Johnston 0.9211/0.9244 | both-sides capped 0.8193/0.8368 | uncapped 0.7887/0.7960 | paired (capped - Johnston) -0.1018 +- 0.0261
+  n = 3000: Johnston 0.9527/0.9520 | both-sides capped 0.8454/0.8458 | uncapped 0.7856/0.7841 | paired (capped - Johnston) -0.1073 +- 0.0563

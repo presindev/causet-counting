@@ -1,0 +1,37 @@
+median [min-max] over universes (x draws for 'spread')
+== calibration: random 2D orders, 10 per N ==
+N=100 top    M=40              stress 0.185 [0.13-0.36]  r+ 0.138 [0.08-0.35]  M~40  failed 0/10
+N=100 spread M=40              stress 0.269 [0.14-0.50]  r+ 0.239 [0.09-0.46]  M~40  failed 0/50
+N=200 top    M=40              stress 0.116 [0.08-0.17]  r+ 0.073 [0.04-0.10]  M~40  failed 0/10
+N=200 top    M=80              stress 0.128 [0.10-0.16]  r+ 0.087 [0.05-0.15]  M~80  failed 0/10
+N=200 spread M=40              stress 0.165 [0.10-0.36]  r+ 0.136 [0.06-0.28]  M~40  failed 0/50
+N=200 spread M=80              stress 0.167 [0.10-0.39]  r+ 0.127 [0.06-0.24]  M~80  failed 0/50
+N=400 top    M=40              stress 0.082 [0.05-0.13]  r+ 0.058 [0.03-0.11]  M~40  failed 0/10
+N=400 top    M=80              stress 0.078 [0.07-0.09]  r+ 0.056 [0.04-0.07]  M~80  failed 0/10
+N=400 spread M=40              stress 0.122 [0.06-0.22]  r+ 0.099 [0.04-0.24]  M~40  failed 0/50
+N=400 spread M=80              stress 0.137 [0.07-0.50]  r+ 0.109 [0.04-0.33]  M~80  failed 0/50
+== N = 400 Monte Carlo final states, by layer count ==
+30-39 layers (22) top    M=40  stress 0.081 [0.05-0.15]  r+ 0.054 [0.03-0.13]  M~40  failed 0/22
+30-39 layers (22) top    M=80  stress 0.077 [0.05-0.14]  r+ 0.050 [0.03-0.13]  M~80  failed 0/22
+30-39 layers (22) spread M=40  stress 0.121 [0.08-0.35]  r+ 0.098 [0.04-0.32]  M~40  failed 0/110
+30-39 layers (22) spread M=80  stress 0.126 [0.08-0.37]  r+ 0.094 [0.04-0.34]  M~80  failed 0/110
+9-11 layers (7) top    M=40    stress 0.182 [0.06-0.31]  r+ 0.186 [0.07-0.23]  M~40  failed 0/7
+9-11 layers (7) top    M=80    stress 0.243 [0.03-0.37]  r+ 0.311 [0.04-0.91]  M~80  failed 0/7
+9-11 layers (7) spread M=40    stress 0.154 [0.11-0.33]  r+ 0.665 [0.28-0.92]  M~40  failed 0/35
+9-11 layers (7) spread M=80    stress 0.162 [0.11-0.23]  r+ 0.707 [0.51-0.96]  M~80  failed 0/35
+4-7 layers (2) top    M=40     stress 0.646 [0.45-0.84]  r+ 0.393 [0.18-0.60]  M~40  failed 0/2
+4-7 layers (2) top    M=80     stress 0.873 [0.62-1.13]  r+ 0.392 [0.18-0.60]  M~80  failed 0/2
+4-7 layers (2) spread M=40     stress 0.214 [0.00-0.77]  r+ 0.104 [0.00-0.38]  M~40  failed 0/10
+4-7 layers (2) spread M=80     stress 0.258 [0.00-1.77]  r+ 0.092 [0.00-0.97]  M~80  failed 0/10
+2-3 layers (13) top    M=40    pipeline failed 13/13
+2-3 layers (13) top    M=80    pipeline failed 13/13
+2-3 layers (13) spread M=40    pipeline failed 65/65
+2-3 layers (13) spread M=80    pipeline failed 65/65
+== per-universe, 9-11 layers, spread, M = 40 (median stress over draws) ==
+  0.12 0.14 0.15 0.12 0.12   failed 0
+  0.14 0.18 0.11 0.13 0.13   failed 0
+  0.15 0.13 0.14 0.15 0.10   failed 0
+  0.14 0.18 0.21 0.22 0.15   failed 0
+  0.08 0.16 0.10 0.15 0.13   failed 0
+  0.18 0.20 0.21 0.17 0.17   failed 0
+  0.17 0.16 0.24 0.13 0.16   failed 0

@@ -1,0 +1,7 @@
+Nmax=10, eps=0.35: 36.1 s, 202681 states
+
+== stems of size 2, ref n2:rel0,min2,h1: drift per event d_N/pi (N -> N+1), and d_N per relation, last steps
+  n2:rel1,min1,h2    rel 1  N:       6       7       8       9      10
+                            d/pi:  +0.0423 +0.0335 +0.0272 +0.0223 +0.0184
+                            N*d/rel:+0.7969 +0.7378 +0.6828 +0.6304 +0.5794
+                            N^2*d/rel:+4.781 +5.164 +5.463 +5.674 +5.794

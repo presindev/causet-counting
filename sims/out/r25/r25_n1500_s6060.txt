@@ -1,0 +1,31 @@
+  diamond universe 1 (1519 events, 6 s, likelihood 2 s): johnston 0.9132/0.9851  switch 0.9256/0.9831  w_K100 0.9686/0.9923  poisson 0.9836/0.9945  oracle_wall 0.9836/0.9945   loglik 1:-89105 100:-45514 200:-45437 300:-45429 400:-45423
+  diamond universe 2 (1564 events, 7 s, likelihood 2 s): johnston 0.9262/0.9766  switch 0.9361/0.9746  w_K100 0.9685/0.9914  poisson 0.9837/0.9935  oracle_wall 0.9837/0.9935   loglik 1:-105674 100:-54390 200:-54302 300:-54294 400:-54289
+  diamond universe 3 (1440 events, 6 s, likelihood 1 s): johnston 0.9378/0.9857  switch 0.9487/0.9844  w_K100 0.9724/0.9903  poisson 0.9849/0.9951  oracle_wall 0.9849/0.9951   loglik 1:-77871 100:-45260 200:-45202 300:-45195 400:-45191
+diamond n = 1500 (3 univ., seed 6060, 400 iterations), all pairs:
+  johnston  corr 0.9257   vs johnston +0.0000 +- 0.0000   (+0 % of his residual)
+  switch    corr 0.9368   vs johnston +0.0111 +- 0.0007   (+15 % of his residual)
+  w_K100    corr 0.9698   vs johnston +0.0441 +- 0.0061   (+59 % of his residual)
+  poisson   corr 0.9841   vs johnston +0.0583 +- 0.0068   (+79 % of his residual)
+  oracle_wall corr 0.9841   vs johnston +0.0583 +- 0.0068   (+79 % of his residual)
+diamond n = 1500 (3 univ., seed 6060, 400 iterations), interior pairs:
+  johnston  corr 0.9825   vs johnston +0.0000 +- 0.0000   (+0 % of his residual)
+  switch    corr 0.9807   vs johnston -0.0018 +- 0.0002   (-10 % of his residual)
+  w_K100    corr 0.9913   vs johnston +0.0089 +- 0.0031   (+51 % of his residual)
+  poisson   corr 0.9944   vs johnston +0.0119 +- 0.0025   (+68 % of his residual)
+  oracle_wall corr 0.9944   vs johnston +0.0119 +- 0.0025   (+68 % of his residual)
+  slab universe 1 (1543 events, 16 s, likelihood 4 s): johnston 0.9845/0.9845  switch 0.9847/0.9840  w_K100 0.9884/0.9824  poisson 0.9917/0.9945  oracle_wall 0.9950/0.9953   loglik 1:-450292 100:-403731 200:-403419 300:-403419 400:-403419
+  slab universe 2 (1478 events, 14 s, likelihood 4 s): johnston 0.9838/0.9795  switch 0.9840/0.9793  w_K100 0.9882/0.9809  poisson 0.9928/0.9950  oracle_wall 0.9952/0.9955   loglik 1:-400685 100:-357740 200:-357644 300:-357644 400:-357644
+  slab universe 3 (1491 events, 14 s, likelihood 4 s): johnston 0.9856/0.9813  switch 0.9850/0.9803  w_K100 0.9873/0.9891  poisson 0.9891/0.9936  oracle_wall 0.9932/0.9947   loglik 1:-434860 100:-368487 200:-368486 300:-368486 400:-368486
+slab n = 1500 (3 univ., seed 6060, 400 iterations), all pairs:
+  johnston  corr 0.9846   vs johnston +0.0000 +- 0.0000   (+0 % of his residual)
+  switch    corr 0.9846   vs johnston -0.0001 +- 0.0003   (-0 % of his residual)
+  w_K100    corr 0.9880   vs johnston +0.0034 +- 0.0008   (+22 % of his residual)
+  poisson   corr 0.9912   vs johnston +0.0066 +- 0.0016   (+43 % of his residual)
+  oracle_wall corr 0.9945   vs johnston +0.0098 +- 0.0012   (+64 % of his residual)
+slab n = 1500 (3 univ., seed 6060, 400 iterations), interior pairs:
+  johnston  corr 0.9817   vs johnston +0.0000 +- 0.0000   (+0 % of his residual)
+  switch    corr 0.9812   vs johnston -0.0005 +- 0.0002   (-3 % of his residual)
+  w_K100    corr 0.9841   vs johnston +0.0024 +- 0.0029   (+13 % of his residual)
+  poisson   corr 0.9944   vs johnston +0.0126 +- 0.0016   (+69 % of his residual)
+  oracle_wall corr 0.9952   vs johnston +0.0134 +- 0.0015   (+74 % of his residual)
+  related pairs with interval share inside the slab < 0.99: 0.453, < 0.8: 0.137; mean share 0.930 (oracle)

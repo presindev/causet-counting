@@ -1,0 +1,6 @@
+  |ratio-1| percentile 50: ours 0.103   his 0.104
+  |ratio-1| percentile 90: ours 0.288   his 0.363
+  |ratio-1| percentile 99: ours 0.605   his 0.828
+  |ratio-1| percentile 99.9: ours 1.119   his 1.811
+  |ratio-1| percentile 100: ours 2.783   his 10.947
+embedded spatial corr: Johnston 0.9174 | hybrid min5 0.7668 | capped min5 0.8083 | capped min1 0.8257

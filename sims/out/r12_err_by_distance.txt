@@ -1,0 +1,6 @@
+spacelike spatial distance, by true |dx| (interval half-width 0.5): signed median bias and median |err|, ours (capped) vs his
+  |dx| 0.00-0.10 (n=  3872): ours bias -0.048 err 0.161 | his bias +0.400 err 0.478
+  |dx| 0.10-0.20 (n= 43341): ours bias -0.161 err 0.205 | his bias -0.080 err 0.336
+  |dx| 0.20-0.35 (n=217706): ours bias -0.171 err 0.183 | his bias -0.124 err 0.219
+  |dx| 0.35-0.50 (n=295991): ours bias -0.138 err 0.145 | his bias -0.069 err 0.131
+  |dx| 0.50-1.00 (n=230652): ours bias -0.114 err 0.124 | his bias +0.005 err 0.062

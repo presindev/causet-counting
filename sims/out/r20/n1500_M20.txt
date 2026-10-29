@@ -1,0 +1,43 @@
+n = 1500, 4 universes, seed 3030. (A) spatial corr on core pairs; (B) local charts: 20 per universe, M = 20 nearest by profile distance, base events in the f = 0.02 core; every arm scored on the same within-chart pairs. Paired vs Johnston.
+  univ 1 f = 0.02: core 182/1502 (r <= 0.34, t in [0.41, 0.62]): johnston 0.9782 switch 0.9801 ours 0.9543 w_K30 0.9846 w_K100 0.9873
+  univ 1 f = 0.04: core has 18 events, skipped
+  univ 1 local: 2 charts ok, 18 without anchors; validation (true D) min corr 1.000000; Gram cond median 955; median true pair distance 0.147; johnston 0.932/0.133 switch 0.937/0.139 ours 0.893/0.127 w_K30 0.972/0.089 w_K100 0.975/0.082 madsen 0.375/0.343 madsen_avg 0.375/0.343  (corr/median rel. err)
+  universe 1: 4 s (Johnston 2 s, all global maps 4 s, local charts 0 s)
+  univ 2 f = 0.02: core 160/1481 (r <= 0.34, t in [0.38, 0.61]): johnston 0.9810 switch 0.9802 ours 0.8092 w_K30 0.9843 w_K100 0.9881
+  univ 2 f = 0.04: core has 19 events, skipped
+  univ 2 local: 4 charts ok, 16 without anchors; validation (true D) min corr 1.000000; Gram cond median 955; median true pair distance 0.138; johnston 0.955/0.082 switch 0.953/0.083 ours 0.818/0.162 w_K30 0.977/0.088 w_K100 0.981/0.072 madsen 0.497/0.351 madsen_avg 0.422/0.574  (corr/median rel. err)
+  universe 2: 5 s (Johnston 2 s, all global maps 5 s, local charts 0 s)
+  univ 3 f = 0.02: core 172/1457 (r <= 0.34, t in [0.39, 0.63]): johnston 0.9728 switch 0.9719 ours 0.8283 w_K30 0.9900 w_K100 0.9927
+  univ 3 f = 0.04: core 35/1457 (r <= 0.24, t in [0.46, 0.55]): johnston 0.9390 switch 0.9462 ours 0.8178 w_K30 0.9886 w_K100 0.9903
+  univ 3 local: 3 charts ok, 17 without anchors; validation (true D) min corr 1.000000; Gram cond median 1161; median true pair distance 0.153; johnston 0.878/0.222 switch 0.883/0.226 ours 0.771/0.145 w_K30 0.978/0.073 w_K100 0.979/0.073 madsen 0.441/0.379 madsen_avg 0.353/0.555  (corr/median rel. err)
+  universe 3: 4 s (Johnston 1 s, all global maps 4 s, local charts 0 s)
+  univ 4 f = 0.02: core 146/1408 (r <= 0.34, t in [0.39, 0.63]): johnston 0.9552 switch 0.9535 ours 0.8391 w_K30 0.9886 w_K100 0.9909
+  univ 4 f = 0.04: core 27/1408 (r <= 0.23, t in [0.45, 0.53]): johnston 0.8815 switch 0.8814 ours 0.8053 w_K30 0.9887 w_K100 0.9877
+  univ 4 local: 8 charts ok, 12 without anchors; validation (true D) min corr 1.000000; Gram cond median 1260; median true pair distance 0.144; johnston 0.856/0.173 switch 0.852/0.174 ours 0.744/0.182 w_K30 0.975/0.066 w_K100 0.979/0.062 madsen 0.274/0.599 madsen_avg 0.274/0.514  (corr/median rel. err)
+  universe 4: 6 s (Johnston 2 s, all global maps 6 s, local charts 0 s)
+
+(A) n = 1500, f = 0.02: 4 universes; core size 165 of ~1500 (max radius 0.34 of 0.5; t 0.39-0.62)
+  arm          core spatial corr   vs johnston (paired)   share of his core residual
+  johnston     0.9718              +0.0000 +- 0.0000         +0%
+  switch       0.9714              -0.0004 +- 0.0008         -1%
+  ours         0.8577              -0.1141 +- 0.0322       -405%
+  w_K30        0.9869              +0.0151 +- 0.0068        +54%
+  w_K100       0.9897              +0.0179 +- 0.0065        +64%
+
+(A) n = 1500, f = 0.04: 2 universes; core size 31 of ~1500 (max radius 0.24 of 0.5; t 0.46-0.54)
+  arm          core spatial corr   vs johnston (paired)   share of his core residual
+  johnston     0.9103              +0.0000 +- 0.0000         +0%
+  switch       0.9138              +0.0035 +- 0.0036         +4%
+  ours         0.8116              -0.0987 +- 0.0225       -110%
+  w_K30        0.9887              +0.0784 +- 0.0288        +87%
+  w_K100       0.9890              +0.0788 +- 0.0274        +88%
+
+(B) n = 1500, local charts (M = 20, pooled within-chart pairs, 4 universes): Madsen validation with true intervals min corr 1.000000; Gram cond median 1058; charts without anchors 63; median true pair distance 0.145
+  arm          local corr   vs johnston (paired)   share of his local residual   median rel. error
+  johnston     0.9053       +0.0000 +- 0.0000         +0%                   0.152
+  switch       0.9061       +0.0009 +- 0.0023         +1%                   0.155
+  ours         0.8065       -0.0988 +- 0.0210       -104%                   0.154
+  w_K30        0.9753       +0.0700 +- 0.0234        +74%                   0.079
+  w_K100       0.9785       +0.0732 +- 0.0231        +77%                   0.072
+  madsen       0.3968       -0.5084 +- 0.0356       -537%                   0.418
+  madsen_avg   0.3560       -0.5493 +- 0.0127       -580%                   0.497

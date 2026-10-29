@@ -1,0 +1,6 @@
+.DS_Store
+data/
+n400_out/
+n400_fetch/
+cluster_fetch/
+.venv/

@@ -1,0 +1,3 @@
+Johnston vs Johnston + our multi-reference spacelike estimator (d = 4, whole interval, all pairs): spatial-distance corr (his Table V metric), Minkowski corr
+  n = 1000: Johnston 0.8753/0.8832 | K=5 0.7056/0.6984 [75%] | K=20 0.7054/0.6983 [75%]
+  n = 1500: Johnston 0.9137/0.9178 | K=5 0.7254/0.7158 [84%] | K=20 0.7263/0.7185 [84%]

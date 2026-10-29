@@ -1,0 +1,10 @@
+rep 0 (ours on 84% of spacelike pairs): Johnston 0.9184 | partial oracle 0.9285 | ours 0.6370 | truth x shuffled our errors 0.9267
+     mean t 0-0.3: median ratio ours 0.995  his 0.681  (n=12616)
+     mean t 0.3-0.5: median ratio ours 0.939  his 0.969  (n=384414)
+     mean t 0.5-0.7: median ratio ours 0.931  his 0.989  (n=406069)
+     mean t 0.7-1: median ratio ours 0.992  his 0.709  (n=16577)
+rep 1 (ours on 83% of spacelike pairs): Johnston 0.9143 | partial oracle 0.9310 | ours 0.7860 | truth x shuffled our errors 0.9287
+     mean t 0-0.3: median ratio ours 1.080  his 0.789  (n=16332)
+     mean t 0.3-0.5: median ratio ours 1.014  his 1.018  (n=437083)
+     mean t 0.5-0.7: median ratio ours 0.950  his 1.014  (n=421826)
+     mean t 0.7-1: median ratio ours 0.993  his 0.770  (n=11573)

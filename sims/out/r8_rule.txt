@@ -1,0 +1,51 @@
+thresholds from 50 flat N=400 (M=80, 5 spread draws): stress_top 0.138  r+_spread 0.289  zero 0.118
+  flat medians: stress_top 0.074  r+_spread 0.103  zero 0.086
+independent flat N=400: 0/50 false fails
+de Sitter N=400 H tau=1.0: 0/10 fail  ['pass']
+de Sitter N=400 H tau=2.0: 1/10 fail  ['FAIL(stress)', 'pass']
+de Sitter N=400 H tau=4.0: 10/10 fail  ['FAIL(stress)', 'FAIL(stress,r+)']
+N = 400 Monte Carlo final states: layers, stress_top, r+_spread, zero, verdict
+    2 n400_b0.2_cold_s2052.npz          -      -      -  FAIL(no run)
+    2 n400_b0.2_cold_s2053.npz          -      -      -  FAIL(no run)
+    2 n400_b0.2_cold_s2054.npz          -      -      -  FAIL(no run)
+    2 n400_b0.2_cold_s2055.npz          -      -      -  FAIL(no run)
+    2 n400_b0.3_cold_s2060.npz          -      -      -  FAIL(no run)
+    2 n400_b0.3_cold_s2061.npz          -      -      -  FAIL(no run)
+    2 n400_b0.3_cold_s2062.npz          -      -      -  FAIL(no run)
+    2 n400_b0.3_cold_s2063.npz          -      -      -  FAIL(no run)
+    2 n400_b0.45_cold_s2068.npz         -      -      -  FAIL(no run)
+    2 n400_b0.45_cold_s2069.npz         -      -      -  FAIL(no run)
+    2 n400_b0.45_cold_s2070.npz         -      -      -  FAIL(no run)
+    2 n400_b0.45_cold_s2071.npz         -      -      -  FAIL(no run)
+    3 n400_b0.12_cold_s2047.npz         -      -      -  FAIL(no run)
+    4 n400_b0.08_cold_s2036.npz     0.619  0.366  0.999  FAIL(stress,r+,zero)
+    7 n400_b0.08_cold_s2037.npz     1.128  0.126  0.973  FAIL(stress,zero)
+    9 n400_b0.7_hot_s2073.npz       0.276  0.782  0.553  FAIL(stress,r+,zero)
+    9 n400_b0.7_hot_s2074.npz       0.367  0.645  0.560  FAIL(stress,r+,zero)
+   10 n400_b0.45_hot_s2064.npz      0.243  0.597  0.610  FAIL(stress,r+,zero)
+   10 n400_b0.45_hot_s2065.npz      0.031  0.675  0.579  FAIL(r+,zero)
+   10 n400_b0.45_hot_s2066.npz      0.034  0.744  0.690  FAIL(r+,zero)
+   10 n400_b0.45_hot_s2067.npz      0.147  0.676  0.611  FAIL(stress,r+,zero)
+   11 n400_b0.7_hot_s2072.npz       0.325  0.676  0.600  FAIL(stress,r+,zero)
+   30 n400_b0.3_hot_s2058.npz       0.060  0.107  0.100  pass
+   31 n400_b0.3_hot_s2057.npz       0.077  0.095  0.089  pass
+   31 n400_b0.05_cold_s2031.npz     0.058  0.064  0.097  pass
+   33 n400_b0.2_hot_s2050.npz       0.054  0.090  0.090  pass
+   33 n400_b0.3_hot_s2056.npz       0.078  0.196  0.094  pass
+   34 n400_b0.2_hot_s2051.npz       0.059  0.095  0.096  pass
+   34 n400_b0.05_cold_s2028.npz     0.072  0.110  0.088  pass
+   34 n400_b0.08_hot_s2032.npz      0.086  0.086  0.103  pass
+   35 n400_b0.3_hot_s2059.npz       0.077  0.055  0.095  pass
+   35 n400_b0.01_hot_s2001.npz      0.090  0.094  0.099  pass
+   35 n400_b0.03_cold_s2021.npz     0.119  0.112  0.092  pass
+   35 n400_b0.03_cold_s2023.npz     0.084  0.070  0.087  pass
+   36 n400_b0.03_cold_s2022.npz     0.072  0.052  0.092  pass
+   36 n400_b0.05_cold_s2030.npz     0.079  0.077  0.084  pass
+   36 n400_b0.08_hot_s2033.npz      0.083  0.200  0.080  pass
+   36 n400_b0.08_hot_s2034.npz      0.076  0.231  0.090  pass
+   37 n400_b0.01_hot_s2003.npz      0.072  0.097  0.085  pass
+   37 n400_b0.08_hot_s2035.npz      0.137  0.251  0.090  pass
+   38 n400_b0.01_hot_s2000.npz      0.064  0.075  0.087  pass
+   38 n400_b0.01_hot_s2002.npz      0.057  0.092  0.085  pass
+   38 n400_b0.05_hot_s2027.npz      0.089  0.113  0.091  pass
+   39 n400_b0.05_cold_s2029.npz     0.090  0.124  0.085  pass

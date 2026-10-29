@@ -1,0 +1,5 @@
+Combining estimators (table v2, regularized w, capped). Spatial corr / Minkowski corr; whole 4D interval; mean +- sd over realizations
+  n = 500: Johnston 0.7989/0.8303 | mean-combined 0.7331/0.7868 | geo-combined 0.7233/0.7793 | paired diff (mean-comb - Johnston, spatial) -0.0657 +- 0.0135
+  n = 1000: Johnston 0.8858/0.8943 | mean-combined 0.8520/0.8687 | geo-combined 0.8416/0.8612 | paired diff (mean-comb - Johnston, spatial) -0.0339 +- 0.0137
+  n = 1500: Johnston 0.9194/0.9235 | mean-combined 0.9099/0.9147 | geo-combined 0.9084/0.9134 | paired diff (mean-comb - Johnston, spatial) -0.0095 +- 0.0040
+  n = 3000: Johnston 0.9543/0.9549 | mean-combined 0.9483/0.9486 | geo-combined 0.9477/0.9480 | paired diff (mean-comb - Johnston, spatial) -0.0059 +- 0.0015

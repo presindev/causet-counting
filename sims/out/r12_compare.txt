@@ -1,0 +1,4 @@
+per-pair spacelike distance: median |d_est/d - 1| (raw);  embedding: corr(embedded vs true squared intervals)
+  n = 500: spacelike err all pairs  ours 0.228  Johnston 0.370 | band 0.5<t<0.8  ours 0.165  Johnston 0.440 | embedded corr  ours 0.2974  Johnston 0.6092
+  n = 1500: spacelike err all pairs  ours 0.145  Johnston 0.299 | band 0.5<t<0.8  ours 0.117  Johnston 0.334 | embedded corr  ours 0.5814  Johnston 0.7863
+  n = 3000: spacelike err all pairs  ours 0.094  Johnston 0.233 | band 0.5<t<0.8  ours 0.073  Johnston 0.260 | embedded corr  ours 0.5983  Johnston 0.9484

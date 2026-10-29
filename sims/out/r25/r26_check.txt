@@ -1,0 +1,7 @@
+gradient check (analytic, numeric): 1880.3/1880.3, -191.51/-191.51, -38.016/-38.016, 471.69/471.69
+n = 400: exact Poisson from the truth: corr 1.0000 -> 0.8994
+n = 400: exact Poisson + wall from the truth: corr 1.0000 -> 0.9734
+n = 1000: exact Poisson from the truth: corr 1.0000 -> 0.9706
+n = 1000: exact Poisson + wall from the truth: corr 1.0000 -> 0.9930
+n = 2000: exact Poisson from the truth: corr 1.0000 -> 0.9900
+n = 2000: exact Poisson + wall from the truth: corr 1.0000 -> 0.9971

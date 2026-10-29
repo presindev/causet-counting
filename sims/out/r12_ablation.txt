@@ -1,0 +1,5 @@
+pasts only (no future refs), 50% of spacelike pairs; Johnston 0.8997
+  counted N_a, N_b:  embedded 0.7611
+  exact   V_a, V_b:  embedded 0.7212   (counted N_C in both)
+  counted        log-error sd: total 0.228, per-element part sd 0.087, per-pair residual 0.192
+  exact V_a,V_b  log-error sd: total 0.250, per-element part sd 0.115, per-pair residual 0.189

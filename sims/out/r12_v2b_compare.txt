@@ -1,0 +1,5 @@
+table v2 + regularized w. Spatial corr (his Table V metric) / Minkowski corr; whole 4D interval
+  n = 500: Johnston 0.7977/0.8299 | ours 0.5884/0.6224 | ours capped 0.6321/0.6880 | ours capped min5 0.6616/0.7364
+  n = 1000: Johnston 0.9022/0.9091 | ours 0.7347/0.7327 | ours capped 0.8022/0.8161 | ours capped min5 0.8181/0.8475
+  n = 1500: Johnston 0.9101/0.9140 | ours 0.7520/0.7415 | ours capped 0.8355/0.8433 | ours capped min5 0.8589/0.8734
+  n = 3000: Johnston 0.9537/0.9538 | ours 0.8546/0.8469 | ours capped 0.9109/0.9116 | ours capped min5 0.9276/0.9287

@@ -1,0 +1,18 @@
+== 3+1 distance from past sizes (reference = bottom tip of a sprinkled diamond), rho = 1 ==
+  N = 5000 (T = 14.0 ell), 58197 spacelike pairs:
+    d  0- 2 ell: n= 3751  median rel err 0.073   bias (median signed) +0.012
+    d  2- 4 ell: n=14549  median rel err 0.036   bias (median signed) -0.000
+    d  4- 8 ell: n=34129  median rel err 0.030   bias (median signed) -0.001
+    d  8-16 ell: n= 5768  median rel err 0.040   bias (median signed) +0.011
+  N = 20000 (T = 19.8 ell), 58171 spacelike pairs:
+    d  0- 2 ell: n= 1723  median rel err 0.063   bias (median signed) +0.001
+    d  2- 4 ell: n= 6816  median rel err 0.027   bias (median signed) +0.003
+    d  4- 8 ell: n=26572  median rel err 0.018   bias (median signed) +0.006
+    d  8-16 ell: n=23048  median rel err 0.017   bias (median signed) +0.004
+    d 16-64 ell: n=   12  median rel err 0.051   bias (median signed) -0.028
+  N = 80000 (T = 28.0 ell), 58117 spacelike pairs:
+    d  0- 2 ell: n=  696  median rel err 0.076   bias (median signed) -0.032
+    d  2- 4 ell: n= 2954  median rel err 0.021   bias (median signed) -0.012
+    d  4- 8 ell: n=14028  median rel err 0.011   bias (median signed) -0.005
+    d  8-16 ell: n=33987  median rel err 0.010   bias (median signed) -0.004
+    d 16-64 ell: n= 6452  median rel err 0.014   bias (median signed) -0.006

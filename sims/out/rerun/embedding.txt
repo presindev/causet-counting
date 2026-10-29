@@ -1,0 +1,9 @@
+seed 1: rms position error = 0.0059 = 0.37 ell;  |A^T eta A - eta|max = 0.038
+   eigenvalues: most negative [-2.1723 -0.0814 -0.0377], most positive [0.0359 0.0474 2.4284]
+seed 2: rms position error = 0.0066 = 0.42 ell;  |A^T eta A - eta|max = 0.103
+   eigenvalues: most negative [-2.278  -0.0407 -0.0346], most positive [0.0314 0.0662 1.918 ]
+seed 3: rms position error = 0.0089 = 0.56 ell;  |A^T eta A - eta|max = 0.046
+   eigenvalues: most negative [-2.3049 -0.1021 -0.0402], most positive [0.0464 0.0714 2.4166]
+seed 4: rms position error = 0.0061 = 0.38 ell;  |A^T eta A - eta|max = 0.028
+   eigenvalues: most negative [-2.4193 -0.0608 -0.0335], most positive [0.0394 0.0474 2.0117]
+N = 2000, M = 150: rms error 0.43 +- 0.07 ell (sample region ~ 38 ell across)

@@ -1,0 +1,32 @@
+  diamond universe 1 (1519 events, 6 s): johnston 0.9132/0.9851  ours 0.7582/0.9140  switch 0.9256/0.9831  w_K30 0.9585/0.9895  w_K100 0.9686/0.9923
+  diamond universe 2 (1564 events, 6 s): johnston 0.9262/0.9766  ours 0.7900/0.9415  switch 0.9361/0.9746  w_K30 0.9590/0.9887  w_K100 0.9685/0.9914
+  diamond universe 3 (1440 events, 6 s): johnston 0.9378/0.9857  ours 0.8189/0.9283  switch 0.9487/0.9844  w_K30 0.9639/0.9868  w_K100 0.9724/0.9903
+diamond n = 1500 (3 univ., seed 6060), all pairs:
+  johnston  corr 0.9257   vs johnston +0.0000 +- 0.0000   (+0 % of his residual)
+  ours      corr 0.7890   vs johnston -0.1367 +- 0.0104   (-184 % of his residual)
+  switch    corr 0.9368   vs johnston +0.0111 +- 0.0007   (+15 % of his residual)
+  w_K30     corr 0.9605   vs johnston +0.0348 +- 0.0056   (+47 % of his residual)
+  w_K100    corr 0.9698   vs johnston +0.0441 +- 0.0061   (+59 % of his residual)
+diamond n = 1500 (3 univ., seed 6060), interior pairs:
+  johnston  corr 0.9825   vs johnston +0.0000 +- 0.0000   (+0 % of his residual)
+  ours      corr 0.9279   vs johnston -0.0545 +- 0.0105   (-311 % of his residual)
+  switch    corr 0.9807   vs johnston -0.0018 +- 0.0002   (-10 % of his residual)
+  w_K30     corr 0.9883   vs johnston +0.0059 +- 0.0032   (+33 % of his residual)
+  w_K100    corr 0.9913   vs johnston +0.0089 +- 0.0031   (+51 % of his residual)
+  ours median rel. error: away from the boundary 0.079, near it 0.102 (share of pairs away 0.17; no estimate 0.033)
+  slab universe 1 (1543 events, 5 s): johnston 0.9845/0.9845  ours 0.9139/0.8682  switch 0.9847/0.9840  w_K30 0.9813/0.9679  w_K100 0.9884/0.9824
+  slab universe 2 (1474 events, 5 s): johnston 0.9830/0.9789  ours 0.9254/0.8739  switch 0.9827/0.9780  w_K30 0.9840/0.9794  w_K100 0.9881/0.9885
+  slab universe 3 (1515 events, 5 s): johnston 0.9856/0.9797  ours 0.9520/0.9200  switch 0.9854/0.9790  w_K30 0.9865/0.9853  w_K100 0.9880/0.9853
+slab n = 1500 (3 univ., seed 6060), all pairs:
+  johnston  corr 0.9844   vs johnston +0.0000 +- 0.0000   (+0 % of his residual)
+  ours      corr 0.9304   vs johnston -0.0539 +- 0.0108   (-345 % of his residual)
+  switch    corr 0.9843   vs johnston -0.0001 +- 0.0001   (-1 % of his residual)
+  w_K30     corr 0.9839   vs johnston -0.0004 +- 0.0014   (-3 % of his residual)
+  w_K100    corr 0.9882   vs johnston +0.0038 +- 0.0008   (+24 % of his residual)
+slab n = 1500 (3 univ., seed 6060), interior pairs:
+  johnston  corr 0.9810   vs johnston +0.0000 +- 0.0000   (+0 % of his residual)
+  ours      corr 0.8874   vs johnston -0.0937 +- 0.0173   (-494 % of his residual)
+  switch    corr 0.9803   vs johnston -0.0007 +- 0.0001   (-4 % of his residual)
+  w_K30     corr 0.9775   vs johnston -0.0035 +- 0.0067   (-19 % of his residual)
+  w_K100    corr 0.9854   vs johnston +0.0044 +- 0.0034   (+23 % of his residual)
+  ours median rel. error: away from the boundary 0.102, near it 0.144 (share of pairs away 0.22; no estimate 0.111)

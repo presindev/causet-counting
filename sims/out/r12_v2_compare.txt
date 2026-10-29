@@ -1,0 +1,5 @@
+table v2 (w = V_C / smaller interval). Johnston vs Johnston + our spacelike estimator. Spatial corr (his Table V metric) / Minkowski corr; whole 4D interval
+  n = 500: Johnston 0.7977/0.8299 | ours min1 0.3481/0.3035 [91%] | ours min5 0.2208/0.2415 [65%] | multiref 0.2814/0.2913 [76%]
+  n = 1000: Johnston 0.9022/0.9091 | ours min1 0.3968/0.3133 [95%] | ours min5 0.3507/0.3246 [78%] | multiref 0.4224/0.3995 [86%]
+  n = 1500: Johnston 0.9101/0.9140 | ours min1 0.3588/0.2552 [96%] | ours min5 0.3811/0.3298 [82%] | multiref 0.4177/0.3434 [88%]
+  n = 3000: Johnston 0.9537/0.9538 | ours min1 0.3032/0.2025 [98%] | ours min5 0.3991/0.2390 [90%] | multiref 0.4098/0.3015 [94%]

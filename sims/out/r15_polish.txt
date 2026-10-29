@@ -1,0 +1,13 @@
+Cheap far-pair detours in the switch (L = 0.25). Spatial corr; paired difference vs full Johnston; far-step time; stones per far pair
+  n = 1500 (4 univ.), far pairs 89% of spacelike
+    johnston (full min-plus)   0.9128  (+0.0000 +- 0.0000)   time 2.2 s
+    switch, full detour        0.9254  (+0.0126 +- 0.0014)
+    switch, (b) G=4            0.9171  (+0.0043 +- 0.0004)   far-step time 0.8 s   stones/pair 178, no stone in 3 cells 28.3%, after 27-cell block 2.1% -> full detour (+ rough-map zero counts 3.7%)
+    switch, (b) G=6            0.9166  (+0.0037 +- 0.0007)   far-step time 0.8 s   stones/pair 57, no stone in 3 cells 41.4%, after 27-cell block 7.6% -> full detour (+ rough-map zero counts 3.7%)
+    switch, (b) G=8            0.9155  (+0.0027 +- 0.0008)   far-step time 0.9 s   stones/pair 25, no stone in 3 cells 51.0%, after 27-cell block 15.0% -> full detour (+ rough-map zero counts 3.7%)
+  n = 3000 (2 univ.), far pairs 88% of spacelike
+    johnston (full min-plus)   0.9568  (+0.0000 +- 0.0000)   time 18.1 s
+    switch, full detour        0.9659  (+0.0091 +- 0.0021)
+    switch, (b) G=4            0.9629  (+0.0061 +- 0.0022)   far-step time 4.5 s   stones/pair 385, no stone in 3 cells 15.7%, after 27-cell block 0.7% -> full detour (+ rough-map zero counts 1.7%)
+    switch, (b) G=6            0.9629  (+0.0062 +- 0.0017)   far-step time 4.1 s   stones/pair 123, no stone in 3 cells 25.9%, after 27-cell block 3.6% -> full detour (+ rough-map zero counts 1.7%)
+    switch, (b) G=8            0.9627  (+0.0060 +- 0.0018)   far-step time 4.6 s   stones/pair 54, no stone in 3 cells 34.6%, after 27-cell block 8.1% -> full detour (+ rough-map zero counts 1.7%)

@@ -1,0 +1,11 @@
+Per-pair SPATIAL distance |dx| for spacelike pairs (same quantity for both). Median and 90th percentile of |est/true - 1|; pairs with min(count) >= 20 on the chosen side
+  n = 1000 (374507 pairs):
+    his r                          median 0.132   90% 0.427
+    ours + his t                   median 0.112   90% 0.275
+    ours + true t                  median 0.108   90% 0.269
+    ours Minkowski d (vs true d)   median 0.130   90% 0.338
+  n = 3000 (5615799 pairs):
+    his r                          median 0.083   90% 0.297
+    ours + his t                   median 0.062   90% 0.171
+    ours + true t                  median 0.061   90% 0.170
+    ours Minkowski d (vs true d)   median 0.074   90% 0.225

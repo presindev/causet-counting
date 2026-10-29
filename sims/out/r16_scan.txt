@@ -1,0 +1,17 @@
+(c) fit to trusted distances only (related pairs + our close spacelike pairs < L = 0.25). Spatial corr; paired difference vs Johnston
+  n = 1500 (3 univ.); trusted pairs: related 10% of all, close spacelike 11% of spacelike
+    johnston               0.9240  (+0.0000 +- 0.0000)   per universe +0.000 +0.000 +0.000
+    switch (full detour)   0.9338  (+0.0098 +- 0.0018)   per universe +0.006 +0.013 +0.011
+    ours alone (start)     0.7489  (-0.1751 +- 0.0431)   per universe -0.139 -0.261 -0.126
+    (c) L=0.35             0.8316  (-0.0924 +- 0.0624)   fit time 6.6 s, iterations 246   per universe -0.027 -0.217 -0.033
+    (c) L=0.5              0.9090  (-0.0149 +- 0.0065)   fit time 6.1 s, iterations 226   per universe -0.010 -0.028 -0.007
+    (c) L=.25, far w=0.1   0.9354  (+0.0115 +- 0.0071)   fit time 3.6 s, iterations 133   per universe +0.024 -0.001 +0.012
+    (c) L=.25, far w=0.3   0.9303  (+0.0063 +- 0.0063)   fit time 4.8 s, iterations 177   per universe +0.018 -0.004 +0.006
+  n = 3000 (2 univ.); trusted pairs: related 11% of all, close spacelike 11% of spacelike
+    johnston               0.9568  (+0.0000 +- 0.0000)   per universe +0.000 +0.000
+    switch (full detour)   0.9639  (+0.0070 +- 0.0008)   per universe +0.008 +0.006
+    ours alone (start)     0.8663  (-0.0905 +- 0.0009)   per universe -0.090 -0.091
+    (c) L=0.35             0.9280  (-0.0288 +- 0.0033)   fit time 18.4 s, iterations 160   per universe -0.025 -0.032
+    (c) L=0.5              0.9428  (-0.0140 +- 0.0047)   fit time 26.8 s, iterations 234   per universe -0.009 -0.019
+    (c) L=.25, far w=0.1   0.9616  (+0.0047 +- 0.0027)   fit time 9.8 s, iterations 85   per universe +0.002 +0.007
+    (c) L=.25, far w=0.3   0.9618  (+0.0050 +- 0.0022)   fit time 11.0 s, iterations 95   per universe +0.003 +0.007

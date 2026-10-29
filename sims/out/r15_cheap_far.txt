@@ -1,0 +1,19 @@
+Cheap far-pair detours in the switch (L = 0.25). Spatial corr; paired difference vs full Johnston; far-step time; stones per far pair
+  n = 1500 (4 univ.), far pairs 90% of spacelike
+    johnston (full min-plus)   0.9203  (+0.0000 +- 0.0000)   time 2.4 s
+    switch, full detour        0.9339  (+0.0136 +- 0.0016)
+    switch, (a) K=30           0.9224  (+0.0021 +- 0.0056)   far-step time 1.3 s   sent to full detour 78.7%
+    switch, (a) K=100          0.9126  (-0.0077 +- 0.0087)   far-step time 1.0 s   sent to full detour 46.8%
+    switch, (a) K=300          0.9004  (-0.0199 +- 0.0175)   far-step time 0.5 s   sent to full detour 21.0%
+    switch, (b) G=4            0.9276  (+0.0073 +- 0.0017)   far-step time 1.0 s   stones/pair 161, sent to full detour 27.5% (+ rough-map zero counts 3.1%)
+    switch, (b) G=6            0.9278  (+0.0075 +- 0.0015)   far-step time 1.1 s   stones/pair 53, sent to full detour 40.4% (+ rough-map zero counts 3.1%)
+    switch, (b) G=8            0.9273  (+0.0070 +- 0.0021)   far-step time 1.3 s   stones/pair 23, sent to full detour 52.2% (+ rough-map zero counts 3.1%)
+  n = 3000 (2 univ.), far pairs 89% of spacelike
+    johnston (full min-plus)   0.9622  (+0.0000 +- 0.0000)   time 18.7 s
+    switch, full detour        0.9698  (+0.0076 +- 0.0014)
+    switch, (a) K=30           0.9536  (-0.0086 +- 0.0006)   far-step time 7.2 s   sent to full detour 55.1%
+    switch, (a) K=100          0.9289  (-0.0333 +- 0.0249)   far-step time 5.1 s   sent to full detour 35.8%
+    switch, (a) K=300          0.9488  (-0.0134 +- 0.0016)   far-step time 4.6 s   sent to full detour 27.7%
+    switch, (b) G=4            0.9670  (+0.0047 +- 0.0019)   far-step time 5.5 s   stones/pair 294, sent to full detour 17.2% (+ rough-map zero counts 1.4%)
+    switch, (b) G=6            0.9673  (+0.0050 +- 0.0012)   far-step time 6.4 s   stones/pair 93, sent to full detour 27.6% (+ rough-map zero counts 1.4%)
+    switch, (b) G=8            0.9674  (+0.0052 +- 0.0008)   far-step time 7.5 s   stones/pair 40, sent to full detour 36.9% (+ rough-map zero counts 1.4%)

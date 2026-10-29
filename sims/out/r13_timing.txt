@@ -1,0 +1,7 @@
+Timing (laptop, numpy + Accelerate BLAS, one universe per n), seconds
+      n         C@C   his min-plus   ours (2 matmul + inversion)   eigh
+     524       0.000          0.059                         0.076    0.012
+    1008       0.001          0.434                         0.217    0.052
+    2024       0.009          3.685                         0.832    0.387
+    3037       0.033         17.803                         1.874    1.436
+    3989       0.073         76.043                         3.277    3.439

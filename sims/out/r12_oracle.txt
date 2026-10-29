@@ -1,0 +1,2 @@
+n = 1000: Johnston 0.9031 | oracle spacelike + his related 0.9999 | his spacelike + oracle related 0.9055 | all oracle 1.0000
+n = 1500: Johnston 0.9149 | oracle spacelike + his related 0.9999 | his spacelike + oracle related 0.9156 | all oracle 1.0000

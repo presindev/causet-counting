@@ -1,0 +1,13 @@
+(c) fit to trusted distances only (related pairs + our close spacelike pairs < L = 0.25). Spatial corr; paired difference vs Johnston
+  n = 1500 (3 univ.); trusted pairs: related 10% of all, close spacelike 11% of spacelike
+    johnston               0.9240  (+0.0000 +- 0.0000)
+    switch (full detour)   0.9338  (+0.0098 +- 0.0018)
+    ours alone (start)     0.7489  (-0.1751 +- 0.0431)
+    (c) fit, w=1           0.8615  (-0.0625 +- 0.0691)   fit time 6.5 s, iterations 250
+    (c) fit, w=1/D         0.8586  (-0.0653 +- 0.0654)   fit time 5.4 s, iterations 206
+  n = 3000 (2 univ.); trusted pairs: related 11% of all, close spacelike 11% of spacelike
+    johnston               0.9568  (+0.0000 +- 0.0000)
+    switch (full detour)   0.9639  (+0.0070 +- 0.0008)
+    ours alone (start)     0.8663  (-0.0905 +- 0.0009)
+    (c) fit, w=1           0.9445  (-0.0123 +- 0.0015)   fit time 16.8 s, iterations 150
+    (c) fit, w=1/D         0.9427  (-0.0141 +- 0.0019)   fit time 19.6 s, iterations 175

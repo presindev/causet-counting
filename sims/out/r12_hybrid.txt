@@ -1,0 +1,5 @@
+Johnston's pipeline vs the same pipeline with our spacelike estimator (d = 4, whole interval, all pairs). Spatial-distance corr (his Table V metric) and Minkowski corr.
+  n = 500: Johnston spatial 0.8063 Mink 0.8337 | hybrid(min 5) spatial 0.5222 Mink 0.5206 [ours on 63% of spacelike] | hybrid(min 20) spatial 0.7851 Mink 0.8081 [22%]
+  n = 1000: Johnston spatial 0.8926 Mink 0.9007 | hybrid(min 5) spatial 0.7205 Mink 0.7154 [ours on 77% of spacelike] | hybrid(min 20) spatial 0.8460 Mink 0.8496 [41%]
+  n = 1500: Johnston spatial 0.9263 Mink 0.9289 | hybrid(min 5) spatial 0.7770 Mink 0.7429 [ours on 84% of spacelike] | hybrid(min 20) spatial 0.8886 Mink 0.8860 [55%]
+  n = 3000: Johnston spatial 0.9561 Mink 0.9556 | hybrid(min 5) spatial 0.8866 Mink 0.8775 [ours on 91% of spacelike] | hybrid(min 20) spatial 0.9229 Mink 0.9196 [71%]

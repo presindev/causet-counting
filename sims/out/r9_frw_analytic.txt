@@ -1,0 +1,20 @@
+== FRW a = eta^p, exact volumes, h -> 0: 16 (1 - ratio) / tau^2 vs R at a,b / at the proper-time midpoint / at c ==
+  p = 1.0, eta0 = 1.5: R(eta0) = -0.3951
+    tau= 0.01: 16(1-ratio)/tau^2 = -0.3988   R(ab) -0.3951   R(mid) -0.3986   R(c) -0.4022
+    tau= 0.03: 16(1-ratio)/tau^2 = -0.4026   R(ab) -0.3951   R(mid) -0.4058   R(c) -0.4170
+    tau= 0.10: 16(1-ratio)/tau^2 = -0.4201   R(ab) -0.3951   R(mid) -0.4327   R(c) -0.4759
+    tau= 0.20: 16(1-ratio)/tau^2 = -0.4486   R(ab) -0.3951   R(mid) -0.4759   R(c) -0.5844
+    tau= 0.40: 16(1-ratio)/tau^2 = -0.5200   R(ab) -0.3951   R(mid) -0.5844   R(c) -0.9512
+  p = -2.0, eta0 = 1.0: R(eta0) = +4.0000
+    tau= 0.01: 16(1-ratio)/tau^2 = +3.9812   R(ab) +4.0000   R(mid) +3.9603   R(c) +3.9212
+    tau= 0.03: 16(1-ratio)/tau^2 = +3.9234   R(ab) +4.0000   R(mid) +3.8826   R(c) +3.7704
+    tau= 0.10: 16(1-ratio)/tau^2 = +3.7430   R(ab) +4.0000   R(mid) +3.6281   R(c) +3.3058
+    tau= 0.20: 16(1-ratio)/tau^2 = +3.5029   R(ab) +4.0000   R(mid) +3.3058   R(c) +2.7778
+    tau= 0.40: 16(1-ratio)/tau^2 = +3.0748   R(ab) +4.0000   R(mid) +2.7778   R(c) +2.0408
+  p = 0.5, eta0 = 1.0: R(eta0) = -1.0000
+    tau= 0.01: 16(1-ratio)/tau^2 = -1.0118   R(ab) -1.0000   R(mid) -1.0152   R(c) -1.0307
+    tau= 0.03: 16(1-ratio)/tau^2 = -1.0316   R(ab) -1.0000   R(mid) -1.0466   R(c) -1.0965
+    tau= 0.10: 16(1-ratio)/tau^2 = -1.1117   R(ab) -1.0000   R(mid) -1.1687   R(c) -1.3841
+    tau= 0.20: 16(1-ratio)/tau^2 = -1.2523   R(ab) -1.0000   R(mid) -1.3841   R(c) -2.0408
+    tau= 0.40: 16(1-ratio)/tau^2 = -1.6930   R(ab) -1.0000   R(mid) -2.0408   R(c) -6.2500
+  check vs de Sitter closed form (s4a_desitter.continuum_ratio): tau=0.5: 0.969697 closed form 0.969698

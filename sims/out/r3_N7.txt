@@ -1,0 +1,55 @@
+N=7: 2045 final universes, 2451 states, 0.3 s
+validated: row sums = F_N(stem) from a2_future_factor
+
+== cut after k=3 births: 5 pasts (ceiling log2 = 2.32 bits), 2045 futures ==
+            setting  distinct rows   rank  C bits  Q bits  Q_eff bits
+   -- future = full F (2045 columns)
+   eps=0.21 beta=0.0              5      5    2.32    2.32        1.99
+   eps=0.21 beta=4.0              5      5    2.32    2.32        1.99
+   eps=0.21 beta=7.0              5      5    2.32    2.32        1.99
+   eps=0.21 beta=8.0              5      5    2.32    2.32        1.99
+   eps=0.21 beta=12.0              5      5    2.32    2.32        1.99
+   eps=0.21 beta=random              5      5    2.32    2.32        2.13
+   -- future = record (230 columns)
+   eps=0.21 beta=0.0              5      5    2.32    2.32        1.45
+   eps=0.21 beta=4.0              5      5    2.32    2.32        1.47
+   eps=0.21 beta=7.0              5      5    2.32    2.32        1.52
+   eps=0.21 beta=8.0              5      5    2.32    2.32        1.54
+   eps=0.21 beta=12.0              5      5    2.32    2.32        1.62
+   eps=0.21 beta=random              5      5    2.32    2.32        2.10
+
+== cut after k=4 births: 16 pasts (ceiling log2 = 4.00 bits), 2045 futures ==
+            setting  distinct rows   rank  C bits  Q bits  Q_eff bits
+   -- future = full F (2045 columns)
+   eps=0.21 beta=0.0             16     16    4.00    4.00        3.71
+   eps=0.21 beta=4.0             16     16    4.00    4.00        3.71
+   eps=0.21 beta=7.0             16     16    4.00    4.00        3.71
+   eps=0.21 beta=8.0             16     16    4.00    4.00        3.71
+   eps=0.21 beta=12.0             16     16    4.00    4.00        3.71
+   eps=0.21 beta=random             16     16    4.00    4.00        3.88
+   -- future = record (230 columns)
+   eps=0.21 beta=0.0             16     16    4.00    4.00        2.57
+   eps=0.21 beta=4.0             16     16    4.00    4.00        2.63
+   eps=0.21 beta=7.0             16     16    4.00    4.00        2.74
+   eps=0.21 beta=8.0             16     16    4.00    4.00        2.79
+   eps=0.21 beta=12.0             16     16    4.00    4.00        3.00
+   eps=0.21 beta=random             16     16    4.00    4.00        3.77
+
+== cut after k=5 births: 63 pasts (ceiling log2 = 5.98 bits), 2045 futures ==
+            setting  distinct rows   rank  C bits  Q bits  Q_eff bits
+   -- future = full F (2045 columns)
+   eps=0.21 beta=0.0             63     63    5.98    5.98        5.79
+   eps=0.21 beta=4.0             63     63    5.98    5.98        5.79
+   eps=0.21 beta=7.0             63     63    5.98    5.98        5.79
+   eps=0.21 beta=8.0             63     63    5.98    5.98        5.79
+   eps=0.21 beta=12.0             63     63    5.98    5.98        5.79
+   eps=0.21 beta=random             63     63    5.98    5.98        5.88
+   -- future = record (230 columns)
+   eps=0.21 beta=0.0             63     63    5.98    5.98        3.78
+   eps=0.21 beta=4.0             63     63    5.98    5.98        3.88
+   eps=0.21 beta=7.0             63     63    5.98    5.98        4.05
+   eps=0.21 beta=8.0             63     63    5.98    5.98        4.12
+   eps=0.21 beta=12.0             63     63    5.98    5.98        4.45
+   eps=0.21 beta=random             63     63    5.98    5.98        5.34
+
+total 0.6 s

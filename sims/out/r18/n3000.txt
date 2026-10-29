@@ -1,0 +1,17 @@
+  universe 1: johnston 0.9531  ours 0.8486
+  universe 2: johnston 0.9574  ours 0.8849
+n = 3000 (2 univ., seed 2029); waist share of spacelike pairs for K = (10, 30, 100): 0.314, 0.558, 0.831
+  arm                  spatial corr   vs johnston (paired)   share of his residual
+  johnston             0.9552         +0.0000 +- 0.0000          +0%
+  switch               0.9644         +0.0091 +- 0.0001         +20%
+  ours                 0.8667         -0.0885 +- 0.0160        -198%
+  oracle_waist_K10     0.9948         +0.0395 +- 0.0018         +88%
+  oracle_rest_K10      0.8812         -0.0741 +- 0.0133        -166%
+  kswitch_K10          0.9502         -0.0051 +- 0.0022         -11%
+  oracle_waist_K30     0.9987         +0.0435 +- 0.0023         +97%
+  oracle_rest_K30      0.8706         -0.0847 +- 0.0150        -189%
+  kswitch_K30          0.9546         -0.0006 +- 0.0009          -1%
+  oracle_waist_K100    0.9998         +0.0446 +- 0.0022        +100%
+  oracle_rest_K100     0.8675         -0.0878 +- 0.0156        -196%
+  kswitch_K100         0.9556         +0.0004 +- 0.0002          +1%
+  ours_wsmacof         0.9740         +0.0188 +- 0.0022         +42%

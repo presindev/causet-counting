@@ -1,0 +1,39 @@
+n = 3000, 3 universes, seed 3031. (A) spatial corr on core pairs; (B) local charts: 20 per universe, M = 40 nearest by profile distance, base events in the f = 0.02 core; every arm scored on the same within-chart pairs. Paired vs Johnston.
+  univ 1 f = 0.02: core 309/2940 (r <= 0.34, t in [0.39, 0.59]): johnston 0.9931 switch 0.9928 ours 0.9821 w_K30 0.9920 w_K100 0.9935
+  univ 1 f = 0.04: core 41/2940 (r <= 0.22, t in [0.46, 0.54]): johnston 0.9856 switch 0.9867 ours 0.9884 w_K30 0.9933 w_K100 0.9939
+  univ 1 local: 7 charts ok, 13 without anchors; validation (true D) min corr 1.000000; Gram cond median 719; median true pair distance 0.151; johnston 0.970/0.065 switch 0.970/0.069 ours 0.947/0.107 w_K30 0.980/0.068 w_K100 0.984/0.066 madsen 0.606/0.252 madsen_avg 0.641/0.212  (corr/median rel. err)
+  universe 1: 30 s (Johnston 18 s, all global maps 29 s, local charts 0 s)
+  univ 2 f = 0.02: core 283/3048 (r <= 0.31, t in [0.38, 0.60]): johnston 0.9937 switch 0.9937 ours 0.9767 w_K30 0.9936 w_K100 0.9949
+  univ 2 f = 0.04: core 37/3048 (r <= 0.20, t in [0.45, 0.54]): johnston 0.9820 switch 0.9823 ours 0.9777 w_K30 0.9925 w_K100 0.9933
+  univ 2 local: 8 charts ok, 12 without anchors; validation (true D) min corr 1.000000; Gram cond median 822; median true pair distance 0.144; johnston 0.978/0.057 switch 0.978/0.058 ours 0.953/0.086 w_K30 0.989/0.045 w_K100 0.991/0.043 madsen 0.395/0.358 madsen_avg 0.397/0.372  (corr/median rel. err)
+  universe 2: 35 s (Johnston 22 s, all global maps 35 s, local charts 0 s)
+  univ 3 f = 0.02: core 316/2914 (r <= 0.34, t in [0.39, 0.61]): johnston 0.9925 switch 0.9914 ours 0.9731 w_K30 0.9921 w_K100 0.9935
+  univ 3 f = 0.04: core 47/2914 (r <= 0.22, t in [0.45, 0.55]): johnston 0.9859 switch 0.9857 ours 0.9751 w_K30 0.9899 w_K100 0.9910
+  univ 3 local: 6 charts ok, 14 without anchors; validation (true D) min corr 1.000000; Gram cond median 971; median true pair distance 0.156; johnston 0.975/0.069 switch 0.971/0.076 ours 0.928/0.103 w_K30 0.979/0.078 w_K100 0.982/0.071 madsen 0.557/0.300 madsen_avg 0.383/0.437  (corr/median rel. err)
+  universe 3: 28 s (Johnston 18 s, all global maps 28 s, local charts 0 s)
+
+(A) n = 3000, f = 0.02: 3 universes; core size 303 of ~3000 (max radius 0.33 of 0.5; t 0.39-0.60)
+  arm          core spatial corr   vs johnston (paired)   share of his core residual
+  johnston     0.9931              +0.0000 +- 0.0000         +0%
+  switch       0.9927              -0.0004 +- 0.0004         -6%
+  ours         0.9773              -0.0158 +- 0.0025       -229%
+  w_K30        0.9926              -0.0005 +- 0.0003         -8%
+  w_K100       0.9940              +0.0009 +- 0.0002        +13%
+
+(A) n = 3000, f = 0.04: 3 universes; core size 42 of ~3000 (max radius 0.21 of 0.5; t 0.45-0.54)
+  arm          core spatial corr   vs johnston (paired)   share of his core residual
+  johnston     0.9845              +0.0000 +- 0.0000         +0%
+  switch       0.9849              +0.0004 +- 0.0004         +2%
+  ours         0.9804              -0.0041 +- 0.0039        -27%
+  w_K30        0.9919              +0.0074 +- 0.0019        +48%
+  w_K100       0.9928              +0.0082 +- 0.0018        +53%
+
+(B) n = 3000, local charts (M = 40, pooled within-chart pairs, 3 universes): Madsen validation with true intervals min corr 1.000000; Gram cond median 822; charts without anchors 39; median true pair distance 0.150
+  arm          local corr   vs johnston (paired)   share of his local residual   median rel. error
+  johnston     0.9743       +0.0000 +- 0.0000         +0%                   0.064
+  switch       0.9730       -0.0014 +- 0.0009         -5%                   0.068
+  ours         0.9427       -0.0316 +- 0.0078       -123%                   0.099
+  w_K30        0.9828       +0.0084 +- 0.0022        +33%                   0.064
+  w_K100       0.9856       +0.0113 +- 0.0019        +44%                   0.060
+  madsen       0.5192       -0.4552 +- 0.0659       -1773%                   0.303
+  madsen_avg   0.4739       -0.5005 +- 0.0858       -1949%                   0.340

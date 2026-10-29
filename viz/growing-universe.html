@@ -1,0 +1,278 @@
+<title>Growing Universe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: the growing causal set as the hero, an instrument panel beside it, the constraint checklist below. */
+  :root {
+    --bg: #f5f6f8; --panel: #ffffff; --ink: #1a1f2b; --muted: #5b6474; --faint: #c3c9d3; --rule: #e2e6ed;
+    --a: #008a7c; --b: #c2610c; --link: rgba(26, 31, 43, 0.16);
+    --font-display: "Spectral", Georgia, serif;
+    --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171d; --panel: #1b1f27; --ink: #e7eaf0; --muted: #9aa3b2; --faint: #4a5261; --rule: #2a303b;
+      --a: #1d9e8f; --b: #d07a2a; --link: rgba(231, 234, 240, 0.14); color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171d; --panel: #1b1f27; --ink: #e7eaf0; --muted: #9aa3b2; --faint: #4a5261; --rule: #2a303b;
+    --a: #1d9e8f; --b: #d07a2a; --link: rgba(231, 234, 240, 0.14); color-scheme: dark;
+  }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+  .wrap {
+    max-width: 1180px; margin: 0 auto; padding-block: 28px 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: grid; gap: 24px;
+  }
+  header { display: grid; gap: 6px; max-width: 72ch; }
+  .eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px, 4vw, 40px); line-height: 1.1; margin: 0; text-wrap: balance; }
+  header p { margin: 0; color: var(--muted); }
+  .stage { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 20px; align-items: start; }
+  @media (max-width: 860px) { .stage { grid-template-columns: minmax(0, 1fr); } }
+  .figure { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; min-width: 0; }
+  canvas { display: block; width: 100%; aspect-ratio: 4 / 3; max-width: 100%; }
+  .note { font-size: 12.5px; color: var(--muted); padding: 6px 4px 0; }
+  .panel { display: grid; gap: 16px; min-width: 0; }
+  .control { display: grid; gap: 4px; }
+  .control label { display: flex; justify-content: space-between; font-weight: 500; font-size: 14px; }
+  .control output { font-family: var(--font-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .control small { color: var(--muted); font-size: 12.5px; }
+  input[type="range"] { width: 100%; accent-color: var(--a); }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); border-radius: 5px; overflow: hidden; }
+  .seg button { border: 0; border-radius: 0; }
+  .seg button[aria-pressed="true"] { background: var(--a); color: #fff; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; }
+  button {
+    font: inherit; font-size: 14px; padding: 6px 12px; border-radius: 5px; cursor: pointer;
+    border: 1px solid var(--rule); background: var(--panel); color: var(--ink);
+  }
+  button:hover { border-color: var(--muted); }
+  button.primary { background: var(--a); border-color: var(--a); color: #fff; }
+  input:focus-visible, button:focus-visible { outline: 2px solid var(--a); outline-offset: 2px; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; border-top: 1px solid var(--rule); padding-top: 14px; }
+  .stat { display: grid; gap: 0; }
+  .stat .v { font-family: var(--font-mono); font-size: 24px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .stat .k { font-size: 12.5px; color: var(--muted); }
+  .chart h3 { font-size: 13px; font-weight: 600; margin: 0 0 4px; }
+  .chart svg { width: 100%; height: auto; display: block; }
+  .checklist { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+  .item { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; align-items: start; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 12px; min-width: 0; }
+  .pill { font-family: var(--font-mono); font-size: 11px; padding: 2px 7px; border-radius: 999px; white-space: nowrap; border: 1px solid currentColor; }
+  .pill.yes { color: var(--a); }
+  .pill.part { color: var(--b); }
+  .pill.no { color: var(--muted); }
+  .item h4 { margin: 0; font-size: 14.5px; }
+  .item p { grid-column: 2; margin: 0; font-size: 13.5px; color: var(--muted); }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Physics notebook · toy model stage 1 · classical sequential growth</span>
+    <h1>A universe that creates its own events</h1>
+    <p>Events are born one at a time. Each newborn picks some existing events as its direct causes and inherits their whole past. Nothing else exists: no space, no clock. Height is cosmic time, the longest chain of causes back to the first event. The width of each row is how many events share that cosmic time.</p>
+  </header>
+
+  <section class="stage">
+    <div class="figure">
+      <canvas id="cs" role="img" aria-label="Growing causal set drawn by cosmic time, with links between events"></canvas>
+      <div class="note">Vertical position is cosmic time, computed from the order alone. Horizontal position is only a drawing choice; the number of events in a row is what is real.</div>
+    </div>
+
+    <aside class="panel">
+      <div class="control">
+        <label>Growth rule</label>
+        <div class="seg" role="group" aria-label="Growth rule">
+          <button id="ruleConst" type="button" aria-pressed="false">Fixed p</button>
+          <button id="ruleExp" type="button" aria-pressed="true">p = c / n</button>
+        </div>
+        <small id="ruleHelp"></small>
+      </div>
+      <div class="control">
+        <label for="c">Coupling c <output id="cOut"></output></label>
+        <input id="c" type="range" min="0.5" max="6" step="0.1" value="3">
+      </div>
+      <div class="row">
+        <button id="play" class="primary" type="button">Pause</button>
+        <button id="step" type="button">+50 events</button>
+        <button id="reset" type="button">New universe</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span class="v" id="sN">0</span><span class="k">events created</span></div>
+        <div class="stat"><span class="v" id="sT">0</span><span class="k">cosmic time (layers)</span></div>
+        <div class="stat"><span class="v" id="sL">0</span><span class="k">mean past neighbours</span></div>
+        <div class="stat"><span class="v" id="sM">0</span><span class="k">most neighbours</span></div>
+      </div>
+
+      <div class="chart">
+        <h3>Size of the universe vs cosmic time</h3>
+        <svg id="chart" viewBox="0 0 300 150" role="img" aria-label="Number of events per layer against layer index"></svg>
+        <div class="note">The last rows are still filling in: that is the present, where events are being born.</div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="checklist" aria-label="Constraints">
+    <div class="item"><span class="pill yes">yes</span><h4>1 · Discrete spacetime</h4><p>Only events and who-caused-whom. Nothing in between.</p></div>
+    <div class="item"><span class="pill yes">yes</span><h4>2 · Finite non-locality</h4><p>Each event has a handful of direct neighbours, because this universe is finite and still small.</p></div>
+    <div class="item"><span class="pill part">partly</span><h4>3 · A cosmological frame</h4><p>Cosmic time is defined by counting alone, the longest chain back to the beginning, as in the GR "cosmological time function". It is the frame of the whole universe. It is not yet tied to matter or the CMB.</p></div>
+    <div class="item"><span class="pill no">not yet</span><h4>4 · Newton and Einstein from far away</h4><p>Next stage: compute the causal-set curvature (Benincasa–Dowker action) on these universes and compare with an expanding GR universe.</p></div>
+    <div class="item"><span class="pill part">partly</span><h4>5 · Creation of events</h4><p>Growth is creation, and the "p = c / n" rule makes the universe expand from a single first event. Caveat: that rule uses the birth order as a hidden clock, which the fully covariant rules forbid.</p></div>
+    <div class="item"><span class="pill no">not yet</span><h4>6 · Quantum links</h4><p>Here growth uses probabilities. The quantum version replaces them with amplitudes, so different growth histories interfere.</p></div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const NMAX = 700;
+  const $ = (id) => document.getElementById(id);
+  const canvas = $("cs"), ctx = canvas.getContext("2d");
+  let rule = "exp", c = 3, seed = 7, rnd;
+  let N, height, past, links, layerOf, xpos, running = true, raf = 0, last = 0;
+
+  function mulberry32(a) {
+    return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  }
+
+  function reset() {
+    rnd = mulberry32(seed);
+    N = 1; height = [0]; past = [new Uint8Array(NMAX)]; links = [[]]; xpos = [0];
+  }
+
+  function pAt(n) { return rule === "exp" ? Math.min(1, c / n) : Math.min(1, c / 150); }
+
+  function birth() {
+    if (N >= NMAX) return false;
+    const j = N, p = pAt(j);
+    let parents;
+    do { parents = []; for (let i = 0; i < j; i++) if (rnd() < p) parents.push(i); } while (parents.length === 0);
+    const pj = new Uint8Array(NMAX);
+    let h = -1;
+    for (const i of parents) {
+      pj[i] = 1; const pi = past[i];
+      for (let k = 0; k < j; k++) if (pi[k]) pj[k] = 1;
+      if (height[i] > h) h = height[i];
+    }
+    // direct neighbours = chosen causes that are not already in the past of another chosen cause
+    const lk = parents.filter((i) => !parents.some((k) => k !== i && past[k][i]));
+    past.push(pj); height.push(h + 1); links.push(lk);
+    xpos.push(lk.reduce((s, i) => s + xpos[i], 0) / lk.length);
+    N++;
+    return true;
+  }
+
+  function layout() {
+    const T = Math.max(...height) + 1;
+    const rows = Array.from({ length: T }, () => []);
+    for (let i = 0; i < N; i++) rows[height[i]].push(i);
+    for (const row of rows) {
+      row.sort((a, b) => xpos[a] - xpos[b]);
+      const w = row.length;
+      row.forEach((i, k) => { xpos[i] = w === 1 ? 0 : (k - (w - 1) / 2) / Math.max(w - 1, 1) * Math.sqrt(w); });
+    }
+    return rows;
+  }
+
+  function tok(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+
+  function draw() {
+    const rows = layout();
+    const dpr = window.devicePixelRatio || 1, W = canvas.clientWidth, H = canvas.clientHeight;
+    if (canvas.width !== Math.round(W * dpr)) { canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr); }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+    const T = rows.length, maxw = Math.max(...rows.map((r) => Math.sqrt(r.length)), 1);
+    const padY = 24, padX = 24;
+    const sx = (W / 2 - padX) / (maxw / 2 + 0.5), sy = (H - 2 * padY) / Math.max(T - 1, 1);
+    const P = (i) => [W / 2 + xpos[i] * sx, H - padY - height[i] * sy];
+
+    ctx.strokeStyle = tok("--link"); ctx.lineWidth = 1;
+    ctx.beginPath();
+    for (let j = 1; j < N; j++) { const [x2, y2] = P(j); for (const i of links[j]) { const [x1, y1] = P(i); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); } }
+    ctx.stroke();
+
+    const A = tok("--a"), B = tok("--b"), panel = tok("--panel"), ink = tok("--ink");
+    const r = Math.max(1.8, Math.min(4, 260 / Math.sqrt(N)));
+    for (let i = 0; i < N; i++) {
+      const [x, y] = P(i);
+      ctx.beginPath(); ctx.arc(x, y, r + 1, 0, 7); ctx.fillStyle = panel; ctx.fill();
+      ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fillStyle = i === N - 1 ? B : A; ctx.fill();
+    }
+    const [lx, ly] = P(N - 1);
+    ctx.strokeStyle = B; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(lx, ly, r + 5, 0, 7); ctx.stroke();
+    const [ox, oy] = P(0);
+    ctx.fillStyle = ink; ctx.font = "500 12px " + tok("--font-body"); ctx.textAlign = "left";
+    ctx.fillText("first event", ox + 10, oy + 4);
+
+    const nl = links.slice(1).map((l) => l.length);
+    $("sN").textContent = N;
+    $("sT").textContent = T;
+    $("sL").textContent = nl.length ? (nl.reduce((a, b) => a + b, 0) / nl.length).toFixed(2) : "0";
+    $("sM").textContent = nl.length ? Math.max(...nl) : 0;
+    drawChart(rows.map((r) => r.length));
+  }
+
+  function drawChart(sizes) {
+    const svg = $("chart"), w = 300, h = 150, ml = 32, mr = 8, mt = 8, mb = 24;
+    const T = sizes.length, ymax = Math.max(10, Math.ceil(Math.max(...sizes) / 10) * 10);
+    const bw = (w - ml - mr) / Math.max(T, 1);
+    const ly = (v) => h - mb - (v / ymax) * (h - mt - mb);
+    let out = "";
+    [0, ymax / 2, ymax].forEach((v) => {
+      out += `<line x1="${ml}" x2="${w - mr}" y1="${ly(v)}" y2="${ly(v)}" stroke="var(--rule)"/>`;
+      out += `<text x="${ml - 5}" y="${ly(v) + 4}" text-anchor="end" font-size="10" fill="var(--muted)" font-family="var(--font-mono)">${v}</text>`;
+    });
+    const frontier = Math.max(0, T - 4);
+    sizes.forEach((s, k) => {
+      const x = ml + k * bw, y = ly(s);
+      out += `<rect x="${(x + 0.5).toFixed(1)}" y="${y.toFixed(1)}" width="${Math.max(bw - 1, 0.5).toFixed(1)}" height="${(h - mb - y).toFixed(1)}" rx="1" fill="${k >= frontier ? "var(--faint)" : "var(--a)"}"><title>cosmic time ${k}: ${s} events</title></rect>`;
+    });
+    out += `<text x="${w - mr}" y="${h - 6}" text-anchor="end" font-size="10" fill="var(--muted)">cosmic time →</text>`;
+    out += `<text x="${ml}" y="${h - 6}" font-size="10" fill="var(--muted)">0</text>`;
+    svg.innerHTML = out;
+  }
+
+  function loop(t) {
+    if (running && t - last > 30) {
+      last = t;
+      const k = N < 100 ? 1 : 3;
+      for (let i = 0; i < k; i++) if (!birth()) { running = false; $("play").textContent = "Play"; break; }
+      draw();
+    }
+    raf = requestAnimationFrame(loop);
+  }
+
+  function setRule(r) {
+    rule = r;
+    $("ruleConst").setAttribute("aria-pressed", r === "const");
+    $("ruleExp").setAttribute("aria-pressed", r === "exp");
+    $("ruleHelp").textContent = r === "exp"
+      ? "Each newborn links to about c earlier events on average. The universe expands from a single first event."
+      : "Every pair is linked with the same probability p = c/150. The universe reaches a fixed size and stays there.";
+    reset(); draw();
+  }
+
+  $("ruleConst").addEventListener("click", () => setRule("const"));
+  $("ruleExp").addEventListener("click", () => setRule("exp"));
+  $("c").addEventListener("input", (e) => { c = +e.target.value; $("cOut").textContent = c.toFixed(1); });
+  $("play").addEventListener("click", () => {
+    if (N >= NMAX) { reset(); }
+    running = !running; $("play").textContent = running ? "Pause" : "Play";
+  });
+  $("step").addEventListener("click", () => { for (let i = 0; i < 50; i++) birth(); draw(); });
+  $("reset").addEventListener("click", () => { seed = (seed * 1103515245 + 12345) >>> 0; reset(); running = true; $("play").textContent = "Pause"; draw(); });
+  new ResizeObserver(() => draw()).observe(canvas);
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => draw());
+  new MutationObserver(() => draw()).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+  $("cOut").textContent = c.toFixed(1);
+  setRule("exp");
+  for (let i = 0; i < 120; i++) birth();
+  draw();
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { running = false; $("play").textContent = "Play"; }
+  raf = requestAnimationFrame(loop);
+})();
+</script>

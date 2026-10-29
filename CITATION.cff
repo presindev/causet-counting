@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code or notebook, please cite the paper (preferred) or this repository."
+title: "Geometry by counting in causal sets: research notebook and code"
+authors:
+  - family-names: Bada
+    given-names: Roberto
+    affiliation: "SapereIA; Institute of Cosmos Sciences, University of Barcelona (ICCUB)"
+    email: roberto@sapereia.com
+repository-code: "https://github.com/presindev/causet-counting"
+license: MIT
+date-released: 2026-10-29
+keywords:
+  - causal sets
+  - quantum gravity
+  - spacetime reconstruction
+  - AI-assisted research
+preferred-citation:
+  type: article
+  title: "Geometry by counting in causal sets: exact 1+1 tools, and spatial distances in 3+1"
+  authors:
+    - family-names: Bada
+      given-names: Roberto
+  year: 2026
+  notes: "arXiv identifier to be added"

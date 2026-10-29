@@ -1,0 +1,8 @@
+Johnston 2025 set-up: 4D interval (0,0)-(1,0) with v1, vn added; n sprinkled; all pairs. Correlation of estimated vs true squared Minkowski intervals.
+  n = 500: all pairs 0.5609 +- 0.0282; spacelike only 0.5072; no estimate 8.18% of pairs   (Johnston Table IV d=4: 0.9578 / 0.9771 / 0.9851)
+  n = 1000: all pairs 0.6025 +- 0.0296; spacelike only 0.5539; no estimate 4.44% of pairs   (Johnston Table IV d=4: 0.9578 / 0.9771 / 0.9851)
+  n = 1500: all pairs 0.6425 +- 0.0266; spacelike only 0.5902; no estimate 3.27% of pairs   (Johnston Table IV d=4: 0.9578 / 0.9771 / 0.9851)
+after 1+3 Lorentzian MDS of the estimated intervals (unestimated pairs set to 0); correlations of embedded vs true squared intervals, and of spatial distances
+  n = 500: raw Pearson 0.506, raw Spearman 0.779 | embedded: Minkowski 0.3616 (Johnston 0.958/0.977/0.985), spatial 0.3792 (Johnston 0.789/0.887/0.928)
+  n = 1000: raw Pearson 0.575, raw Spearman 0.854 | embedded: Minkowski 0.4634 (Johnston 0.958/0.977/0.985), spatial 0.5078 (Johnston 0.789/0.887/0.928)
+  n = 1500: raw Pearson 0.635, raw Spearman 0.885 | embedded: Minkowski 0.5773 (Johnston 0.958/0.977/0.985), spatial 0.6406 (Johnston 0.789/0.887/0.928)

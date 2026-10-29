@@ -1,0 +1,13 @@
+(c) holdout (fresh seed 2026): fit to related + close ours (w=1) + far ours (w_far). Spatial / Minkowski corr; paired spatial difference vs Johnston
+  n = 1500 (5 univ.)
+    johnston               0.9181 / 0.9230   (+0.0000 +- 0.0000)   per universe +0.000 +0.000 +0.000 +0.000 +0.000
+    switch                 0.9318 / 0.9369   (+0.0137 +- 0.0026)   per universe +0.014 +0.011 +0.024 +0.011 +0.009
+    w_far=0.1              0.9242 / 0.9212   (+0.0061 +- 0.0069)   per universe -0.016 +0.003 +0.009 +0.006 +0.028
+    w_far=0.2              0.9234 / 0.9201   (+0.0053 +- 0.0070)   per universe -0.017 +0.004 +0.009 +0.005 +0.026
+    w_far=0.1, no detour   0.9264 / 0.9243   (+0.0083 +- 0.0071)   per universe -0.016 +0.002 +0.014 +0.015 +0.026
+  n = 3000 (3 univ.)
+    johnston               0.9567 / 0.9568   (+0.0000 +- 0.0000)   per universe +0.000 +0.000 +0.000
+    switch                 0.9620 / 0.9626   (+0.0053 +- 0.0007)   per universe +0.004 +0.007 +0.005
+    w_far=0.1              0.9589 / 0.9541   (+0.0023 +- 0.0025)   per universe -0.001 +0.001 +0.007
+    w_far=0.2              0.9592 / 0.9537   (+0.0026 +- 0.0028)   per universe -0.003 +0.004 +0.007
+    w_far=0.1, no detour   0.9609 / 0.9566   (+0.0042 +- 0.0017)   per universe +0.001 +0.006 +0.006

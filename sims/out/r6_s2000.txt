@@ -1,0 +1,29 @@
+samples per cell 2000, seed 1
+ n  Htau |  g2 (c2: ordering fraction)   g3          | mean K - target (per mu), in units of sd(K)/sqrt(samples) | intervals for 3 sigma: K(mu best)  c2
+/Users/presindev/dev/personal/physics/sims/r6_curvature_fixed_n.py:65: RuntimeWarning: divide by zero encountered in matmul
+  Ks = {mu: 0.5 * cs @ (-mu / 2) ** np.arange(kmax + 1) for mu in MUS}
+/Users/presindev/dev/personal/physics/sims/r6_curvature_fixed_n.py:65: RuntimeWarning: overflow encountered in matmul
+  Ks = {mu: 0.5 * cs @ (-mu / 2) ** np.arange(kmax + 1) for mu in MUS}
+/Users/presindev/dev/personal/physics/sims/r6_curvature_fixed_n.py:65: RuntimeWarning: invalid value encountered in matmul
+  Ks = {mu: 0.5 * cs @ (-mu / 2) ** np.arange(kmax + 1) for mu in MUS}
+ 10 0.00 | -0.0048±0.0056  -0.0119±0.0141 | -0.0000 ( -0.9σ)  -0.0004 ( -0.8σ)  -0.0018 ( -0.8σ) |     24531      24350
+ 10 0.25 | +0.0021±0.0056  +0.0091±0.0143 | +0.0000 ( +0.4σ)  +0.0002 ( +0.3σ)  +0.0004 ( +0.2σ) |    138105     126034
+ 10 0.50 | +0.0051±0.0055  +0.0053±0.0139 | +0.0000 ( +0.9σ)  +0.0005 ( +1.0σ)  +0.0027 ( +1.2σ) |     13046      21355
+ 10 1.00 | +0.0332±0.0055  +0.0759±0.0145 | +0.0002 ( +6.1σ)  +0.0030 ( +6.1σ)  +0.0135 ( +6.1σ) |       477        487
+ 10 2.00 | +0.0892±0.0055  +0.2138±0.0157 | +0.0006 (+16.3σ)  +0.0081 (+16.6σ)  +0.0351 (+16.7σ) |        65         68
+ 30 0.00 | -0.0027±0.0029  -0.0038±0.0068 | -0.0002 ( -1.0σ)  -0.0020 ( -1.3σ)  -0.0067 ( -2.1σ) |      3937      20242
+ 30 0.25 | +0.0017±0.0029  +0.0038±0.0068 | +0.0001 ( +0.6σ)  +0.0009 ( +0.6σ)  +0.0019 ( +0.6σ) |     51690      52793
+ 30 0.50 | -0.0001±0.0029  +0.0004±0.0069 | -0.0000 ( -0.1σ)  -0.0002 ( -0.1σ)  -0.0000 ( -0.0σ) |   1630019    8844833
+ 30 1.00 | +0.0293±0.0029  +0.0681±0.0071 | +0.0017 (+10.2σ)  +0.0144 ( +9.9σ)  +0.0159 ( +5.3σ) |       175        175
+ 30 2.00 | +0.1000±0.0029  +0.2408±0.0077 | +0.0056 (+35.0σ)  +0.0476 (+35.4σ)  +0.0451 (+17.5σ) |        14         15
+/Users/presindev/dev/personal/physics/sims/r6_curvature_fixed_n.py:46: RuntimeWarning: divide by zero encountered in matmul
+  ends = ends @ C                              # chains of length k ending at j
+/Users/presindev/dev/personal/physics/sims/r6_curvature_fixed_n.py:46: RuntimeWarning: overflow encountered in matmul
+  ends = ends @ C                              # chains of length k ending at j
+/Users/presindev/dev/personal/physics/sims/r6_curvature_fixed_n.py:46: RuntimeWarning: invalid value encountered in matmul
+  ends = ends @ C                              # chains of length k ending at j
+ 60 0.00 | +0.0037±0.0020  +0.0068±0.0046 | +0.0008 ( +2.0σ)  +0.0040 ( +2.3σ)  -0.0040 ( -1.0σ) |      3511       5129
+ 60 0.25 | -0.0007±0.0019  -0.0016±0.0046 | -0.0001 ( -0.3σ)  -0.0000 ( -0.0σ)  +0.0043 ( +1.1σ) |     14594     143908
+ 60 0.50 | +0.0087±0.0020  +0.0193±0.0047 | +0.0017 ( +4.4σ)  +0.0066 ( +3.8σ)  -0.0078 ( -2.0σ) |       923        938
+ 60 1.00 | +0.0288±0.0019  +0.0655±0.0047 | +0.0055 (+15.0σ)  +0.0207 (+12.5σ)  -0.0252 ( -7.0σ) |        80         82
+ 60 2.00 | +0.0963±0.0020  +0.2345±0.0054 | +0.0177 (+48.3σ)  +0.0575 (+40.3σ)  -0.0751 (-24.1σ) |         8          8

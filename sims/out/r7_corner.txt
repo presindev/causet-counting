@@ -1,0 +1,10 @@
+quadrature: A, 2 int (1-A_x) e^{-A_x}, prediction 2(1 - e^{-A})
+  A=  0.5: 0.78694   0.78694
+  A=    2: 1.72933   1.72933
+  A=    8: 1.99933   1.99933
+  A=   50: 1.99997   2.00000
+sprinklings (400 seeds each): mean BD action of a diamond, expected -> 2 (BDJS) with finite-size 2 e^{-A}
+  <N>=   5: <S> = +1.695 +- 0.515   prediction 1.987
+  <N>=  50: <S> = +3.620 +- 4.329   prediction 2.000
+  <N>= 200: <S> = -10.055 +- 11.879   prediction 2.000
+  <N>= 800: <S> = +10.225 +- 30.489   prediction 2.000

@@ -1,0 +1,24 @@
+n = 1000 (1 universes; points 1012)
+  johnston     spatial 0.8565  Minkowski 0.8618   vs johnston +0.0000 +- nan
+  ours         spatial 0.7174  Minkowski 0.7149   vs johnston -0.1391 +- nan
+  ours_capped  spatial 0.6681  Minkowski 0.6715   vs johnston -0.1884 +- nan
+  switch0.20   spatial 0.8664  Minkowski 0.8714   vs johnston +0.0098 +- nan
+  switch0.25   spatial 0.8731  Minkowski 0.8781   vs johnston +0.0166 +- nan
+  switch0.30   spatial 0.8754  Minkowski 0.8805   vs johnston +0.0188 +- nan
+  timing (s, mean): his min-plus 3 | our step 1 | shared C@C 0 + eigh 0 | fallback share 7.0e-02
+n = 3000 (2 universes; points 3020, 2983)
+  johnston     spatial 0.9515  Minkowski 0.9521   vs johnston +0.0000 +- 0.0000
+  ours         spatial 0.8211  Minkowski 0.8018   vs johnston -0.1304 +- 0.0344
+  ours_capped  spatial 0.9066  Minkowski 0.9095   vs johnston -0.0449 +- 0.0054
+  switch0.20   spatial 0.9579  Minkowski 0.9587   vs johnston +0.0064 +- 0.0008
+  switch0.25   spatial 0.9599  Minkowski 0.9610   vs johnston +0.0084 +- 0.0014
+  switch0.30   spatial 0.9594  Minkowski 0.9608   vs johnston +0.0079 +- 0.0024
+  timing (s, mean): his min-plus 101 | our step 14 | shared C@C 0 + eigh 4 | fallback share 1.9e-02
+n = 6000 (4 universes; points 6027, 5975, 5924, 5906)
+  johnston     spatial 0.9752  Minkowski 0.9744   vs johnston +0.0000 +- 0.0000
+  ours         spatial 0.9120  Minkowski 0.9065   vs johnston -0.0632 +- 0.0022
+  ours_capped  spatial 0.9396  Minkowski 0.9380   vs johnston -0.0355 +- 0.0060
+  switch0.20   spatial 0.9786  Minkowski 0.9782   vs johnston +0.0034 +- 0.0003
+  switch0.25   spatial 0.9801  Minkowski 0.9802   vs johnston +0.0049 +- 0.0004
+  switch0.30   spatial 0.9799  Minkowski 0.9803   vs johnston +0.0047 +- 0.0003
+  timing (s, mean): his min-plus 898 | our step 65 | shared C@C 3 + eigh 30 | fallback share 9.3e-03

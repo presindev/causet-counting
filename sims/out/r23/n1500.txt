@@ -1,0 +1,8 @@
+  universe 1 (33 s): johnston 0.9249  switch 0.9359  w_K100 0.9628  likelihood 0.9692   loglik 1:-21334209 100:-21307391 200:-21305509 300:-21305336 400:-21305280
+  universe 2 (32 s): johnston 0.9183  switch 0.9292  w_K100 0.9680  likelihood 0.9709   loglik 1:-21864799 100:-21845349 200:-21845180 300:-21845170 400:-21845169
+  universe 3 (34 s): johnston 0.9274  switch 0.9357  w_K100 0.9754  likelihood 0.9783   loglik 1:-22990750 100:-22974217 200:-22974197 300:-22974196 400:-22974195
+n = 1500 (3 univ., seed 7070, 400 iterations)
+  johnston   spatial corr 0.9235   vs johnston +0.0000 +- 0.0000   (+0 % of his residual)
+  switch     spatial corr 0.9336   vs johnston +0.0101 +- 0.0009   (+13 % of his residual)
+  w_K100     spatial corr 0.9687   vs johnston +0.0452 +- 0.0037   (+59 % of his residual)
+  likelihood spatial corr 0.9728   vs johnston +0.0493 +- 0.0025   (+64 % of his residual)

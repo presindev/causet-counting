@@ -1,0 +1,3 @@
+his r / true, related: median 1.051  (mean 1.093)
+his r / true, spacelike: median 1.035  (mean 1.080)
+ours spatial / true, spacelike: median 0.966

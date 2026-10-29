@@ -1,0 +1,71 @@
+
+######## screen = full: 2451 possible views of the last newborn (N = 8), 1.2 s
+  -- k = 3: 5 alternatives.   setting: coherence | exactly decohered pairs | rank | Q_eff bits
+     beta=   0.0: 0.745 | 0.000 |    5 | 0.99
+     beta=   4.0: 0.640 | 0.000 |    5 | 1.27
+     beta=   7.0: 0.268 | 0.000 |    5 | 1.97
+     beta=   8.0: 0.207 | 0.000 |    5 | 2.13
+     beta=  12.0: 0.480 | 0.000 |    5 | 1.67
+     beta=random: 0.243 | 0.000 |    5 | 2.03
+  -- k = 4: 16 alternatives.   setting: coherence | exactly decohered pairs | rank | Q_eff bits
+     beta=   0.0: 0.638 | 0.000 |   16 | 1.75
+     beta=   4.0: 0.538 | 0.000 |   16 | 2.14
+     beta=   7.0: 0.254 | 0.000 |   16 | 3.09
+     beta=   8.0: 0.204 | 0.000 |   16 | 3.32
+     beta=  12.0: 0.381 | 0.000 |   16 | 2.81
+     beta=random: 0.162 | 0.000 |   16 | 3.64
+  -- k = 5: 63 alternatives.   setting: coherence | exactly decohered pairs | rank | Q_eff bits
+     beta=   0.0: 0.547 | 0.000 |   63 | 2.57
+     beta=   4.0: 0.469 | 0.000 |   63 | 2.96
+     beta=   7.0: 0.250 | 0.000 |   63 | 4.07
+     beta=   8.0: 0.212 | 0.000 |   63 | 4.33
+     beta=  12.0: 0.338 | 0.000 |   63 | 3.83
+     beta=random: 0.152 | 0.000 |   63 | 5.07
+
+######## screen = coarse: 29 possible views of the last newborn (N = 8), 1.8 s
+  -- k = 3: 5 alternatives.   setting: coherence | exactly decohered pairs | rank | Q_eff bits
+     beta=   0.0: 0.890 | 0.000 |    5 | 0.52
+     beta=   4.0: 0.893 | 0.000 |    5 | 0.51
+     beta=   7.0: 0.503 | 0.000 |    5 | 1.45
+     beta=   8.0: 0.442 | 0.000 |    5 | 1.71
+     beta=  12.0: 0.604 | 0.000 |    5 | 1.44
+     beta=random: 0.283 | 0.000 |    5 | 2.02
+  -- k = 4: 16 alternatives.   setting: coherence | exactly decohered pairs | rank | Q_eff bits
+     beta=   0.0: 0.825 | 0.000 |   16 | 0.91
+     beta=   4.0: 0.831 | 0.000 |   16 | 0.93
+     beta=   7.0: 0.457 | 0.000 |   16 | 2.10
+     beta=   8.0: 0.407 | 0.000 |   16 | 2.37
+     beta=  12.0: 0.471 | 0.000 |   16 | 2.25
+     beta=random: 0.216 | 0.000 |   16 | 3.37
+  -- k = 5: 63 alternatives.   setting: coherence | exactly decohered pairs | rank | Q_eff bits
+     beta=   0.0: 0.751 | 0.000 |   22 | 1.31
+     beta=   4.0: 0.750 | 0.000 |   28 | 1.39
+     beta=   7.0: 0.433 | 0.000 |   28 | 2.49
+     beta=   8.0: 0.376 | 0.000 |   28 | 2.71
+     beta=  12.0: 0.429 | 0.000 |   28 | 2.69
+     beta=random: 0.220 | 0.000 |   29 | 3.99
+
+######## screen = links: 8 possible views of the last newborn (N = 8), 2.3 s
+  -- k = 3: 5 alternatives.   setting: coherence | exactly decohered pairs | rank | Q_eff bits
+     beta=   0.0: 0.992 | 0.000 |    5 | 0.05
+     beta=   4.0: 0.977 | 0.000 |    5 | 0.14
+     beta=   7.0: 0.919 | 0.000 |    5 | 0.40
+     beta=   8.0: 0.758 | 0.000 |    5 | 0.88
+     beta=  12.0: 0.865 | 0.000 |    5 | 0.59
+     beta=random: 0.393 | 0.000 |    5 | 1.68
+  -- k = 4: 16 alternatives.   setting: coherence | exactly decohered pairs | rank | Q_eff bits
+     beta=   0.0: 0.984 | 0.000 |    7 | 0.12
+     beta=   4.0: 0.967 | 0.000 |    8 | 0.22
+     beta=   7.0: 0.828 | 0.000 |    8 | 0.79
+     beta=   8.0: 0.741 | 0.000 |    8 | 1.08
+     beta=  12.0: 0.757 | 0.000 |    8 | 1.02
+     beta=random: 0.464 | 0.000 |    8 | 1.95
+  -- k = 5: 63 alternatives.   setting: coherence | exactly decohered pairs | rank | Q_eff bits
+     beta=   0.0: 0.971 | 0.000 |    7 | 0.20
+     beta=   4.0: 0.954 | 0.000 |    8 | 0.30
+     beta=   7.0: 0.830 | 0.000 |    8 | 0.83
+     beta=   8.0: 0.717 | 0.000 |    8 | 1.17
+     beta=  12.0: 0.718 | 0.000 |    8 | 1.21
+     beta=random: 0.489 | 0.000 |    8 | 1.98
+
+total 2.3 s
