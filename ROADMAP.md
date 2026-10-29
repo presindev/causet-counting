@@ -8,7 +8,9 @@ Effort: S = an afternoon on the laptop; M = a session plus a cluster job; L = se
 | What | Where | Status | Effort |
 |---|---|---|---|
 | F_N at N = 12 (stems 2–4) | cluster, `sims/cluster/fn_job.sh` with NMAX=12 | **Job 449963** (resubmit of 449948 after the lookup-table fix; --mem=200G). Prediction to test: weak-β 2-stem N·d ≈ 0.233 at N = 12 (idea 004, test 4c). N = 11 took 47 min and 6.1 GB on cn12 with 2.77 M states. A000112(12) = 4.9 × 10⁷ states, so expect ~110 GB and ~15–25 h. Needs `--mem=160G`, `--time=48:00:00`, and a fat node (cn01 or any 2 TB node). | M |
-| r25: slab vs diamond at EQUAL density, Poisson likelihood (idea 005) | cluster, `sims/cluster/r25_job.sh` | **Jobs 450431 (test) → 450432–450435** (diamond 1500/3000, slab 6000/12000, 4 univ. each; submitted session 13). Fills the slab placeholder in `paper/counting-full-v2.tex` Sec. 9.3 | S |
+| r25: slab vs diamond at EQUAL density, Poisson likelihood (idea 005) | cluster | **Done (session 14):** slab +58/+65 % vs diamond +75/+80 %; oracle wall closes the gap; in Sec. 9.3 | — |
+| r27: N = 800 held-out test of the layered flag (idea 005) | cluster, `sims/cluster/r27_job.sh` | **Job 450475** (after test 450473); threshold fixed beforehand z > 0.120 | S |
+| r28: clean timing on exclusive nodes (idea 005) | cluster, `sims/cluster/r28_job.sh` | **Job 450476** (after test 450474); for Sec. 9.5 | S |
 | Parallel tempering at N = 400 to locate β_c | cluster, new code | Needed: the cold chains are frozen (acceptance ≤ 0.001), so plain Metropolis can't cross. Literature fit β_c ≈ 1.66/(ε²N) = 0.094 is the target to confirm or refute. | M |
 | Screen test with covariant stems and a fixed per-event view budget; records per patch vs births | laptop N ≤ 9, then cluster | Designed in session 9, not run | M |
 | ~~J₂ curvature probe at fixed n~~ | laptop | **Done (session 10):** K at fixed n is no more sensitive than the related-pair share c₂ (g₂ ≈ 0.027 (Hτ)²); dropped as a claim (GRAVEYARD D8) | — |
@@ -87,3 +89,8 @@ which is a separate paper/note and does not block counting-full (session 13).**
 - Slab (laptop, n = 1500): +43 % all / +69 % interior; side-wall clipping costs about half (oracle +64 %); no wall correction (Roberto: diagnosis only). cluster r25 pending.
 - Paper: `paper/counting-full-v2.tex` (3+1 storyline rewritten; review ~80 %). Off-arXiv literature pass done: BK24 exact-inversion correction, Pellegrin/Rideout–Wallden/Huang credits.
 - Remaining before arXiv: r25 numbers; Roberto's items (affiliation details, AI statement, code URL, endorser); optional clean timing run; then the Boguñá email.
+
+## 8. Status after session 14 (2026-10-29)
+- r25 done (equal density: wall explains the whole slab gap). Roberto's paper items done; notebook public (github.com/presindev/causet-counting, `release/make_public.sh`).
+- Literature: 3+1 unequal-depth inversion and Google Scholar citers checked, nothing found; Johnston 2022 and Cunningham 2018 cited.
+- Boguñá e-mail sent; PRD assessment in `paper/REVIEW-PRD-2026-10-29.md` (refocus on 3+1 + per-pair error + one curved test, or CQG). Waiting: F_N, r27, r28, Boguñá.
