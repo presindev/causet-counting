@@ -331,3 +331,19 @@ conference abstract books, Bombelli 1987 and Meyer 1988 theses, Myrheim 1978, Br
 - **Rideout–Wallden 0810.1768, 0905.0017:** spacelike distance as a minimum over (w, z) in the common past/future; no overlap inversion.
 - **Boguñá, MG17 talk, 12 July 2024** (indico.icranet.org/event/8/contributions/1636): abstract only; nothing beyond BK24.
 - Verdict: our unequal-depth table remains a narrow extension of BK24, not found elsewhere. Not reached: Google Scholar, APS cited-by. — 005, paper v2
+
+## Session 14 (2026-10-29): Google Scholar cited-by lists (pasted by Roberto; previously the stated gap)
+- **Johnston 2025** (Scholar: 2 citers): Casasola 2026 (Research Square and a ResearchGate copy). Known. Madsen 2026 not yet on Scholar.
+- **BK24** (Scholar: 2): Shuman 2405.10574, 2405.11805. Known (INSPIRE has 7).
+- **Clough–Evans 2016/17** (Scholar: 49): mostly ML/network embedding (hyperbolic, pseudo-Riemannian: Sim 2021 known; Holbrook 2021 Bayesian MDS = likelihood MDS, same
+  family as Ramsay/Hoff, not causal sets). Causal-set items: Liu–Reid 2018 (known), Johnston 2022 (below), Cunningham 2018 (below), Xu 2607.26672 and AlMuhanna–Evans
+  2610.27025 (seen session 13, no threat), Evans talk slides (NetSci 2017 etc., Clough–Evans material). None calibrates the test or flags layered orders.
+- **Johnston, "Embedding causal sets into Minkowski spacetime", CQG (2022), arXiv:2111.09331 (FT grepped)** — SVD of causal-set inner products from interval volumes;
+  no spacelike distances as input, no likelihood, no layered detection. Predecessor of Johnston 2025 (which calls itself "similar … but simpler"). Not cited in v2: should be.
+- **Cunningham, "Inference of boundaries in causal sets", CQG 35 (2018), arXiv:1710.09705 (abstract + grep)** — 1+1: tells null from timelike boundaries from the order,
+  timelike boundary volume to 0.5 % (flat). Not a threat. Possible use [ours, untested]: an intrinsic estimate of the slab's side wall, i.e. the inside share our oracle
+  needed (paper: "a correction needs the shape of the region"). 1+1 only; 3+1 not shown.
+- **Casasola 2026** (Scholar: 0).
+- **Johnston 2008, citing articles searched for "Laguerre"** (Scholar: 1): Gorard 2023 arXiv:2303.07282, Laguerre polynomials as a numerical nodal basis (discontinuous
+  Galerkin), unrelated. Laguerre target still not found.
+- Verdict: nothing anticipates our claims. — 005, paper v2

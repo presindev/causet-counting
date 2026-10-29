@@ -4,6 +4,7 @@ switch numbers. python 3.6 + numpy 1.19 compatible. Start: count-weighted fit K0
 Saves after the start map and after the fit (lesson 22).
 Usage: python r24_cluster_lik.py n seed out.npz     |     python r24_cluster_lik.py analyse <r14 folder> <r24 folder>
 """
+import os
 import sys
 import glob
 import time
@@ -33,9 +34,10 @@ def main(n, seed, out):
     del R, I, J, s, k
     names.append("w_K100"); a.append(np.corrcoef(spatial_dist(Xw, iu), st)[0, 1]); save()
     print("  w_K100 spatial corr %.4f (%.0f s)" % (a[-1], T["fit_K100"]), flush=True)
-    S, Rl = setup(C, rho, t, W); del C
+    t0 = time.time(); S, Rl = setup(C, rho, t, W); del C; T["setup"] = time.time() - t0
     S0 = dict(S); S0["nb"] = np.zeros_like(S["nb"]); S0["nc"] = np.zeros_like(S["nc"])      # binomial term off: related-pair Poisson only (session-12 ablation)
-    for name, SS in (("poisson_only", S0), ("likelihood", S)):
+    arms = os.environ.get("R24_ARMS", "poisson_only,likelihood").split(",")   # r28 timing run: poisson_only alone
+    for name, SS in [(a_, x_) for a_, x_ in (("poisson_only", S0), ("likelihood", S)) if a_ in arms]:
         t0 = time.time()
         xl, hist = fit(Xw[:, 1:], t, SS, Rl, rho, tab, 400); T[name] = time.time() - t0
         X = np.column_stack([t, xl])
