@@ -352,6 +352,17 @@ Compare each quantum ratio with the counting ratio: q_N = r_N(β)/r_N(0) (r_N(0)
 - **Falsifiable prediction for job 449948 (N = 12):** at ε = 0.21, β = 2, the 2-stem's N·d keeps falling, to ≈ 0.233 ± 0.003 at N = 12. Flat or rising would mean 1/N, i.e. log-divergent.
 - Not answered by this: the window (β ≈ 7), where the first-order model doesn't apply. There the 2-stem converges and the 3- and 4-stems don't yet.
 
+## Test 4d: F_N at N = 12 (session 16, cluster job 449963: 56.9 h, 49.5 M memo states; `sims/fn_N12_check.py` → `sims/out/fn_N12_check.txt`) `[ours]`
+- **Prediction of Test 4c confirmed.** ε = 0.21, β = 2, 2-stem: N·d = 0.2455, 0.2437, 0.2390, **0.2322** (N = 9–12), against the predicted 0.233 ± 0.003.
+  Effective exponent a (d ∝ N^−a) 1.20 (N = 10→11), 1.33 (11→12): above 1 and growing, so the weak-β relative phase converges if the trend holds. The N = 12 file
+  reproduces the N = 11 run's values to four digits.
+- **The window (β ≈ 7) is not converged, against the N = 11 reading.** 2-stem |q| = 1.904, 1.889, 1.863, **1.701** (N = 9–12): −9 % in the last step after
+  −1 % steps. β = 6 keeps falling ~5 % per step (1.769 → 1.682); ε = 0.30, β = 3.5 jumps 1.641 → 2.123. Test 4b's "the smallest stem converges" was premature:
+  three points of slow change were a plateau, not a limit. 3- and 4-stems at β = 7: median per-step |Δln|R|| 0.2–0.3 and 0.1–2.0, erratic.
+- **Weak β, larger stems:** median phase change per step falls slowly (3-stems 0.030 → 0.023π, 4-stems 0.061 → 0.046π, N = 10 → 12); |R| static.
+- **Verdict:** weak coupling: the drift is understood and dies faster than 1/N (first-order model, now tested by a prediction). Window: open, and N = 13 is out of
+  reach (~2.5 TB). Exact enumeration is finished for this question; any further step needs sampling or the mean-field model.
+
 ## Log
 - 2026-10-25 (session 3) — literature review on A2 and C8.
 - 2026-10-25 — written after Roberto asked "have we fallen into full causal set theory?"
@@ -371,3 +382,4 @@ Compare each quantum ratio with the counting ratio: q_N = r_N(β)/r_N(0) (r_N(0)
 - 2026-10-27 (session 9) — rung-2 test: shuffling within light-cone cells scrambles what a newborn feels (raw: always; smeared: unless ≲ 2 ev/cell, worse with N). Classical coarse-graining fails.
 - 2026-10-27 (session 10) — F_N at N = 11: the 2-stem converges in the window (|q| ≈ 1.87∠π); larger stems not; weak-β phase drift ∝ β × relations. Literature: F_N not found; 10²⁴⁴ vs 10¹²² is Sorkin's √N relation (0710.1675); rung 2 anticipated by Sorkin 2007.
 - 2026-10-27 (session 10) — drift model: first-order mean future action explains the weak-β drift; decays faster than 1/N once N exceeds the non-locality scale (a = 1.5–3.3 for ε ≥ 0.35); prediction for N = 12.
+- 2026-10-30 (session 16) — F_N at N = 12: weak-β drift prediction confirmed (N·d = 0.232 vs 0.233 ± 0.003); window 2-stem not converged after all.

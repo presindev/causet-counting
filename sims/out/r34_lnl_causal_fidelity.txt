@@ -10,3 +10,7 @@ n = 6000 seed 1001: lnL intrinsic-start optimum -909195.0, truth-start optimum -
   Johnston        misclassified pairs 0.0129  (related shown spacelike 0.0243, spacelike shown related 0.0116)
   fit             misclassified pairs 0.0049  (related shown spacelike 0.0115, spacelike shown related 0.0041)
   fit from truth  misclassified pairs 0.0049  (related shown spacelike 0.0114, spacelike shown related 0.0041)
+n = 6000 seed 1002: lnL intrinsic-start optimum -797973.3, truth-start optimum -797745.7 (difference +227.6 over 1810940 related pairs)
+  Johnston        misclassified pairs 0.0121  (related shown spacelike 0.0215, spacelike shown related 0.0110)
+  fit             misclassified pairs 0.0048  (related shown spacelike 0.0088, spacelike shown related 0.0043)
+  fit from truth  misclassified pairs 0.0047  (related shown spacelike 0.0088, spacelike shown related 0.0043)

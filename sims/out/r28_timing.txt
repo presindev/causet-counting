@@ -1,0 +1,7 @@
+     n   C@C  min-plus  eigh  | ours_step  fit_K100  setup  poisson_only  pipeline | pipeline / min-plus
+  1000     0         1     0  |         1         2      0            26        29 | 29.29
+  3000     0        42     2  |         8        16      1           282       307 |  7.31
+  6000     1       513    11  |        31        56      4          1236      1328 |  2.59
+ 10000     5      1947    50  |        91       124     15          3417      3647 |  1.87
+ 15000    17      7511   163  |       214       332     44          7649      8239 |  1.10
+slopes n = 6000-15000: min-plus n^2.92, our counting step n^2.06, likelihood pipeline n^1.99
