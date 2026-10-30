@@ -456,6 +456,30 @@ stress quartiles are fluctuation-level differences; classical reweighting misses
   - Scale: his slab residual is ~10× smaller than in the diamond (1 − ρ = 0.0069 / 0.0047 vs 0.079 / 0.044); ours too (0.0029 / 0.0016 vs 0.020 / 0.0088). The shares are of a small residual.
   - Switch 0 to +3 % (all), −6 to −7 % (interior); K100 +12–13 % / −10 to −15 %: both fade in the slab, as at equal n.
   - Cost at slab 12000 (median): Poisson fit 1291 s, his detours 10137 s, oracle 1018 s. All 450435 tasks fit in 110 G (MaxRSS not reported with `-X`).
+## The counting argument in 3+1, step by step (session 16, written for Roberto) `[established]` + `[literature]`
+Why a count of events measures proper time, and how the likelihood embedding uses it.
+
+1. **Frame.** A $\prec$ B are timelike-separated, so a boost puts them at $A=(0,\mathbf 0)$, $B=(\tau,\mathbf 0)$ ($c=1$), with $\tau^2=\Delta t^2-|\Delta\mathbf x|^2$
+   in any frame. Boosts have unit determinant, so 4-volumes are frame-independent `[established]`.
+2. **Region between them** (Alexandrov interval): $|\mathbf x|\le t$ (future of A) and $|\mathbf x|\le\tau-t$ (past of B). At time $t$ a ball of radius
+   $r(t)=\min(t,\tau-t)$: two cones glued at $t=\tau/2$.
+3. **Volume.**
+   $$V=\int_0^\tau\tfrac{4\pi}{3}r(t)^3\,dt=2\int_0^{\tau/2}\tfrac{4\pi}{3}t^3\,dt=2\cdot\tfrac{4\pi}{3}\cdot\frac{(\tau/2)^4}{4}=\frac{\pi\tau^4}{24}.$$
+   Four powers of $\tau$ because the diamond is $\sim\tau$ long in time and $\sim\tau$ wide in each of three directions (1+1: $V=\tau^2/2$; $d$ dimensions: $\propto\tau^d$).
+4. **Count.** For a sprinkling at density $\rho$ the number $N$ of elements in a region of volume $V$ is Poisson with mean $\mu=\rho V$ `[established]`:
+   $$\langle N\rangle=\mu=\frac{\pi\rho\tau^4}{24},\qquad \delta N\approx\sqrt\mu .$$
+5. **Inversion.** $\hat\tau=(24N/\pi\rho)^{1/4}$; since $\tau\propto N^{1/4}$, the relative error is $\delta\tau/\tau\approx 1/(4\sqrt\mu)$ (2.5 % at $\mu=100$, 25 % at $\mu=1$);
+   $N=0$ gives $\hat\tau=0$, i.e. the pair looks null.
+6. **In units of $\ell$** ($\rho\ell^4=1$): $\mu=\frac{\pi}{24}(\tau/\ell)^4\approx0.13\,(\tau/\ell)^4$, i.e. $\mu\approx0.13,\ 2.1,\ 10.6,\ 82$ at $\tau=1,2,3,5\,\ell$.
+   Counts carry almost nothing below $\sim2\ell$ and become reliable from $\sim3$–$5\ell$: the origin of the low-count trouble.
+7. **From proper time to space.** With the times $t_i$ given (Johnston's coordinate), each related pair gives one noisy equation
+   $|\mathbf x_j-\mathbf x_i|^2=(t_j-t_i)^2-\tau_{ij}^2$. Each element has thousands of related partners, so it is pinned like a GPS receiver by many satellites.
+8. **Likelihood** (Casasola 2026 `[literature]`). $\ln P(N\mid\mu)=N\ln\mu-\mu-\ln N!$ peaks at $\mu=N$ ($\partial_\mu=N/\mu-1=0$). The fit maximizes
+   $$\ln L=\sum_{i\prec j}\left[N_{ij}\ln\mu_{ij}-\mu_{ij}\right],\qquad \mu_{ij}=\frac{\pi\rho}{24}\left[(t_j-t_i)^2-|\mathbf x_j-\mathbf x_i|^2\right]^2$$
+   over the spatial coordinates; the paper uses a Gaussian form of it (same maps, 3+1 draft check (iv)).
+9. **Spacelike pairs** have an empty interval ($N\equiv0$, no information). Their distances come out by triangulation through related partners; Johnston uses
+   detours, Boguñá–Krioukov the overlap of pasts and futures. Spacelike pairs only a few $\ell$ apart are where his error sits (r30).
+
 ## Log
 - 2026-10-25 — created after Roberto's question and his reading of Boguñá–Krioukov 2024.
 - 2026-10-25 (session 3) — S4a flat 2D: BK estimator quoted and checked; rectangle identity; distances to 3–5 %.
@@ -489,3 +513,4 @@ stress quartiles are fluctuation-level differences; classical reweighting misses
   r33 position rms dominated by the tenth of elements with fewest related partners (not time, not scale); r34 truth-start lnL higher (+105–549) ⇒ start's
   local optimum; causal fidelity 0.5–0.7 % misclassified vs 1.3–2.1 % for Johnston. Paper: `paper/embedding-3p1-v1.tex` (~90 %, PRD).
   1+1 side (r31): rectangle estimator unbiased for d² above 2ℓ, beats BK equal-depth and the past–future interval. Paper: `paper/toolkit-1p1-v1.tex` (~80 %, CQG).
+- 2026-10-30 (session 16) — the 3+1 counting argument ($V=\pi\tau^4/24$ → Poisson → likelihood) written out step by step for Roberto.

@@ -23,13 +23,13 @@ History of earlier "next time" notes: the `journal/` entries (session 10 rewrote
 - [paper/draft-v6.pdf](paper/draft-v6.pdf): older two-part draft (2026-10-27, session 10); its Part II (growth memory) is the home of F_N. Part I "is it spacetime?" and Part II "what must a growing universe remember?"; Table 2 = what is ours
   after the literature crawl. Review against the arXiv bar: `paper/REVIEW-v6-2026-10-27.md` (Part I ~3–4 sessions from a methods preprint; Part II needs F_N to say something).
 - **Methodology case study (future, ROADMAP §9):** turn `paper/methodology-note-v1.tex` into a quantitative case study from the notebook's own record (error provenance, claim history, effort). Not started; after the two physics papers are settled; target: AI-agents-for-physics workshop, April 2027.
-- **Public copy:** github.com/presindev/causet-counting = snapshot of this notebook, built by `release/make_public.sh --push` after each wrap-up commit (no compute.md;
+- **Public copy:** github.com/presindev/causet-counting (**made PRIVATE 2026-10-30, session 16, by Roberto; make it public again before any arXiv post or submission**: all three drafts say "openly available" there, and the e-mail to Boguñá links it) = snapshot of this notebook, built by `release/make_public.sh --push` after each wrap-up commit (no compute.md;
   cluster named only in the Acknowledgements; README/LICENSE/CITATION.cff live in `release/`).
 - `paper/archive/`: v0 ("soup"), v1–v5 and their reviews.
 
 ## Waiting computations (details in ROADMAP §1)
-- F_N at N = 12 on the cluster: **job 449963** (at 23:11 on 28 Oct: 30.5 h, 72 GB ≈ 63 % by memory; ~18 h left).
-- r25 (slab vs diamond, equal density): jobs 450431 → 450432–450435.
+- r27 (N = 800 held-out flag test, 1+1 Sec. VII): **job 450475**, 13/28 done at 08:38 on 30 Oct, expected that evening. (F_N N = 12, r25, r28: done.)
+- Window question for F_N (β ≈ 7): exact enumeration finished at N = 12; needs sampling or the mean-field model.
 - Parallel tempering at N = 400 (code to write).
 - Covariant-stem screen test; J₂ fixed-n curvature probe; null-edge ½ vs corner terms.
 
@@ -54,10 +54,8 @@ C6 Newton + Einstein from far away · C7 creation (and maybe destruction) of eve
 Missing so far: matter (what sources gravity?).
 
 ## Next time
-- Latest journal: `journal/2026-10-29-session15-split-prd-referee-loop.md`. **The laptop was switched off at the end of session 15:** first re-run the
-  interrupted r34 universe (`cd sims && ../.venv/bin/python -u r34_lnl_causal_fidelity.py 6000 1002 | tee -a out/r34_lnl_causal_fidelity.txt`, ~20 min;
-  skip if the file already has that block) and fill the 3+1 causal-fidelity `\pending`.
-- Then fetch F_N 449963, r27 450475, r28 450476 (compute.md); r27 → 1+1 Sec. VII, r28 → 3+1 Sec. VII, F_N → idea 004 (N·d ≈ 0.233).
-- Roberto: read the two drafts + note; decide on the removal candidates (journal, end); language pass; Boguñá's reply. After each wrap-up commit:
-  `release/make_public.sh --push`.
-- Later: methodology case study (ROADMAP §9), after the papers; April 2027 workshop. Gravity / rung-3 discussion still deferred.
+- Latest journal: `journal/2026-10-30-session16-fetch-fn12-r28-r34.md`. 3+1 draft has no placeholders left.
+- **Fetch r27** (job 450475; command in compute.md, Session 16) → fill the 1+1 Sec. VII `\pending`. If the flag misclassifies at N = 800, the claim changes, not just the number. Then commit + `release/make_public.sh --push` (Roberto runs it: the push is blocked for Claude).
+- Roberto: read the two drafts + note; removal candidates (session 15 journal); language pass; Boguñá (the repo link in his e-mail is now a 404: repo is private).
+- **Before any submission: make github.com/presindev/causet-counting public again.**
+- Later: F_N window (sampling / mean-field); methodology case study (ROADMAP §9), April 2027 workshop; gravity / rung-3 discussion still deferred.

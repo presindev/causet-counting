@@ -120,3 +120,6 @@ Mistakes made in this notebook and the rule that prevents each one. Claude reads
     metric with the distance errors before believing it.
 42. **Copy numbers from the output file, not from memory or grep order.** (Session 15: an invented eigenvalue normalization, and two oracle percentages
     swapped between n = 1500 and 3000 after reading a multi-file grep.) → Quote each number next to its file name while writing; grep one file at a time.
+43. **A few slowly changing points are a plateau, not a limit.** (Session 10 wrote "the 2-stem converges in the window" from |q| = 1.91, 1.89, 1.86 at N = 9–11;
+    at N = 12 it fell to 1.70, and the weak-β row next to it had a model that predicted N = 12 correctly.) → Call something converged only with a model of the
+    approach (an exponent, a predicted next value) that the next point then confirms; otherwise write "changing slowly over N = a–b".

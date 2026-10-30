@@ -7,10 +7,10 @@ Effort: S = an afternoon on the laptop; M = a session plus a cluster job; L = se
 
 | What | Where | Status | Effort |
 |---|---|---|---|
-| F_N at N = 12 (stems 2–4) | cluster, `sims/cluster/fn_job.sh` with NMAX=12 | **Job 449963** (resubmit of 449948 after the lookup-table fix; --mem=200G). Prediction to test: weak-β 2-stem N·d ≈ 0.233 at N = 12 (idea 004, test 4c). N = 11 took 47 min and 6.1 GB on cn12 with 2.77 M states. A000112(12) = 4.9 × 10⁷ states, so expect ~110 GB and ~15–25 h. Needs `--mem=160G`, `--time=48:00:00`, and a fat node (cn01 or any 2 TB node). | M |
+| F_N at N = 12 (stems 2–4) | cluster | **Done (session 16):** job 449963 COMPLETED in 57 h, 49.5 M states. Weak-β prediction confirmed (N·d = 0.2322 vs 0.233 ± 0.003); window 2-stem NOT converged (|q| 1.863 → 1.701). Idea 004 Test 4d. N = 13 out of reach (~2.5 TB). | — |
 | r25: slab vs diamond at EQUAL density, Poisson likelihood (idea 005) | cluster | **Done (session 14):** slab +58/+65 % vs diamond +75/+80 %; oracle wall closes the gap; in Sec. 9.3 | — |
-| r27: N = 800 held-out test of the layered flag (idea 005) | cluster, `sims/cluster/r27_job.sh` | **Job 450475** (after test 450473); threshold fixed beforehand z > 0.120 | S |
-| r28: clean timing on exclusive nodes (idea 005) | cluster, `sims/cluster/r28_job.sh` | **Job 450476** (after test 450474); for Sec. 9.5 | S |
+| r27: N = 800 held-out test of the layered flag (idea 005) | cluster, `sims/cluster/r27_job.sh` | **Job 450475** (after test 450473); threshold fixed beforehand z > 0.120. Session 16, 08:38: 13/28 done, tasks 3–10 ~50 s/sweep (~28 h of 30 h), 26–27 pending; expected evening 30 Oct | S |
+| r28: clean timing on exclusive nodes (idea 005) | cluster | **Done (session 16):** Johnston n^2.92, likelihood pipeline n^1.99; ours slower at all n ≤ 15000 (×7.0 → ×1.07); in 3+1 Sec. VII | — |
 | Parallel tempering at N = 400 to locate β_c | cluster, new code | Needed: the cold chains are frozen (acceptance ≤ 0.001), so plain Metropolis can't cross. Literature fit β_c ≈ 1.66/(ε²N) = 0.094 is the target to confirm or refute. | M |
 | Screen test with covariant stems and a fixed per-event view budget; records per patch vs births | laptop N ≤ 9, then cluster | Designed in session 9, not run | M |
 | ~~J₂ curvature probe at fixed n~~ | laptop | **Done (session 10):** K at fixed n is no more sensitive than the related-pair share c₂ (g₂ ≈ 0.027 (Hτ)²); dropped as a claim (GRAVEYARD D8) | — |
@@ -24,7 +24,7 @@ Already fetched and analysed (session 10): cluster 449800 (N = 400 tail, all 11 
 ## 2. Promising lines (ours, alive)
 
 1. **Future-factor criterion (branch C).** Not found in the literature: every quantum growth model imposes a sum rule, which makes F_N = 1. At N = 11:
-   - inside the window (β = 7), the 2-element stem's ratio relative to counting converges to ≈ 1.87∠π (N = 9–11: 1.91, 1.89, 1.86);
+   - inside the window (β = 7), the 2-element stem's ratio relative to counting seemed to converge to ≈ 1.87∠π (N = 9–11: 1.91, 1.89, 1.86); **N = 12 (session 16): 1.70, not converged**;
    - 3- and 4-element stems are still moving;
    - at weak β every stem's phase drifts by ≈ 0.008π·β per relation in the stem, per added event, slowly slowing.
 
