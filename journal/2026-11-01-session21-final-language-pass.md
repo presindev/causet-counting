@@ -25,3 +25,9 @@ at submission.
 **Open (Roberto).** Upload v6 to PRD and CQG; CQG abstract word limit (≈ 330 words now); arXiv; Boguñá. Read the three v6 review files.
 
 **Lessons.** No new rule.
+
+**Before wrap-up.** Final reading of both v6 by the authoring session (`paper/final-reading-2026-11-01.md`): no error of substance; risks are significance
+(3+1 for PRD), unrefereed preprints, the Johnston Table IV mismatch, the curvature estimator's use (1+1), abstract length (347 words, not 330 as first
+reported), and no expert reading yet. Methodology note v3 (new section "Final preparation"). **Decision (Roberto):** before PRD/CQG/arXiv, send both papers
+to Boguñá with an apology for the preliminary 29 Oct draft and ask for advice (journals, description of BK24, missing work); include his feedback if he
+answers. Draft: `correspondence/2026-11-02-boguna-email-2-draft.md` (send 2 Nov as a reply in the 29 Oct thread).

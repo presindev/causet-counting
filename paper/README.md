@@ -15,4 +15,4 @@
 Compile from inside the paper's folder: `cd paper/embedding-3p1 && tectonic -X compile embedding-3p1-v1.tex`.
 New referee reports: `paper/<paper>/reviews/`, named `referee-YYYY-MM-DD-<round or topic>.md`.
 
-Current versions (session 21, 2026-11-01): `embedding-3p1-v6` (PRD, language pass), `toolkit-1p1-v6` (CQG, IOP `iopart` class, shipped next to the source; language pass), `methodology-note-v2` (adds the external referee iteration).
+Current versions (session 21, 2026-11-01): `embedding-3p1-v6` (PRD, language pass), `toolkit-1p1-v6` (CQG, IOP `iopart` class, shipped next to the source; language pass), `methodology-note-v3` (v2 added the external referee iteration; v3 the final preparation). Final reading of both papers: `final-reading-2026-11-01.md`.
