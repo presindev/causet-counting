@@ -18,7 +18,7 @@ History of earlier "next time" notes: the `journal/` entries (session 10 rewrote
 - **Current (session 21, 2026-11-01): final language pass, no change of content.** `paper/embedding-3p1/embedding-3p1-v6.pdf` (PRD, 9 pp) and
   `paper/toolkit-1p1/toolkit-1p1-v6.pdf` (CQG, now IOP `iopart` style, 22 pp preprint layout), each with `-v6-diff.pdf` and a review `reviews/REVIEW-<slug>-v6-2026-11-01.md`;
   `paper/methodology-note/methodology-note-v2.pdf` (adds sessions 16–20 and how the external referee loop worked). Referee workspace files in `paper/referee-workspace/`.
-  Copied to `~/Desktop/papers/<track>/manuscripts/`. Zenodo DOI still a red placeholder in both papers.
+  Copied to `~/Desktop/papers/<track>/manuscripts/`. Zenodo DOI filled: 10.5281/zenodo.23856330 (release v1.0; concept 10.5281/zenodo.23856329); no placeholders left.
 - **Previous (session 20, referee round 4: 3+1 PRD accept, 1+1 CQG accept after 25–29; final pre-submission versions):** `paper/embedding-3p1/embedding-3p1-v5.pdf`
   and `paper/toolkit-1p1/toolkit-1p1-v5.pdf`, with `-v5-diff.pdf` and `answers/answer-<slug>-v5.md`; delivered to `~/Desktop/papers/`. Both say "are openly available"
   (repo must be public before upload) and carry one red placeholder, the Zenodo DOI (same release for both). Journal: session 20.
@@ -75,9 +75,8 @@ Missing so far: matter (what sources gravity?).
 
 ## Next time
 - Latest journal: `journal/2026-11-01-session21-final-language-pass.md`.
-- **Submission (Roberto), in this order:** `release/make_public.sh --push`; set github.com/presindev/causet-counting public; tag a release with Zenodo's GitHub
-  integration on; copy the DOI into both v6 sources (`\pending{Zenodo DOI}`), rebuild with tectonic, upload. If no DOI in time: delete the DOI clause in the 3+1
-  (optional there); the 1+1 editor makes it a condition of acceptance.
+- **Submission:** repo public, release v1.0 archived on Zenodo, DOI filled in both v6 (session 21). Left: upload v6 to PRD and CQG (ORCID 0009-0008-6595-6798 in
+  the submission systems; check the CQG abstract word limit, v6 ≈ 330 words); arXiv at submission; tell Boguñá the repo link works again.
 - **1+1:** IOP style done (v6). Check the CQG abstract word limit (v6 abstract ≈ 330 words); ORCID goes in the submission system.
 - **Referee final message** (`paper/referee-final-2026-10-31.md`): loop closed. Before submission also: fresh-clone rerun of Table III of each paper from the
   public repo; a human causal-set reader; arXiv at submission. References flagged by the referee verified (session 20). Locality test: optional, pre-register first.

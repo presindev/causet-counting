@@ -16,6 +16,12 @@ updated with the last sessions; (4) referee reviews in the repo, and the note to
 - Reviews: every report and answer on the Desktop was already in the repo (checked with `cmp`). Added `paper/referee-workspace/` (the referee session's
   `CLAUDE.md`, `REVIEW_MEMORY.md`, `history.json`, plus a README). These contain the referee's frank odds; the e-mail address is already in the papers.
 
-**Open (Roberto).** CQG abstract word limit (≈ 330 words now); ORCID; DOI + public repo as before. Read the three v6 review files.
+**Release (later in the session).** Public README / CITATION.cff rewritten for the two papers (they described the combined draft); `.zenodo.json` added
+(title, ORCID 0009-0008-6595-6798, MIT). `make_public.sh` failed once on a cluster-login word in the session-19 journal (reworded). Repo made public by Roberto;
+Zenodo switch on; release v1.0 → version DOI 10.5281/zenodo.23856330 (concept 10.5281/zenodo.23856329), metadata checked via the Zenodo API. DOI filled in
+both v6 (no placeholder left), rebuilt; DOI badge in the README. ORCID not added to the LaTeX: neither revtex4-2 nor iopart has a field; the journals take it
+at submission.
+
+**Open (Roberto).** Upload v6 to PRD and CQG; CQG abstract word limit (≈ 330 words now); arXiv; Boguñá. Read the three v6 review files.
 
 **Lessons.** No new rule.

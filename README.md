@@ -1,5 +1,7 @@
 # Geometry by counting in causal sets — notebook and code
 
+[![DOI](https://zenodo.org/badge/1438099223.svg)](https://doi.org/10.5281/zenodo.23856329)
+
 Research notebook and simulation code behind two papers by R. Bada:
 
 - *Spatial embedding of 3+1 causal sets: low-count spacelike pairs and a likelihood fit to interval counts* (prepared for Phys. Rev. D;
@@ -73,7 +75,7 @@ The code was written by the AI system working with the author; the author did no
 in the paper (known answers, fresh seeds, ablations) and logged in `LESSONS.md`. Please report problems as GitHub issues.
 
 ## How to cite
-Please cite the papers; to point at the notebook or code specifically, cite the repository as well (GitHub's "Cite this repository" button reads `CITATION.cff`).
+Please cite the papers; to point at the notebook or code specifically, cite the Zenodo archive as well (version used for the papers: doi:10.5281/zenodo.23856330; all versions: doi:10.5281/zenodo.23856329) (GitHub's "Cite this repository" button reads `CITATION.cff`).
 ```bibtex
 @misc{Bada2026embedding,
   author = {Bada, Roberto},
@@ -92,8 +94,8 @@ Please cite the papers; to point at the notebook or code specifically, cite the 
   title        = {Geometry by counting in causal sets: research notebook and code},
   year         = {2026},
   howpublished = {\url{https://github.com/presindev/causet-counting}},
-  doi          = {DOI to be added},
-  note         = {Zenodo archive of the version used for the papers}
+  doi          = {10.5281/zenodo.23856330},
+  note         = {Zenodo archive of release v1.0, the version used for the papers}
 }
 ```
 
