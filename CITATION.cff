@@ -6,6 +6,7 @@ authors:
     given-names: Roberto
     affiliation: "SapereIA; Institute of Cosmos Sciences, University of Barcelona (ICCUB)"
     email: roberto@sapereia.com
+    orcid: "https://orcid.org/0009-0008-6595-6798"
 repository-code: "https://github.com/presindev/causet-counting"
 license: MIT
 date-released: 2026-11-01
@@ -20,5 +21,6 @@ preferred-citation:
   authors:
     - family-names: Bada
       given-names: Roberto
+      orcid: "https://orcid.org/0009-0008-6595-6798"
   year: 2026
   notes: "Prepared for Classical and Quantum Gravity; companion: Spatial embedding of 3+1 causal sets: low-count spacelike pairs and a likelihood fit to interval counts (prepared for Physical Review D). arXiv identifiers to be added."
