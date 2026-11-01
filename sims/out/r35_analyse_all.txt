@@ -1,0 +1,72 @@
+n = 1000: 10 universes (seeds 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010)
+  johnston  C 0.8855  (1 - C = 0.1145)
+  start      C 0.9533  gain +0.0678 (0.0137)  removed  59.2 %   per universe: min  50.9  median  56.5  max  74.5  s.d.  7.0  wins 10/10
+  fit        C 0.9678  gain +0.0823 (0.0138)  removed  71.9 %   per universe: min  61.1  median  69.6  max  80.8  s.d.  6.7  wins 10/10
+  fit_lbfgs  C 0.9677  gain +0.0821 (0.0138)  removed  71.7 %   per universe: min  60.9  median  70.1  max  80.9  s.d.  6.7  wins 10/10
+  jstart     C 0.9683  gain +0.0828 (0.0140)  removed  72.3 %   per universe: min  59.9  median  72.1  max  80.5  s.d.  5.3  wins 10/10
+  pstart     C 0.9679  gain +0.0824 (0.0138)  removed  72.0 %   per universe: min  61.3  median  69.7  max  81.3  s.d.  6.7  wins 10/10
+  truth      C 0.9890  gain +0.1035 (0.0163)  removed  90.4 %   per universe: min  85.2  median  88.4  max  95.1  s.d.  3.0  wins 10/10
+  exact_all  C 0.9679  gain +0.0823 (0.0137)  removed  71.9 %   per universe: min  60.6  median  69.3  max  81.9  s.d.  6.9  wins 10/10
+  exact_near C 0.9680  gain +0.0825 (0.0137)  removed  72.1 %   per universe: min  60.8  median  69.3  max  81.9  s.d.  6.8  wins 10/10
+  gauss_near C 0.9673  gain +0.0818 (0.0137)  removed  71.4 %   per universe: min  60.7  median  69.0  max  81.1  s.d.  6.7  wins 10/10
+  joint      C 0.9693  gain +0.0837 (0.0138)  removed  73.1 %   per universe: min  60.2  median  72.2  max  83.2  s.d.  7.5  wins 10/10
+    paired exact_near - exact_all: +0.00016 (0.00007), positive in 8/10
+    paired gauss_near - fit: -0.00050 (0.00012), positive in 1/10
+    paired exact_all - fit: +0.00009 (0.00020), positive in 7/10
+    paired fit_lbfgs - fit: -0.00013 (0.00014), positive in 3/10
+    paired jstart - fit_lbfgs: +0.00066 (0.00211), positive in 4/10
+    paired joint - fit_lbfgs: +0.00159 (0.00035), positive in 9/10
+  lnL(truth start) - lnL(arm), mean [min, max]: fit 6.6 [0.4, 17.7]  fit_lbfgs 0.0 [-0.7, 0.7]  jstart 0.0 [-0.0, 0.1]  pstart 0.0 [-0.0, 0.1]
+  best-lnL of three starts: C 0.9676, removed 71.7 %
+  near-cone share of related pairs 0.64; time error rms (ell): Johnston 0.096, joint 0.097
+  johnston   |dd|/ell q50 0.33 q90 1.14 q99 3.06;  misclassified pairs 3.33 % [2.36, 7.83]
+  fit        |dd|/ell q50 0.20 q90 0.46 q99 1.41;  misclassified pairs 1.24 % [1.08, 1.36]
+  fit_lbfgs  |dd|/ell q50 0.20 q90 0.46 q99 1.43;  misclassified pairs 1.24 % [1.08, 1.36]
+n = 3000: 10 universes (seeds 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010)
+  johnston  C 0.9551  (1 - C = 0.0449)
+  start      C 0.9742  gain +0.0191 (0.0017)  removed  42.5 %   per universe: min  27.9  median  45.6  max  54.8  s.d.  9.1  wins 10/10
+  fit        C 0.9884  gain +0.0334 (0.0019)  removed  74.3 %   per universe: min  63.9  median  75.6  max  80.5  s.d.  5.8  wins 10/10
+  fit_lbfgs  C 0.9885  gain +0.0335 (0.0019)  removed  74.5 %   per universe: min  64.2  median  76.0  max  80.9  s.d.  5.8  wins 10/10
+  jstart     C 0.9892  gain +0.0341 (0.0018)  removed  76.0 %   per universe: min  72.0  median  75.1  max  81.4  s.d.  3.5  wins 10/10
+  pstart     C 0.9884  gain +0.0334 (0.0019)  removed  74.2 %   per universe: min  64.5  median  75.5  max  80.5  s.d.  5.6  wins 10/10
+  truth      C 0.9965  gain +0.0415 (0.0019)  removed  92.3 %   per universe: min  90.0  median  92.4  max  93.3  s.d.  1.0  wins 10/10
+  exact_all  C 0.9888  gain +0.0337 (0.0019)  removed  75.0 %   per universe: min  64.2  median  76.3  max  81.8  s.d.  5.9  wins 10/10
+  exact_near C 0.9892  gain +0.0341 (0.0019)  removed  76.0 %   per universe: min  64.6  median  77.4  max  82.5  s.d.  6.0  wins 10/10
+  gauss_near C 0.9887  gain +0.0336 (0.0019)  removed  74.7 %   per universe: min  63.3  median  76.4  max  81.1  s.d.  6.1  wins 10/10
+  joint      C 0.9889  gain +0.0338 (0.0020)  removed  75.3 %   per universe: min  63.5  median  77.4  max  81.2  s.d.  6.0  wins 10/10
+    paired exact_near - exact_all: +0.00041 (0.00004), positive in 10/10
+    paired gauss_near - fit: +0.00020 (0.00008), positive in 8/10
+    paired exact_all - fit: +0.00034 (0.00004), positive in 10/10
+    paired fit_lbfgs - fit: +0.00010 (0.00004), positive in 9/10
+    paired jstart - fit_lbfgs: +0.00065 (0.00045), positive in 5/10
+    paired joint - fit_lbfgs: +0.00036 (0.00011), positive in 9/10
+  lnL(truth start) - lnL(arm), mean [min, max]: fit 45.4 [15.9, 103.7]  fit_lbfgs 0.9 [-0.1, 5.4]  jstart 1.3 [0.1, 5.5]  pstart 1.5 [0.2, 5.0]
+  best-lnL of three starts: C 0.9889, removed 75.4 %
+  near-cone share of related pairs 0.47; time error rms (ell): Johnston 0.074, joint 0.076
+  johnston   |dd|/ell q50 0.23 q90 0.76 q99 2.86;  misclassified pairs 1.69 % [1.41, 2.14]
+  fit        |dd|/ell q50 0.14 q90 0.33 q99 0.65;  misclassified pairs 0.68 % [0.64, 0.72]
+  fit_lbfgs  |dd|/ell q50 0.14 q90 0.33 q99 0.62;  misclassified pairs 0.68 % [0.64, 0.72]
+n = 6000: 10 universes (seeds 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010)
+  johnston  C 0.9764  (1 - C = 0.0236)
+  start      C 0.9842  gain +0.0078 (0.0010)  removed  33.0 %   per universe: min   9.5  median  35.2  max  45.4  s.d. 11.1  wins 10/10
+  fit        C 0.9953  gain +0.0189 (0.0007)  removed  80.0 %   per universe: min  76.2  median  80.1  max  85.4  s.d.  3.1  wins 10/10
+  fit_lbfgs  C 0.9954  gain +0.0190 (0.0007)  removed  80.6 %   per universe: min  76.4  median  81.2  max  86.2  s.d.  3.2  wins 10/10
+  jstart     C 0.9952  gain +0.0188 (0.0007)  removed  79.6 %   per universe: min  68.5  median  81.1  max  87.2  s.d.  5.3  wins 10/10
+  pstart     C 0.9954  gain +0.0190 (0.0007)  removed  80.5 %   per universe: min  76.2  median  80.8  max  85.9  s.d.  3.1  wins 10/10
+  truth      C 0.9984  gain +0.0220 (0.0008)  removed  93.1 %   per universe: min  91.1  median  93.0  max  94.1  s.d.  0.8  wins 10/10
+  exact_all  C 0.9956  gain +0.0191 (0.0007)  removed  81.1 %   per universe: min  77.0  median  81.5  max  86.5  s.d.  3.1  wins 10/10
+  exact_near C 0.9959  gain +0.0194 (0.0007)  removed  82.4 %   per universe: min  78.4  median  82.9  max  88.3  s.d.  3.2  wins 10/10
+  gauss_near C 0.9955  gain +0.0191 (0.0007)  removed  81.0 %   per universe: min  76.7  median  80.9  max  87.0  s.d.  3.3  wins 10/10
+  joint      C 0.9956  gain +0.0192 (0.0007)  removed  81.4 %   per universe: min  76.5  median  81.8  max  87.7  s.d.  3.5  wins 10/10
+    paired exact_near - exact_all: +0.00030 (0.00003), positive in 10/10
+    paired gauss_near - fit: +0.00024 (0.00004), positive in 10/10
+    paired exact_all - fit: +0.00027 (0.00002), positive in 10/10
+    paired fit_lbfgs - fit: +0.00016 (0.00002), positive in 10/10
+    paired jstart - fit_lbfgs: -0.00025 (0.00049), positive in 5/10
+    paired joint - fit_lbfgs: +0.00019 (0.00007), positive in 8/10
+  lnL(truth start) - lnL(arm), mean [min, max]: fit 177.8 [103.7, 415.4]  fit_lbfgs 2.3 [0.2, 6.5]  jstart 2.9 [0.6, 5.4]  pstart 4.0 [0.8, 9.7]
+  best-lnL of three starts: C 0.9955, removed 81.0 %
+  near-cone share of related pairs 0.37; time error rms (ell): Johnston 0.062, joint 0.066
+  johnston   |dd|/ell q50 0.18 q90 0.59 q99 2.35;  misclassified pairs 1.13 % [0.92, 1.34]
+  fit        |dd|/ell q50 0.12 q90 0.27 q99 0.47;  misclassified pairs 0.48 % [0.45, 0.51]
+  fit_lbfgs  |dd|/ell q50 0.12 q90 0.27 q99 0.45;  misclassified pairs 0.48 % [0.45, 0.51]

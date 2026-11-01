@@ -1,0 +1,11 @@
+n 3000: 10 universes; lnL truth - fit_lbfgs: [ 5.37  1.11  0.06 -0.09  0.61  0.27  0.4   0.45  0.3   0.59]; higher in 9/10; mean 0.91, max 5.37; truth > best of three converged starts in 9
+  C fit_lbfgs 0.98855, truth 0.99653; related pairs 4.47e+05
+  rms(truth - fit) raw 4.85 ell; after best O(3) about the time axis 0.63 ell [0.45, 1.28]
+  straight path: barrier (line minus path, max in [0,1]) mean 4964 [2732, 9621]; lnL(0.5) - lnL(0) mean -4964
+  relaxed from s = 0.25: C 0.99028; lnL - fit_lbfgs mean +0.47 [+0.06, +1.42]; distance to fit 0.13, to truth 0.54 ell; hit max iterations 8/10
+  relaxed from s = 0.5: C 0.99354; lnL - fit_lbfgs mean -748.00 [-7485.54, +3.97]; distance to fit 0.35, to truth 0.34 ell; hit max iterations 7/10
+  relaxed from s = 0.75: C 0.99623; lnL - fit_lbfgs mean +0.96 [+0.02, +5.23]; distance to fit 0.54, to truth 0.13 ell; hit max iterations 4/10
+  continued L-BFGS (2000 it): dlnL +0.53 [+0.08, +1.52], C 0.98855 -> 0.98853 (lower in 8/10)
+  errloc johnston : rms all 0.66, lowest-decile 1.83 [1.64, 2.01], rest 0.32 [0.29, 0.38], waist 0.82, median 0.27 ell
+  errloc fit      : rms all 0.57, lowest-decile 1.70 [1.45, 2.16], rest 0.20 [0.18, 0.25], waist 0.73, median 0.18 ell
+  errloc fit_lbfgs: rms all 0.57, lowest-decile 1.69 [1.43, 2.14], rest 0.20 [0.18, 0.25], waist 0.73, median 0.18 ell

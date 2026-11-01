@@ -4,9 +4,11 @@ Poisson likelihood, from the cluster runs.
   (a) residual 1 - rho (spatial corr, his Table V metric) against n, log-log, mean over universes (error bars: spread / sqrt(#universes))
   (b) time per universe against n: his min-plus, our overlap step, the likelihood pipeline (our step + weighted start + 400 Poisson iterations)
 
-Reads cluster_fetch/r14/out (r14_cluster_scale.py: johnston, ours, switch0.25) and cluster_fetch/r24/out (r24_cluster_lik.py: w_K100, poisson_only),
+Reads runs/cluster_fetch/r14/out (r14_cluster_scale.py: johnston, ours, switch0.25) and runs/cluster_fetch/r24/out (r24_cluster_lik.py: w_K100, poisson_only),
 paired by (n, seed). No simulation. Every number plotted is also printed, with log-log slopes over n = 6000-15000.
 Usage: .venv/bin/python sims/fig_3p1.py          (--prd: panel (a) only, without the switch, for the split 3+1 paper -> fig_3p1_prd; session 15)
+       --prd --r35: v2 of the 3+1 paper (session 17): for n <= 6000 Johnston, the starting map and the fit come from runs/r35 (ten universes per size;
+       r35 "start" = w_K100, "fit" = poisson_only); the direct overlap embedding ("ours") keeps the r14 universes. Writes fig_3p1_prd_v2 (v1 file untouched).
 """
 import os, sys, glob
 import numpy as np
@@ -17,7 +19,7 @@ import matplotlib.pyplot as plt
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 OUT = os.path.join(ROOT, "paper", "figs")
-D14, D24 = os.path.join(ROOT, "cluster_fetch", "r14", "out"), os.path.join(ROOT, "cluster_fetch", "r24", "out")
+D14, D24 = os.path.join(ROOT, "runs", "cluster_fetch", "r14", "out"), os.path.join(ROOT, "runs", "cluster_fetch", "r24", "out")
 
 BLUE, ORANGE, AQUA, INK, GREY, PURPLE = "#2a78d6", "#eb6834", "#1baf7a", "#0b0b0b", "#8a8984", "#7a4fc9"
 plt.rcParams.update({"font.size": 9, "axes.spines.top": False, "axes.spines.right": False, "axes.linewidth": 0.6,
@@ -43,6 +45,12 @@ def main():
         methods = [m for m in methods if m[0] != "switch0.25"]
         relab = {"johnston": "Johnston (2025)", "ours": "overlap distances, direct", "w_K100": "weighted starting map", "poisson_only": "likelihood fit"}
         methods = [(k, relab[k], c, mk, ls) for k, lab, c, mk, ls in methods]
+    r35 = {}
+    if R35:
+        for f in glob.glob(os.path.join(ROOT, "runs", "r35", "r35_n*_s*.npz")):
+            z = np.load(f)
+            if "X_joint" in z.files:
+                r35.setdefault(int(z["n"]), []).append(z)
     res = {m[0]: [] for m in methods}
     times = {"his min-plus": [], "our step": [], "likelihood pipeline": []}
     print("n  #univ  " + "  ".join("%-11s" % m[0] for m in methods) + "   likelihood wins  share of his residual (switch, likelihood)")
@@ -53,14 +61,19 @@ def main():
         for m in methods:
             src = r24 if m[0] in ("w_K100", "poisson_only") else r14
             v = np.array([1 - get(src[k], m[0]) for k in keys])
+            if n in r35 and m[0] != "ours":
+                nm = {"johnston": "johnston", "w_K100": "start", "poisson_only": "fit"}[m[0]]
+                v = np.array([1 - float(z["corr"][list(z["names"]).index(nm)]) for z in r35[n]])
             row[m[0]] = v
             res[m[0]].append((v.mean(), v.std(ddof=1) / np.sqrt(len(v)) if len(v) > 1 else 0.0))
         wins = int(np.sum(row["poisson_only"] < row["johnston"]))
+        keys = keys if n not in r35 else [None] * len(r35[n])
         sh = [1 - row[m].mean() / row["johnston"].mean() if m in row else np.nan for m in ("switch0.25", "poisson_only")]
         print("%5d  %d   " % (n, len(keys)) + "  ".join("%-11.4f" % res[m[0]][-1][0] for m in methods) + "   %d/%d        %.0f %%, %.0f %%" % (wins, len(keys), 100 * sh[0], 100 * sh[1]))
-        tj = np.mean([tget(r14[k], "johnston") - tget(r14[k], "CC") - tget(r14[k], "eigh") for k in keys])
-        to = np.mean([tget(r14[k], "ours_step") for k in keys])
-        tl = np.mean([tget(r24[k], "ours_step") + tget(r24[k], "fit_K100") + tget(r24[k], "poisson_only") for k in keys])
+        k14 = sorted(k for k in r14 if k[0] == n and k in r24)
+        tj = np.mean([tget(r14[k], "johnston") - tget(r14[k], "CC") - tget(r14[k], "eigh") for k in k14])
+        to = np.mean([tget(r14[k], "ours_step") for k in k14])
+        tl = np.mean([tget(r24[k], "ours_step") + tget(r24[k], "fit_K100") + tget(r24[k], "poisson_only") for k in k14])
         times["his min-plus"].append(tj); times["our step"].append(to); times["likelihood pipeline"].append(tl)
     print("time (s): " + "; ".join("%s %s" % (k, ", ".join("%.0f" % x for x in v)) for k, v in times.items()))
     big = [i for i, n in enumerate(ns) if n >= 6000]
@@ -93,12 +106,13 @@ def main():
         ax2.set_title("(b) cost", fontsize=9, loc="left")
         ax2.legend(fontsize=7, loc="upper left")
     os.makedirs(OUT, exist_ok=True)
-    name = "fig_3p1_prd" if PRD else "fig_3p1"
+    name = ("fig_3p1_prd_v2" if R35 else "fig_3p1_prd") if PRD else "fig_3p1"
     for ext in ("pdf", "png"):
         fig.savefig(os.path.join(OUT, name + "." + ext), **({"dpi": 150} if ext == "png" else {}))
     print("wrote", os.path.join(OUT, name + ".pdf"))
 
 PRD = "--prd" in sys.argv
+R35 = "--r35" in sys.argv
 
 if __name__ == "__main__":
     main()

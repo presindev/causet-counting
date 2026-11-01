@@ -1,0 +1,61 @@
+== curvature fit, one pair per sprinkling, 1000 sprinklings per row; R_cont = same fit on exact volumes of the same c's ==
+  rho   4000 flat inserted  paper           R_est -1.94 +- 0.23  R_cont +0.00  offset -1.94 +- 0.23  spread per pair 7.4  (n=1000)
+  rho   4000 flat inserted  intrinsic       R_est -0.11 +- 0.02  R_cont +0.00  offset -0.11 +- 0.02  spread per pair 0.8  (n=1000)
+  rho   4000 flat inserted  intrinsic_quad  R_est -0.45 +- 0.08  R_cont +0.00  offset -0.45 +- 0.08  spread per pair 2.5  (n=1000)
+  rho   4000 flat sprinkled paper           R_est -2.36 +- 0.23  R_cont +0.00  offset -2.36 +- 0.23  spread per pair 7.2  (n=1000)
+  rho   4000 flat sprinkled intrinsic       R_est -0.14 +- 0.03  R_cont +0.00  offset -0.14 +- 0.03  spread per pair 0.8  (n=1000)
+  rho   4000 flat sprinkled intrinsic_quad  R_est -0.58 +- 0.08  R_cont +0.00  offset -0.58 +- 0.08  spread per pair 2.5  (n=1000)
+  rho   4000 dS   inserted  paper           R_est +1.09 +- 0.21  R_cont +2.17  offset -1.07 +- 0.21  spread per pair 6.7  (n=1000)
+  rho   4000 dS   inserted  intrinsic       R_est +1.49 +- 0.11  R_cont +2.07  offset -0.58 +- 0.11  spread per pair 3.5  (n=1000)
+  rho   4000 dS   inserted  intrinsic_quad  R_est -0.19 +- 0.37  R_cont +2.33  offset -2.53 +- 0.37  spread per pair 11.6  (n=1000)
+  rho   4000 dS   sprinkled paper           R_est +0.34 +- 0.23  R_cont +2.17  offset -1.83 +- 0.23  spread per pair 7.2  (n=1000)
+  rho   4000 dS   sprinkled intrinsic       R_est +1.19 +- 0.11  R_cont +2.07  offset -0.88 +- 0.11  spread per pair 3.6  (n=1000)
+  rho   4000 dS   sprinkled intrinsic_quad  R_est -1.33 +- 0.39  R_cont +2.34  offset -3.67 +- 0.39  spread per pair 12.3  (n=1000)
+  rho  10000 flat inserted  paper           R_est -0.52 +- 0.13  R_cont +0.00  offset -0.52 +- 0.13  spread per pair 4.2  (n=1000)
+  rho  10000 flat inserted  intrinsic       R_est -0.04 +- 0.02  R_cont -0.00  offset -0.04 +- 0.02  spread per pair 0.5  (n=1000)
+  rho  10000 flat inserted  intrinsic_quad  R_est -0.13 +- 0.05  R_cont +0.00  offset -0.13 +- 0.05  spread per pair 1.5  (n=1000)
+  rho  10000 flat sprinkled paper           R_est -0.96 +- 0.14  R_cont +0.00  offset -0.96 +- 0.14  spread per pair 4.3  (n=1000)
+  rho  10000 flat sprinkled intrinsic       R_est -0.07 +- 0.02  R_cont +0.00  offset -0.07 +- 0.02  spread per pair 0.5  (n=1000)
+  rho  10000 flat sprinkled intrinsic_quad  R_est -0.24 +- 0.05  R_cont +0.00  offset -0.24 +- 0.05  spread per pair 1.6  (n=1000)
+  rho  10000 dS   inserted  paper           R_est +1.63 +- 0.13  R_cont +2.16  offset -0.53 +- 0.13  spread per pair 4.2  (n=1000)
+  rho  10000 dS   inserted  intrinsic       R_est +1.78 +- 0.08  R_cont +2.08  offset -0.30 +- 0.08  spread per pair 2.4  (n=1000)
+  rho  10000 dS   inserted  intrinsic_quad  R_est +0.95 +- 0.25  R_cont +2.35  offset -1.39 +- 0.25  spread per pair 8.0  (n=1000)
+  rho  10000 dS   sprinkled paper           R_est +1.29 +- 0.14  R_cont +2.16  offset -0.87 +- 0.14  spread per pair 4.3  (n=1000)
+  rho  10000 dS   sprinkled intrinsic       R_est +1.61 +- 0.08  R_cont +2.08  offset -0.46 +- 0.08  spread per pair 2.4  (n=1000)
+  rho  10000 dS   sprinkled intrinsic_quad  R_est +0.35 +- 0.26  R_cont +2.35  offset -2.00 +- 0.26  spread per pair 8.1  (n=1000)
+== sensitivity of the intrinsic rule (de Sitter, inserted pairs, rho = 10000, 400 sprinklings): lower cut N_C >= k, upper tau^2 <= q max ==
+  k   5 q 0.50: R_est +1.27 +- 0.25   R_cont +2.19   offset -0.91 +- 0.25   spread 5.0
+  k   5 q 0.75: R_est +1.61 +- 0.16   R_cont +2.11   offset -0.51 +- 0.16   spread 3.1
+  k   5 q 1.00: R_est +1.69 +- 0.13   R_cont +2.08   offset -0.39 +- 0.13   spread 2.6
+  k  20 q 0.50: R_est +1.38 +- 0.23   R_cont +2.18   offset -0.80 +- 0.23   spread 4.6
+  k  20 q 0.75: R_est +1.66 +- 0.15   R_cont +2.11   offset -0.45 +- 0.15   spread 2.9
+  k  20 q 1.00: R_est +1.73 +- 0.12   R_cont +2.08   offset -0.34 +- 0.12   spread 2.4
+  k  50 q 0.50: R_est +1.50 +- 0.21   R_cont +2.17   offset -0.68 +- 0.21   spread 4.1
+  k  50 q 0.75: R_est +1.72 +- 0.13   R_cont +2.10   offset -0.38 +- 0.13   spread 2.7
+  k  50 q 1.00: R_est +1.78 +- 0.11   R_cont +2.07   offset -0.29 +- 0.11   spread 2.2
+== noise at equal density: single-estimate spread of R (mean +- s.e., spread) ==
+  continuum dS ordering fraction: tau_D 0.5: f = 0.5035, tau_D 0.7: f = 0.5069
+  rho   4000 flat BD eps=1.0   R_est -6080.00 +- 16140.80  spread 228265.4   (past of x: 11603 elements; effective footprint ~ 1/eps = 1)
+  rho   4000 flat BD eps=0.1   R_est   -82.08 +-  82.44  spread   1165.9   (past of x: 11603 elements; effective footprint ~ 1/eps = 10)
+  rho   4000 flat BD eps=0.03  R_est    -7.04 +-  12.68  spread    179.4   (past of x: 11603 elements; effective footprint ~ 1/eps = 33)
+  rho   4000 flat BD eps=0.01  R_est    +0.35 +-   2.15  spread     30.4   (past of x: 11603 elements; effective footprint ~ 1/eps = 100)
+  rho   4000 flat chains tau_D=0.5 R_est    +1.34 +-   0.61  spread      8.7   (N in interval 500)
+  rho   4000 flat chains tau_D=0.7 R_est    -0.10 +-   0.23  spread      3.2   (N in interval 978)
+  rho   4000 dS   BD eps=1.0   R_est -35840.00 +- 13158.11  spread 186083.8   (past of x: 2682 elements; effective footprint ~ 1/eps = 1)
+  rho   4000 dS   BD eps=0.1   R_est   +19.02 +-  84.69  spread   1197.7   (past of x: 2682 elements; effective footprint ~ 1/eps = 10)
+  rho   4000 dS   BD eps=0.03  R_est   -13.34 +-  11.18  spread    158.1   (past of x: 2682 elements; effective footprint ~ 1/eps = 33)
+  rho   4000 dS   BD eps=0.01  R_est    +2.74 +-   1.61  spread     22.7   (past of x: 2682 elements; effective footprint ~ 1/eps = 100)
+  rho   4000 dS   chains tau_D=0.5 R_est    +2.44 +-   0.64  spread      9.0   (N in interval 493)
+  rho   4000 dS   chains tau_D=0.7 R_est    +2.06 +-   0.22  spread      3.2   (N in interval 960)
+  rho  10000 flat BD eps=1.0   R_est -40800.00 +- 40807.80  spread 577109.5   (past of x: 29002 elements; effective footprint ~ 1/eps = 1)
+  rho  10000 flat BD eps=0.1   R_est   +84.23 +- 244.25  spread   3454.2   (past of x: 29002 elements; effective footprint ~ 1/eps = 10)
+  rho  10000 flat BD eps=0.03  R_est   -24.89 +-  32.36  spread    457.6   (past of x: 29002 elements; effective footprint ~ 1/eps = 33)
+  rho  10000 flat BD eps=0.01  R_est    -1.46 +-   5.79  spread     81.9   (past of x: 29002 elements; effective footprint ~ 1/eps = 100)
+  rho  10000 flat chains tau_D=0.5 R_est    +0.37 +-   0.36  spread      5.1   (N in interval 1247)
+  rho  10000 flat chains tau_D=0.7 R_est    -0.05 +-   0.13  spread      1.8   (N in interval 2446)
+  rho  10000 dS   BD eps=1.0   R_est +31200.00 +- 38768.19  spread 548265.0   (past of x: 6712 elements; effective footprint ~ 1/eps = 1)
+  rho  10000 dS   BD eps=0.1   R_est   +10.34 +- 231.25  spread   3270.4   (past of x: 6712 elements; effective footprint ~ 1/eps = 10)
+  rho  10000 dS   BD eps=0.03  R_est   +38.19 +-  30.42  spread    430.2   (past of x: 6712 elements; effective footprint ~ 1/eps = 33)
+  rho  10000 dS   BD eps=0.01  R_est    +1.80 +-   5.07  spread     71.8   (past of x: 6712 elements; effective footprint ~ 1/eps = 100)
+  rho  10000 dS   chains tau_D=0.5 R_est    +2.05 +-   0.38  spread      5.4   (N in interval 1237)
+  rho  10000 dS   chains tau_D=0.7 R_est    +1.87 +-   0.15  spread      2.1   (N in interval 2398)

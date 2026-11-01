@@ -1,0 +1,1075 @@
+{
+  "schema": "tracks -> rounds[]; each round: version reviewed, files, verdict, odds, comments with status (open|resolved|partial|unresolved|declined|n/a). Comment ids persist across rounds; new comments get new ids (e.g. M8, m9).",
+  "tracks": {
+    "3+1 PRD": {
+      "slug": "embedding-3p1",
+      "journal": "Physical Review D",
+      "rounds": [
+        {
+          "round": 1,
+          "date": "2026-10-30",
+          "manuscript": "3+1 PRD/manuscripts/embedding-3p1-v1.pdf",
+          "answer": null,
+          "review": "3+1 PRD/reviews/review-embedding-3p1-v1.md",
+          "recommendation": "minor-to-major revision",
+          "odds": "60-75% (higher if M1-M3 fixed)",
+          "placeholders_excluded": [],
+          "comments": {
+            "M1": {
+              "text": "Physical significance of better embedding not argued",
+              "status": "open"
+            },
+            "M2": {
+              "text": "Too few universes (1-2 at n<=3000); want >=10/size up to 6000 and spread of removed fraction",
+              "status": "open"
+            },
+            "M3": {
+              "text": "Ablation vs Casasola near-light-cone pseudo-likelihood from same intrinsic start",
+              "status": "open"
+            },
+            "M4": {
+              "text": "Local optimum: true-start lnL higher; try multi-start/annealing/L-BFGS",
+              "status": "open"
+            },
+            "M5": {
+              "text": "Time coordinate not refit; exploratory joint fit or argument",
+              "status": "open"
+            },
+            "M6": {
+              "text": "Missing refs: Major-Rideout-Surya 2006/2007, Eichhorn-Surya-Versteegen CQG 2019",
+              "status": "open"
+            },
+            "m1": {
+              "text": "s_ab normalization ambiguous typesetting",
+              "status": "open"
+            },
+            "m2": {
+              "text": "Table of sprinkling sets (a)/(b)/(b')/(c)",
+              "status": "open"
+            },
+            "m3": {
+              "text": "Abstract too number-dense",
+              "status": "open"
+            },
+            "m4": {
+              "text": "Figure of error localization + per-pair error histograms",
+              "status": "open"
+            },
+            "m5": {
+              "text": "Resolve Table IV discrepancy with Johnston",
+              "status": "open"
+            },
+            "m6": {
+              "text": "State slab four-leg fallback is needed and fair",
+              "status": "open"
+            },
+            "m7": {
+              "text": "Stable identifiers for unrefereed preprints",
+              "status": "open"
+            },
+            "m8": {
+              "text": "HMM citation date/arXiv mismatch; check 2026 arXiv numbers",
+              "status": "open"
+            }
+          }
+        },
+        {
+          "round": 2,
+          "date": "2026-10-30",
+          "manuscript": "3+1 PRD/manuscripts/embedding-3p1-v2.pdf",
+          "answer": "3+1 PRD/answers/answer-embedding-3p1-v2.md",
+          "review": "3+1 PRD/reviews/review-embedding-3p1-v2.md",
+          "recommendation": "minor revision",
+          "odds": "65-75% as is; 70-80% with M7, m9-m11 fixed",
+          "placeholders_excluded": [],
+          "comments": {
+            "M1": {
+              "text": "Physical significance not argued",
+              "status": "resolved",
+              "note": "argued not demonstrated; explicit limit stated"
+            },
+            "M2": {
+              "text": "Too few universes",
+              "status": "resolved",
+              "note": "10/size to 6000; 72/74/80%; 44/44 wins"
+            },
+            "M3": {
+              "text": "Ablation vs Casasola near-cone",
+              "status": "resolved",
+              "note": "near-cone slightly better; all-pairs contribution withdrawn"
+            },
+            "M4": {
+              "text": "Local optimum / optimizer",
+              "status": "resolved",
+              "note": "L-BFGS, 3 starts, truth-start converged; framing concern moved to M7"
+            },
+            "M5": {
+              "text": "Time coordinate held fixed",
+              "status": "resolved",
+              "note": "joint fit +0.0004/+0.0002"
+            },
+            "M6": {
+              "text": "Missing refs MRS/ESV",
+              "status": "resolved"
+            },
+            "m1": {
+              "text": "s_ab notation",
+              "status": "resolved"
+            },
+            "m2": {
+              "text": "Table of sprinkling sets",
+              "status": "resolved"
+            },
+            "m3": {
+              "text": "Abstract too number-dense",
+              "status": "resolved",
+              "note": "but stale 'roughly halves' -> m9"
+            },
+            "m4": {
+              "text": "Error-localization figure",
+              "status": "resolved",
+              "note": "Fig. 2 added; stale text/legibility -> m10"
+            },
+            "m5": {
+              "text": "Johnston Table IV mismatch",
+              "status": "declined",
+              "note": "acceptable; optional cheap check in m14"
+            },
+            "m6": {
+              "text": "Slab four-leg fallback",
+              "status": "resolved"
+            },
+            "m7": {
+              "text": "Unrefereed preprints",
+              "status": "resolved"
+            },
+            "m8": {
+              "text": "HMM citation / arXiv numbers",
+              "status": "resolved",
+              "note": "referee verified arXiv record: citation correct; comment withdrawn"
+            },
+            "M7": {
+              "text": "'Not by the optimizer' too strong: truth-start lnL higher by ~1; report count of universes, lnL path scan, rephrase abstract/outlook",
+              "status": "open"
+            },
+            "m9": {
+              "text": "Abstract 'roughly halves' stale: median falls 33-40%; '3/4 to 4/5' vs 72-83%",
+              "status": "open"
+            },
+            "m10": {
+              "text": "'Where the error remains' quotes v1 two-universe numbers; Fig. 2 illegible",
+              "status": "open"
+            },
+            "m11": {
+              "text": "Remove version-history references and run IDs from manuscript",
+              "status": "open"
+            },
+            "m12": {
+              "text": "Recommend variant (near-cone), time it in Sec. VII; note 400-iter Adam in Table III",
+              "status": "open"
+            },
+            "m13": {
+              "text": "Companion ref [18] has old 1+1 title",
+              "status": "open"
+            },
+            "m14": {
+              "text": "Optional: Table IV candidate statistics; more slab universes",
+              "status": "open"
+            }
+          }
+        },
+        {
+          "round": 3,
+          "date": "2026-10-30",
+          "manuscript": "3+1 PRD/manuscripts/embedding-3p1-v3.pdf",
+          "diff": "3+1 PRD/manuscripts/embedding-3p1-v3-diff.pdf",
+          "answer": "3+1 PRD/answers/answer-embedding-3p1-v3.md",
+          "review": "3+1 PRD/reviews/review-embedding-3p1-v3.md",
+          "recommendation": "minor revision; accept once 15-18 addressed (no re-review needed)",
+          "odds": "70-80% as is; 75-85% with 15-18",
+          "placeholders_excluded": [],
+          "comments": {
+            "M1": {
+              "text": "Significance",
+              "status": "resolved"
+            },
+            "M2": {
+              "text": "Statistics",
+              "status": "resolved"
+            },
+            "M3": {
+              "text": "Casasola ablation",
+              "status": "resolved"
+            },
+            "M4": {
+              "text": "Optimizer",
+              "status": "resolved"
+            },
+            "M5": {
+              "text": "Time coordinate",
+              "status": "resolved"
+            },
+            "M6": {
+              "text": "References",
+              "status": "resolved"
+            },
+            "M7": {
+              "text": "'Not by the optimizer' too strong",
+              "status": "resolved",
+              "note": "flat-valley wording supported; directional sub-claim -> 15"
+            },
+            "m1": {
+              "text": "s_ab notation",
+              "status": "resolved"
+            },
+            "m2": {
+              "text": "Sets table",
+              "status": "resolved"
+            },
+            "m3": {
+              "text": "Abstract density",
+              "status": "resolved"
+            },
+            "m4": {
+              "text": "Error-location figure",
+              "status": "resolved"
+            },
+            "m5": {
+              "text": "Johnston Table IV",
+              "status": "declined",
+              "note": "candidates computed in v3; mismatch remains; acceptable"
+            },
+            "m6": {
+              "text": "Slab fallback",
+              "status": "resolved"
+            },
+            "m7": {
+              "text": "Unrefereed preprints",
+              "status": "resolved"
+            },
+            "m8": {
+              "text": "HMM citation",
+              "status": "resolved",
+              "note": "withdrawn"
+            },
+            "m9": {
+              "text": "'Roughly halves' stale",
+              "status": "resolved"
+            },
+            "m10": {
+              "text": "Stale v1 numbers; Fig. 2 legibility",
+              "status": "resolved"
+            },
+            "m11": {
+              "text": "Version history in manuscript",
+              "status": "resolved",
+              "note": "remnant 'of this version' in Data availability -> 18"
+            },
+            "m12": {
+              "text": "Recommend variant; timing; schedule",
+              "status": "resolved",
+              "note": "estimates clearly labelled; clarifications -> 17"
+            },
+            "m13": {
+              "text": "Companion title",
+              "status": "resolved"
+            },
+            "m14": {
+              "text": "Optional: Table IV candidates; slab universes",
+              "status": "resolved",
+              "note": "(a) done, (b) declined acceptably"
+            },
+            "m15": {
+              "text": "Directional claims (global max near accurate map; slope; ideal optimizer) rest on dlnL ~ continuation gain (+0.5/+2.4); equal-convergence recount or delete; report n=1000 4/10",
+              "status": "open"
+            },
+            "m16": {
+              "text": "'No barrier': add s=0.25/0.75 relaxations; 'no barrier was found'; state triangle-inequality mechanism",
+              "status": "open"
+            },
+            "m17": {
+              "text": "Near-cone share falls ~n^-0.3 not n^-1/2; state schedule of recommended variant's accuracy",
+              "status": "open"
+            },
+            "m18": {
+              "text": "Data availability says 'openly available' but repo not yet public; remove 'of this version'",
+              "status": "open"
+            }
+          }
+        },
+        {
+          "round": 4,
+          "date": "2026-10-31",
+          "manuscript": "3+1 PRD/manuscripts/embedding-3p1-v4.pdf",
+          "diff": "3+1 PRD/manuscripts/embedding-3p1-v4-diff.pdf",
+          "answer": "3+1 PRD/answers/answer-embedding-3p1-v4.md",
+          "review": "3+1 PRD/reviews/review-embedding-3p1-v4.md",
+          "recommendation": "accept (m19-m20 one-sentence edits, m21 at submission; no re-review)",
+          "odds": "75-85% (with or without m19-m21)",
+          "placeholders_excluded": [],
+          "comments": {
+            "M1": {
+              "text": "Significance",
+              "status": "resolved"
+            },
+            "M2": {
+              "text": "Statistics",
+              "status": "resolved"
+            },
+            "M3": {
+              "text": "Casasola ablation",
+              "status": "resolved"
+            },
+            "M4": {
+              "text": "Optimizer",
+              "status": "resolved"
+            },
+            "M5": {
+              "text": "Time coordinate",
+              "status": "resolved"
+            },
+            "M6": {
+              "text": "References",
+              "status": "resolved"
+            },
+            "M7": {
+              "text": "'Not by the optimizer' too strong",
+              "status": "resolved",
+              "note": "flat-valley wording supported; directional sub-claim -> 15"
+            },
+            "m1": {
+              "text": "s_ab notation",
+              "status": "resolved"
+            },
+            "m2": {
+              "text": "Sets table",
+              "status": "resolved"
+            },
+            "m3": {
+              "text": "Abstract density",
+              "status": "resolved"
+            },
+            "m4": {
+              "text": "Error-location figure",
+              "status": "resolved"
+            },
+            "m5": {
+              "text": "Johnston Table IV",
+              "status": "declined",
+              "note": "candidates computed in v3; mismatch remains; acceptable"
+            },
+            "m6": {
+              "text": "Slab fallback",
+              "status": "resolved"
+            },
+            "m7": {
+              "text": "Unrefereed preprints",
+              "status": "resolved"
+            },
+            "m8": {
+              "text": "HMM citation",
+              "status": "resolved",
+              "note": "withdrawn"
+            },
+            "m9": {
+              "text": "'Roughly halves' stale",
+              "status": "resolved"
+            },
+            "m10": {
+              "text": "Stale v1 numbers; Fig. 2 legibility",
+              "status": "resolved"
+            },
+            "m11": {
+              "text": "Version history in manuscript",
+              "status": "resolved",
+              "note": "remnant 'of this version' in Data availability -> 18"
+            },
+            "m12": {
+              "text": "Recommend variant; timing; schedule",
+              "status": "resolved",
+              "note": "estimates clearly labelled; clarifications -> 17"
+            },
+            "m13": {
+              "text": "Companion title",
+              "status": "resolved"
+            },
+            "m14": {
+              "text": "Optional: Table IV candidates; slab universes",
+              "status": "resolved",
+              "note": "(a) done, (b) declined acceptably"
+            },
+            "m15": {
+              "text": "Directional claims (global max near accurate map; slope; ideal optimizer) rest on dlnL ~ continuation gain (+0.5/+2.4); equal-convergence recount or delete; report n=1000 4/10",
+              "status": "resolved",
+              "note": "route (b): directional sentences deleted everywhere (searched); n=1000 4/10 added; \"no larger than\" wording -> m19"
+            },
+            "m16": {
+              "text": "'No barrier': add s=0.25/0.75 relaxations; 'no barrier was found'; state triangle-inequality mechanism",
+              "status": "resolved",
+              "note": "s=0.25/0.75 rerun to convergence (26-1001 it.); numbers verified; \"no barrier was found\"; 0.15/0.11 ell measured"
+            },
+            "m17": {
+              "text": "Near-cone share falls ~n^-0.3 not n^-1/2; state schedule of recommended variant's accuracy",
+              "status": "resolved",
+              "note": "n^-0.3 (fit -0.32 verified); 400-iter Adam schedule stated"
+            },
+            "m18": {
+              "text": "Data availability says 'openly available' but repo not yet public; remove 'of this version'",
+              "status": "resolved",
+              "note": "commitment wording; present tense at submission -> m21"
+            },
+            "m19": {
+              "text": "Sec. V 'no larger than' continuation gain is false (mean 0.9>0.5; max 5.4/6.5): say 'same order' + unequal continuation; quote relaxation lnL range vs intrinsic end",
+              "status": "open"
+            },
+            "m20": {
+              "text": "Abstract 'become rarer only slowly with density' unsupported (k<10 share 50%->31%, ~n^-0.7); body argues errors decrease slowly",
+              "status": "open"
+            },
+            "m21": {
+              "text": "Data availability + Ref. [32]: switch to present tense when repo made public at submission; optional Zenodo",
+              "status": "open"
+            }
+          }
+        }
+      ],
+      "closing_check": {
+        "date": "2026-10-31",
+        "manuscript": "3+1 PRD/manuscripts/embedding-3p1-v5.pdf",
+        "answer": "3+1 PRD/answers/answer-embedding-3p1-v5.md",
+        "type": "confirmation only (no review file; both v4 reports said no further review)",
+        "result": "all requested changes verified in v5 text",
+        "resolved": [
+          "m19",
+          "m20",
+          "m21"
+        ],
+        "remaining": "[Zenodo DOI] placeholder in Data availability (3+1: optional clause, drop if no DOI; CQG: condition of acceptance); repo must be public at upload"
+      }
+    },
+    "1+1 PRD": {
+      "slug": "toolkit-1p1",
+      "journal": "Physical Review D",
+      "rounds": [
+        {
+          "round": 1,
+          "date": "2026-10-30",
+          "manuscript": "1+1 PRD/manuscripts/toolkit-1p1-v1.pdf",
+          "answer": null,
+          "review": "1+1 PRD/reviews/review-toolkit-1p1-v1.md",
+          "recommendation": "major revision, real chance of rejection on significance",
+          "odds": "30-45% as is; 50-60% with fixes",
+          "placeholders_excluded": [
+            "N = 800 held-out test, Sec. VII"
+          ],
+          "comments": {
+            "M1": {
+              "text": "Add Hu-Meyer-Meyer to Table II",
+              "status": "open"
+            },
+            "M2": {
+              "text": "Ablation: bias correction vs general c against equal-depth BK",
+              "status": "open"
+            },
+            "M3": {
+              "text": "Curvature estimator: intrinsic window (uses H), benchmark vs Benincasa-Dowker/chain abundances, low offset, sprinkled pairs",
+              "status": "open"
+            },
+            "M4": {
+              "text": "Propagator target: demote or show concrete use",
+              "status": "open"
+            },
+            "M5": {
+              "text": "Why null-pair fraction z if height/ordering fraction detect layering",
+              "status": "open"
+            },
+            "M6": {
+              "text": "e^{-beta S} states non-equilibrium; beta_c bracket loose",
+              "status": "open"
+            },
+            "M7": {
+              "text": "Missing refs: Eichhorn-Surya-Versteegen, Major-Rideout-Surya, Khetrapal-Surya",
+              "status": "open"
+            },
+            "m1": {
+              "text": "Restructure around one theme",
+              "status": "open"
+            },
+            "m2": {
+              "text": "Fig. 3 correlated bins",
+              "status": "open"
+            },
+            "m3": {
+              "text": "Define 'Lorentz transformation to within 3-10%'",
+              "status": "open"
+            },
+            "m4": {
+              "text": "State Table I vs II pair selections up front",
+              "status": "open"
+            },
+            "m5": {
+              "text": "HMM citation date/arXiv mismatch; check 2026 arXiv numbers",
+              "status": "open"
+            }
+          }
+        }
+      ],
+      "status": "closed after round 1: author sends the 1+1 paper to CQG only (stated in answer-toolkit-1p1-v2.md, CQG track)"
+    },
+    "1+1 CQG": {
+      "slug": "toolkit-1p1",
+      "journal": "Classical and Quantum Gravity",
+      "rounds": [
+        {
+          "round": 1,
+          "date": "2026-10-30",
+          "manuscript": "1+1 CQG/manuscripts/toolkit-1p1-v1.pdf",
+          "answer": null,
+          "review": "1+1 CQG/reviews/review-toolkit-1p1-v1.md",
+          "recommendation": "major revision, likely accept after fixes",
+          "odds": "55-70% as is; 75-85% with fixes",
+          "placeholders_excluded": [
+            "N = 800 held-out test, Sec. VII"
+          ],
+          "comments": {
+            "M1": {
+              "text": "Add Hu-Meyer-Meyer to Table II",
+              "status": "open"
+            },
+            "M2": {
+              "text": "Ablation: bias correction vs general c against equal-depth BK",
+              "status": "open"
+            },
+            "M3": {
+              "text": "Curvature estimator: intrinsic window, BD/chain benchmark, low offset, sprinkled pairs, derive weighting kernel",
+              "status": "open"
+            },
+            "M4": {
+              "text": "Restructure around Secs. III-IV; propagator target to short section/appendix or separate CQG Note",
+              "status": "open"
+            },
+            "M5": {
+              "text": "Why null-pair fraction z is needed",
+              "status": "open"
+            },
+            "M6": {
+              "text": "e^{-beta S} states non-equilibrium; abstract wording; beta_c bracket",
+              "status": "open"
+            },
+            "M7": {
+              "text": "Missing refs: ESV, MRS, Khetrapal-Surya, 2D-orders phase observables",
+              "status": "open"
+            },
+            "m1": {
+              "text": "Fig. 3 correlated bins",
+              "status": "open"
+            },
+            "m2": {
+              "text": "Define 'Lorentz transformation to within 3-10%'",
+              "status": "open"
+            },
+            "m3": {
+              "text": "State Table I vs II pair selections up front",
+              "status": "open"
+            },
+            "m4": {
+              "text": "Shorten abstract",
+              "status": "open"
+            },
+            "m5": {
+              "text": "HMM citation date/arXiv mismatch; check 2026 arXiv numbers",
+              "status": "open"
+            },
+            "m6": {
+              "text": "Archive code with persistent DOI (IOP data policy)",
+              "status": "open"
+            },
+            "m7": {
+              "text": "Final version in IOP reference style",
+              "status": "open"
+            }
+          }
+        },
+        {
+          "round": 2,
+          "date": "2026-10-30",
+          "manuscript": "1+1 CQG/manuscripts/toolkit-1p1-v2.pdf",
+          "answer": "1+1 CQG/answers/answer-toolkit-1p1-v2.md",
+          "review": "1+1 CQG/reviews/review-toolkit-1p1-v2.md",
+          "title": "Spatial distance and curvature from an exact counting identity in two-dimensional causal sets",
+          "recommendation": "minor revision",
+          "odds": "75-85% as is; 85-90% with M8-M10",
+          "placeholders_excluded": [
+            "N = 800 held-out test (r27), Sec. VI",
+            "Zenodo DOI in Data availability"
+          ],
+          "comments": {
+            "M1": {
+              "text": "HMM in Table II",
+              "status": "resolved",
+              "note": "HMM better above 10 ell; claims restricted"
+            },
+            "M2": {
+              "text": "Ablation correction vs choice of c",
+              "status": "resolved"
+            },
+            "M3": {
+              "text": "Curvature estimator",
+              "status": "partial",
+              "note": "window/pooling/kernel resolved; sprinkled pairs still low -> M8; FRW test old estimator -> M9; realistic noise comparison -> M10"
+            },
+            "M4": {
+              "text": "Restructure",
+              "status": "resolved"
+            },
+            "M5": {
+              "text": "Why z",
+              "status": "resolved"
+            },
+            "M6": {
+              "text": "e^{-beta S} states",
+              "status": "resolved"
+            },
+            "M7": {
+              "text": "Missing refs",
+              "status": "resolved",
+              "note": "complete [16],[17] -> m16"
+            },
+            "m1": {
+              "text": "Fig. 3 correlated bins",
+              "status": "resolved"
+            },
+            "m2": {
+              "text": "Lorentz 3-10% definition",
+              "status": "resolved"
+            },
+            "m3": {
+              "text": "Table I vs II selections",
+              "status": "resolved"
+            },
+            "m4": {
+              "text": "Shorten abstract",
+              "status": "resolved"
+            },
+            "m5": {
+              "text": "HMM citation",
+              "status": "resolved",
+              "note": "verified correct; withdrawn"
+            },
+            "m6": {
+              "text": "Zenodo DOI",
+              "status": "n/a",
+              "note": "placeholder"
+            },
+            "m7": {
+              "text": "IOP style",
+              "status": "deferred",
+              "note": "final version; acceptable"
+            },
+            "M8": {
+              "text": "Sprinkled pairs read low; hypothesis: nearest-element selection depletes strip ends; test with uniform selection in window",
+              "status": "open"
+            },
+            "M9": {
+              "text": "FRW sprinkling test uses v1 single-pair estimator and window; rerun pooled, compare Eq. (12)",
+              "status": "open"
+            },
+            "M10": {
+              "text": "Noise comparison in realistic use: pooled P pairs in one region vs ordering fraction of same region",
+              "status": "open"
+            },
+            "m11": {
+              "text": "Eq. (12) fixes only first moment; triangular kernel illustrative",
+              "status": "open"
+            },
+            "m12": {
+              "text": "Abstract wording on accuracy ranges; sprinkled-pair result",
+              "status": "open"
+            },
+            "m13": {
+              "text": "tau^4 systematic (target 2.07 not 2) as method systematic",
+              "status": "open"
+            },
+            "m14": {
+              "text": "Is 'rectangle in sprinkled region' intrinsic?",
+              "status": "open"
+            },
+            "m15": {
+              "text": "Remove version-history references",
+              "status": "open"
+            },
+            "m16": {
+              "text": "Complete refs [16],[17]",
+              "status": "open"
+            },
+            "m17": {
+              "text": "'What z adds' paragraph break",
+              "status": "open"
+            }
+          }
+        },
+        {
+          "round": 3,
+          "date": "2026-10-30",
+          "manuscript": "1+1 CQG/manuscripts/toolkit-1p1-v3.pdf",
+          "diff": "1+1 CQG/manuscripts/toolkit-1p1-v3-diff.pdf",
+          "answer": "1+1 CQG/answers/answer-toolkit-1p1-v3.md",
+          "review": "1+1 CQG/reviews/review-toolkit-1p1-v3.md",
+          "recommendation": "minor revision (no re-review needed if 18-21 handled; DOI and r27 required before acceptance)",
+          "odds": "65-75% as is; 70-80% with 18-23; higher if optional locality test (24) favours the drift",
+          "placeholders_excluded": [
+            "N = 800 held-out test (r27), Sec. VI",
+            "Zenodo DOI in Data availability"
+          ],
+          "comments": {
+            "M1": {
+              "text": "HMM",
+              "status": "resolved"
+            },
+            "M2": {
+              "text": "Ablation",
+              "status": "resolved"
+            },
+            "M3": {
+              "text": "Curvature estimator",
+              "status": "resolved",
+              "note": "wording issues in 18-21"
+            },
+            "M4": {
+              "text": "Restructure",
+              "status": "resolved"
+            },
+            "M5": {
+              "text": "Why z",
+              "status": "resolved"
+            },
+            "M6": {
+              "text": "e^{-beta S}",
+              "status": "resolved"
+            },
+            "M7": {
+              "text": "Refs",
+              "status": "resolved"
+            },
+            "m1": {
+              "text": "Fig. 3 bins",
+              "status": "resolved"
+            },
+            "m2": {
+              "text": "Lorentz def",
+              "status": "resolved"
+            },
+            "m3": {
+              "text": "Selections",
+              "status": "resolved"
+            },
+            "m4": {
+              "text": "Abstract",
+              "status": "resolved"
+            },
+            "m5": {
+              "text": "HMM citation",
+              "status": "resolved",
+              "note": "withdrawn"
+            },
+            "m6": {
+              "text": "Zenodo DOI",
+              "status": "n/a",
+              "note": "placeholder; condition of acceptance"
+            },
+            "m7": {
+              "text": "IOP style",
+              "status": "deferred"
+            },
+            "M8": {
+              "text": "Sprinkled pairs low",
+              "status": "resolved",
+              "note": "nearest-element Palm bias confirmed; Mecke pooling removes it; scope -> 19"
+            },
+            "M9": {
+              "text": "FRW with final estimator",
+              "status": "resolved",
+              "note": "matches continuum fit; Eq. (12) direction only; number -> 20"
+            },
+            "M10": {
+              "text": "Realistic noise comparison",
+              "status": "resolved",
+              "note": "negative: OF ~3x more precise in dS, drift biased low 0.1-0.5 in-region; abstract -> 18"
+            },
+            "m11": {
+              "text": "Eq. (12) first moment only",
+              "status": "resolved"
+            },
+            "m12": {
+              "text": "Abstract accuracy wording",
+              "status": "resolved"
+            },
+            "m13": {
+              "text": "tau^4 systematic",
+              "status": "resolved"
+            },
+            "m14": {
+              "text": "Window intrinsic?",
+              "status": "partial",
+              "note": "-> 21"
+            },
+            "m15": {
+              "text": "Version refs",
+              "status": "resolved"
+            },
+            "m16": {
+              "text": "Refs [16],[17]",
+              "status": "resolved",
+              "note": "[16] not independently verified"
+            },
+            "m17": {
+              "text": "'What z adds' paragraph",
+              "status": "resolved"
+            },
+            "m18": {
+              "text": "Abstract oversells curvature estimator: in-region bias, OF ~3x more precise in dS",
+              "status": "open"
+            },
+            "m19": {
+              "text": "Mecke scope: 'count-defined separations' selection not covered; abstract 'independently of neighbourhoods' loose; how P pairs drawn",
+              "status": "open"
+            },
+            "m20": {
+              "text": "'About 30%' inconsistent: target exceeds Eq.(12) by 35-53% (Eq.12 short by 26-34%); abstract add 'to leading order'",
+              "status": "open"
+            },
+            "m21": {
+              "text": "Convexity: f unnecessary (D not counted); convexity is an assumption unless causal set is order-defined; Table III caption",
+              "status": "open"
+            },
+            "m22": {
+              "text": "Flat control in one-region comparison has 3.4x elements",
+              "status": "open"
+            },
+            "m23": {
+              "text": "Data availability 'openly available' vs private repo; DOI; r27 placeholder 3 rounds",
+              "status": "open"
+            },
+            "m24": {
+              "text": "Optional: locality test where curvature varies across region",
+              "status": "open"
+            }
+          }
+        },
+        {
+          "round": 4,
+          "date": "2026-10-31",
+          "manuscript": "1+1 CQG/manuscripts/toolkit-1p1-v4.pdf",
+          "diff": "1+1 CQG/manuscripts/toolkit-1p1-v4-diff.pdf",
+          "answer": "1+1 CQG/answers/answer-toolkit-1p1-v4.md",
+          "review": "1+1 CQG/reviews/review-toolkit-1p1-v4.md",
+          "recommendation": "minor revision; accept once m25-m29 made, no further review",
+          "odds": "70-80% with m25-m29; 65-75% if m25 left",
+          "placeholders_excluded": [
+            "Zenodo DOI in Data availability"
+          ],
+          "comments": {
+            "M1": {
+              "text": "HMM",
+              "status": "resolved"
+            },
+            "M2": {
+              "text": "Ablation",
+              "status": "resolved"
+            },
+            "M3": {
+              "text": "Curvature estimator",
+              "status": "resolved",
+              "note": "wording issues in 18-21"
+            },
+            "M4": {
+              "text": "Restructure",
+              "status": "resolved"
+            },
+            "M5": {
+              "text": "Why z",
+              "status": "resolved"
+            },
+            "M6": {
+              "text": "e^{-beta S}",
+              "status": "resolved"
+            },
+            "M7": {
+              "text": "Refs",
+              "status": "resolved"
+            },
+            "m1": {
+              "text": "Fig. 3 bins",
+              "status": "resolved"
+            },
+            "m2": {
+              "text": "Lorentz def",
+              "status": "resolved"
+            },
+            "m3": {
+              "text": "Selections",
+              "status": "resolved"
+            },
+            "m4": {
+              "text": "Abstract",
+              "status": "resolved"
+            },
+            "m5": {
+              "text": "HMM citation",
+              "status": "resolved",
+              "note": "withdrawn"
+            },
+            "m6": {
+              "text": "Zenodo DOI",
+              "status": "n/a",
+              "note": "placeholder; condition of acceptance"
+            },
+            "m7": {
+              "text": "IOP style",
+              "status": "deferred"
+            },
+            "M8": {
+              "text": "Sprinkled pairs low",
+              "status": "resolved",
+              "note": "nearest-element Palm bias confirmed; Mecke pooling removes it; scope -> 19"
+            },
+            "M9": {
+              "text": "FRW with final estimator",
+              "status": "resolved",
+              "note": "matches continuum fit; Eq. (12) direction only; number -> 20"
+            },
+            "M10": {
+              "text": "Realistic noise comparison",
+              "status": "resolved",
+              "note": "negative: OF ~3x more precise in dS, drift biased low 0.1-0.5 in-region; abstract -> 18"
+            },
+            "m11": {
+              "text": "Eq. (12) first moment only",
+              "status": "resolved"
+            },
+            "m12": {
+              "text": "Abstract accuracy wording",
+              "status": "resolved"
+            },
+            "m13": {
+              "text": "tau^4 systematic",
+              "status": "resolved"
+            },
+            "m14": {
+              "text": "Window intrinsic?",
+              "status": "partial",
+              "note": "-> 21"
+            },
+            "m15": {
+              "text": "Version refs",
+              "status": "resolved"
+            },
+            "m16": {
+              "text": "Refs [16],[17]",
+              "status": "resolved",
+              "note": "[16] not independently verified"
+            },
+            "m17": {
+              "text": "'What z adds' paragraph",
+              "status": "resolved"
+            },
+            "m18": {
+              "text": "Abstract oversells curvature estimator: in-region bias, OF ~3x more precise in dS",
+              "status": "resolved",
+              "note": "abstract: less precise (~3x), biased low in one region, within 1.7sigma; 'on average over sprinklings' imprecise -> m25"
+            },
+            "m19": {
+              "text": "Mecke scope: 'count-defined separations' selection not covered; abstract 'independently of neighbourhoods' loose; how P pairs drawn",
+              "status": "resolved",
+              "note": "route (b) + rerun: v3 P pairs were sequential draws; position-based selection gives same per-region bias; pooled-over-sprinklings ratio on target -> ratio bias, argument verified sound"
+            },
+            "m20": {
+              "text": "'About 30%' inconsistent: target exceeds Eq.(12) by 35-53% (Eq.12 short by 26-34%); abstract add 'to leading order'",
+              "status": "resolved",
+              "note": "26-35% falls short (verified unrounded); to leading order in abstract"
+            },
+            "m21": {
+              "text": "Convexity: f unnecessary (D not counted); convexity is an assumption unless causal set is order-defined; Table III caption",
+              "status": "resolved",
+              "note": "f dropped; convexity an assumption; caption matches; Fig.3 'rectangle' leftover -> m26"
+            },
+            "m22": {
+              "text": "Flat control in one-region comparison has 3.4x elements",
+              "status": "resolved",
+              "note": "rerun at matched N; OF slightly more precise in flat; carried everywhere; proper-depth caveat optional -> m27"
+            },
+            "m23": {
+              "text": "Data availability 'openly available' vs private repo; DOI; r27 placeholder 3 rounds",
+              "status": "resolved",
+              "note": "r27 filled and reviewed (8/8 layered flagged, 1/20 FP, fair); reporting points -> m28; data availability present tense -> m29; DOI still placeholder"
+            },
+            "m24": {
+              "text": "Optional: locality test where curvature varies across region",
+              "status": "declined",
+              "note": "not run; Discussion fallback (analytic and conceptual; selection-bias lesson) met"
+            },
+            "m25": {
+              "text": "Abstract 'reproduces on average over independent sprinklings' reads as mean of per-region estimates (biased 1.67 vs 2.10); say coefficients summed over pairs of many sprinklings (referee's own v3 wording)",
+              "status": "open"
+            },
+            "m26": {
+              "text": "Fig. 3 test paragraph still 'rectangle lies inside the region' vs new interval window rule",
+              "status": "open"
+            },
+            "m27": {
+              "text": "Optional: flat control matched in N but proper depth ~1.85 vs ~0.96 (lever arm ~3.5x); 'within 1.1sigma' -> 1.3sigma from rounded Table III",
+              "status": "open"
+            },
+            "m28": {
+              "text": "r27 reporting: Limitations add stress result (full test rejects ~4/20 continuum-like at N=800); Sec V N=400 scope; M and threshold derivation; flat height ~57 context; small-sample caveat; placement of test-inputs sentence",
+              "status": "open"
+            },
+            "m29": {
+              "text": "Data availability + Ref. [46]: present tense at submission; mint Zenodo DOI (condition of acceptance)",
+              "status": "open"
+            }
+          }
+        }
+      ],
+      "closing_check": {
+        "date": "2026-10-31",
+        "manuscript": "1+1 CQG/manuscripts/toolkit-1p1-v5.pdf",
+        "answer": "1+1 CQG/answers/answer-toolkit-1p1-v5.md",
+        "type": "confirmation only (no review file; both v4 reports said no further review)",
+        "result": "all requested changes verified in v5 text",
+        "resolved": [
+          "m25",
+          "m26",
+          "m27",
+          "m28",
+          "m29"
+        ],
+        "remaining": "[Zenodo DOI] placeholder in Data availability (3+1: optional clause, drop if no DOI; CQG: condition of acceptance); repo must be public at upload"
+      }
+    }
+  },
+  "final_assessment": {
+    "date": "2026-10-31",
+    "realistic_odds": {
+      "3+1 PRD": "~65-80% (report said 75-85%; shaded down for shared writer/referee blind spots and real-journal risks)",
+      "1+1 CQG": "~55-75% (report said 70-80%); higher if locality test (m24) favours the drift"
+    },
+    "main_risks": [
+      "significance/incremental (3+1 vs Johnston+Casasola; 1+1 estimator loses to ordering fraction)",
+      "single author + company affiliation + AI disclosure",
+      "rectangle identity possibly in prior work",
+      "unverified refs: Madsen arXiv:2610.36695, Glaser-Surya CQG 33 065003, Eichhorn et al arXiv:2605.27514",
+      "repo reproducibility once public",
+      "1+1 N=800 small sample (8/20)"
+    ],
+    "advice_sent_to_writer": [
+      "fill or drop [Zenodo DOI]; make repo public before upload",
+      "hand-check refs; clean-clone rerun; independent human expert read; arXiv at submission",
+      "optional m24 locality test for CQG only, pre-registered, 1-2 week timebox; do not delay 3+1"
+    ],
+    "fallback_venues": {
+      "3+1": "CQG",
+      "1+1": "PRD or a mathematical-physics journal"
+    }
+  }
+}

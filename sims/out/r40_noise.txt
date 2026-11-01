@@ -1,0 +1,18 @@
+== noise, dS diamond u, v in [-3.0, -0.95], rho = 4000 (2511 elements), 400 sprinklings (4 s); continuum dS ordering fraction 0.51729 ==
+  ordering fraction (whole diamond): R +2.049, s.d. between sprinklings 0.797
+  depth drift, P =  10 pairs: R +1.610, s.d. between sprinklings 2.521   (continuum fit of the same c's +2.088; rms about it 2.566)
+  depth drift, P =  30 pairs: R +1.620, s.d. between sprinklings 2.358   (continuum fit of the same c's +2.090; rms about it 2.405)
+  depth drift, P = 100 pairs: R +1.629, s.d. between sprinklings 2.248   (continuum fit of the same c's +2.090; rms about it 2.295)
+  depth drift, P = 300 pairs: R +1.632, s.d. between sprinklings 2.226   (continuum fit of the same c's +2.090; rms about it 2.272)
+== noise, dS diamond u, v in [-3.0, -0.95], rho = 10000 (6280 elements), 400 sprinklings (15 s); continuum dS ordering fraction 0.51729 ==
+  ordering fraction (whole diamond): R +1.985, s.d. between sprinklings 0.458
+  depth drift, P =  10 pairs: R +1.952, s.d. between sprinklings 1.600   (continuum fit of the same c's +2.097; rms about it 1.606)
+  depth drift, P =  30 pairs: R +1.945, s.d. between sprinklings 1.382   (continuum fit of the same c's +2.097; rms about it 1.390)
+  depth drift, P = 100 pairs: R +1.921, s.d. between sprinklings 1.326   (continuum fit of the same c's +2.097; rms about it 1.337)
+  depth drift, P = 300 pairs: R +1.918, s.d. between sprinklings 1.307   (continuum fit of the same c's +2.097; rms about it 1.319)
+== noise, flat diamond u, v in [-3.0, -0.95], rho = 4000 (8413 elements), 400 sprinklings (21 s); continuum dS ordering fraction 0.51729 ==
+  ordering fraction (whole diamond): R +0.006, s.d. between sprinklings 0.434
+  depth drift, P =  10 pairs: R -0.102, s.d. between sprinklings 0.478   (continuum fit of the same c's +0.000; rms about it 0.489)
+  depth drift, P =  30 pairs: R -0.106, s.d. between sprinklings 0.452   (continuum fit of the same c's +0.000; rms about it 0.464)
+  depth drift, P = 100 pairs: R -0.100, s.d. between sprinklings 0.439   (continuum fit of the same c's +0.000; rms about it 0.450)
+  depth drift, P = 300 pairs: R -0.094, s.d. between sprinklings 0.433   (continuum fit of the same c's +0.000; rms about it 0.443)

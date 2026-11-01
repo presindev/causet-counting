@@ -3,7 +3,7 @@
     Prediction (Test 4c): N*d falls to 0.233 +- 0.003 at N = 12; flat or rising => 1/N (log-divergent).
 (b) 2-stem quantum/counting ratio q_N = [F(rel1)/F(rel0)](beta) / same at beta = 0, all settings, N = 8-12 (Test 4b convention).
 (c) 3- and 4-stems: median per-step change of ln|R| and of the phase, R = stem ratio to stem 0, divided by the beta = 0 ratio.
-Usage: python fn_N12_check.py cluster_fetch/fn/out/fn_N12.npz
+Usage: python fn_N12_check.py runs/cluster_fetch/fn/out/fn_N12.npz
 """
 import sys
 import numpy as np

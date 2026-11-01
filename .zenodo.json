@@ -1,0 +1,10 @@
+{
+  "upload_type": "software",
+  "title": "Geometry by counting in causal sets: research notebook and code",
+  "creators": [
+    {"name": "Bada, Roberto", "affiliation": "SapereIA; Institute of Cosmos Sciences, University of Barcelona (ICCUB)"}
+  ],
+  "description": "Research notebook and simulation code behind two papers by R. Bada: 'Spatial embedding of 3+1 causal sets: low-count spacelike pairs and a likelihood fit to interval counts' (prepared for Phys. Rev. D) and 'Spatial distance and curvature from an exact counting identity in two-dimensional causal sets' (prepared for Class. Quantum Grav.). Includes the full research notebook, every paper version with its referee reports, and the methodology note on working with an AI system. Code: MIT; notes and drafts: CC BY 4.0.",
+  "license": "MIT",
+  "keywords": ["causal sets", "quantum gravity", "spacetime reconstruction", "AI-assisted research"]
+}

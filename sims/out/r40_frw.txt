@@ -1,0 +1,4 @@
+== FRW p = 1, rho = 10000, a, b inserted at eta0 = 1.5 (14 ell apart), 1000 sprinklings (8 s) ==
+  window down to eta_c >= 1.10 (tau <= 0.52; R from -0.40 at a,b to -1.37; R at a third of the depth -0.55): pooled R -1.031 +- 0.369   continuum fit -0.699   Eq. (12) -0.518   (mean of single-pair R -2.81; n=1000)
+  window down to eta_c >= 0.92 (tau <= 0.70; R from -0.40 at a,b to -2.79; R at a third of the depth -0.63): pooled R -0.876 +- 0.177   continuum fit -0.790   Eq. (12) -0.557   (mean of single-pair R -1.56; n=1000)
+  window down to eta_c >= 0.75 (tau <= 0.84; R from -0.40 at a,b to -6.32; R at a third of the depth -0.70): pooled R -0.931 +- 0.113   continuum fit -0.901   Eq. (12) -0.588   (mean of single-pair R -1.32; n=1000)

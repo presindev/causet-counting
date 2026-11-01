@@ -1,11 +1,11 @@
 """Does the fixed-n Laguerre target add anything to the fixed-n related fraction? (session 15; PRD referee on toolkit-1p1-v1, major item 4)
-States: the N = 400 e^{-beta S} final states (cluster_fetch/n400/out, as b_johnston_n400.py); null: 40 random 2D orders of the same size.
+States: the N = 400 e^{-beta S} final states (runs/cluster_fetch/n400/out, as b_johnston_n400.py); null: 40 random 2D orders of the same size.
 Per order, over all related pairs x < y with interval size n = |I(x,y)| >= 2:
     S_K : rms of K(x,y) - L_n(mu/2)/2                       (the paper's statistic, mu = 0.05)
     S_f : rms of c2(x,y)/C(n,2) - 1/2, with c2 = (C^3)[x,y] = related pairs inside the interval; E[c2 | n] = C(n,2)/2 in a random 2D order
 Separation of a state from the null: z = (S - mean_null) / sd_null, for each statistic. If z_K is not larger than z_f, the propagator adds nothing
 beyond the ordering fraction for telling layered from continuum-like orders.
-Usage: python r32_laguerre_vs_fraction.py [n400_out_dir]
+Usage: python r32_laguerre_vs_fraction.py [runs/cluster_fetch/n400/out]
 """
 import sys, glob, os
 import numpy as np
@@ -24,7 +24,7 @@ def stats(u, v):
     return sK, sf
 
 if __name__ == "__main__":
-    folder = sys.argv[1] if len(sys.argv) > 1 else "../cluster_fetch/n400/out"
+    folder = sys.argv[1] if len(sys.argv) > 1 else "../runs/cluster_fetch/n400/out"
     rng = np.random.default_rng(11)
     null = np.array([stats(rng.permutation(400), rng.permutation(400)) for _ in range(40)])
     mu0, sd0 = null.mean(0), null.std(0, ddof=1)

@@ -11,4 +11,6 @@ Then the authoring instance revised. The reports are kept here verbatim in subst
 | 2–3 | `round3-3p1.md`, `round3-1p1-note.md` | minor / minor | r30 on seed 2029 (pairing with r18), r29 on Table II seeds, r33 (position vs time/scale) |
 | 4 | `round4-all.md` | minor / minor; plateau reached | r34 (lnL of truth-started optimum; causal fidelity) |
 
-Final reviews: `../REVIEW-embedding-3p1-v1-2026-10-29.md`, `../REVIEW-toolkit-1p1-v1-2026-10-29.md`.
+**Moved 30 Oct (session 17):** the per-paper rounds now live in each paper's `reviews/` folder: `round1-3p1.md`, `round3-3p1.md` in
+`../embedding-3p1/reviews/`; `round1-1p1.md`, `round3-1p1-note.md` in `../toolkit-1p1/reviews/`. Round 4 (all three drafts) stays here.
+Final reviews: `../embedding-3p1/reviews/REVIEW-embedding-3p1-v1-2026-10-29.md`, `../toolkit-1p1/reviews/REVIEW-toolkit-1p1-v1-2026-10-29.md`.

@@ -1,0 +1,9 @@
+== split-sample fit (d2 from one random half, tau^2 and selection from the other), 1000 sprinklings per row ==
+  rho   4000 flat inserted  split_paper     R_est -3.31 +- 0.34  R_cont +0.00  offset -3.31 +- 0.34  spread per pair 10.7  (n=1000)
+  rho   4000 flat inserted  split_intrinsic R_est -0.18 +- 0.03  R_cont -0.00  offset -0.18 +- 0.03  spread per pair 1.1  (n=1000)
+  rho   4000 flat sprinkled split_paper     R_est -3.87 +- 0.35  R_cont +0.00  offset -3.87 +- 0.35  spread per pair 11.2  (n=1000)
+  rho   4000 flat sprinkled split_intrinsic R_est -0.22 +- 0.04  R_cont -0.00  offset -0.22 +- 0.04  spread per pair 1.1  (n=1000)
+  rho   4000 dS   inserted  split_paper     R_est +0.32 +- 0.31  R_cont +2.17  offset -1.85 +- 0.31  spread per pair 9.7  (n=1000)
+  rho   4000 dS   inserted  split_intrinsic R_est +1.34 +- 0.15  R_cont +2.07  offset -0.73 +- 0.15  spread per pair 4.8  (n=1000)
+  rho   4000 dS   sprinkled split_paper     R_est -1.16 +- 0.35  R_cont +2.17  offset -3.33 +- 0.35  spread per pair 11.2  (n=1000)
+  rho   4000 dS   sprinkled split_intrinsic R_est +0.76 +- 0.17  R_cont +2.07  offset -1.31 +- 0.17  spread per pair 5.4  (n=1000)

@@ -7,7 +7,7 @@
 # Array index -> n: 1 3000, 2 6000, 3 10000, 4 15000.
 # Submit from ~/exp/physics:  mkdir -p r28/logs r28/out && sbatch sims/cluster/r28_job.sh
 # Test first:                 sbatch -p short --time=00:30:00 --array=0 --export=ALL sims/cluster/r28_job.sh      (index 0 = n 1000)
-# Analyse (laptop):           .venv/bin/python sims/r28_timing.py cluster_fetch/r28/out
+# Analyse (laptop):           .venv/bin/python sims/r28_timing.py runs/cluster_fetch/r28/out
 #SBATCH --job-name=r28
 #SBATCH --account=<your-account>
 #SBATCH --partition=low

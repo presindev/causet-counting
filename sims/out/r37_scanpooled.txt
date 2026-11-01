@@ -1,0 +1,19 @@
+== sensitivity, pooled estimator (inserted pairs, rho = 10000, 1000 sprinklings): k = lower cut on N_C, q = upper cut on tau^2 / max ==
+  dS   k   5 q 0.50: pooled R +1.91 +- 0.15   continuum +2.19   offset -0.28
+  dS   k   5 q 0.75: pooled R +1.97 +- 0.09   continuum +2.11   offset -0.14
+  dS   k   5 q 1.00: pooled R +1.97 +- 0.08   continuum +2.08   offset -0.11
+  dS   k  20 q 0.50: pooled R +1.96 +- 0.14   continuum +2.18   offset -0.22
+  dS   k  20 q 0.75: pooled R +2.00 +- 0.09   continuum +2.11   offset -0.11
+  dS   k  20 q 1.00: pooled R +1.99 +- 0.07   continuum +2.08   offset -0.08
+  dS   k  50 q 0.50: pooled R +1.99 +- 0.12   continuum +2.17   offset -0.18
+  dS   k  50 q 0.75: pooled R +2.01 +- 0.08   continuum +2.10   offset -0.09
+  dS   k  50 q 1.00: pooled R +2.00 +- 0.07   continuum +2.07   offset -0.06
+  flat k   5 q 0.50: pooled R -0.01 +- 0.03   continuum -0.00   offset -0.01
+  flat k   5 q 0.75: pooled R -0.01 +- 0.02   continuum +0.00   offset -0.01
+  flat k   5 q 1.00: pooled R -0.01 +- 0.02   continuum +0.00   offset -0.01
+  flat k  20 q 0.50: pooled R -0.00 +- 0.03   continuum +0.00   offset -0.00
+  flat k  20 q 0.75: pooled R -0.01 +- 0.02   continuum -0.00   offset -0.01
+  flat k  20 q 1.00: pooled R -0.01 +- 0.02   continuum -0.00   offset -0.01
+  flat k  50 q 0.50: pooled R -0.00 +- 0.03   continuum -0.00   offset -0.00
+  flat k  50 q 0.75: pooled R -0.00 +- 0.02   continuum +0.00   offset -0.00
+  flat k  50 q 1.00: pooled R -0.00 +- 0.01   continuum +0.00   offset -0.00

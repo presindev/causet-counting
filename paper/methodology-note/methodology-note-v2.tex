@@ -1,0 +1,167 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=teal!70!black,citecolor=teal!70!black,urlcolor=teal!70!black]{hyperref}
+
+% Methodology note (session 15, 2026-10-29): the "How this work was done" section of counting-full-v2.tex, moved out of the physics papers and expanded.
+% Cited by toolkit-1p1 and embedding-3p1 as [MethodNote]. Lives in the public repository; arXiv-able (cs.CY, cross-list cs.AI; needs an endorser) if Roberto wants.
+% v2 (2026-11-01, after session 20): sessions 16-20 added; new Sec. "External referee iteration" (how the separate referee session was set up and run,
+% four rounds, comment counts from paper/referee-workspace/history.json, what it caught, runs triggered, closing check, limits); mistake log 41 -> 53 entries;
+% timeline to 31 Oct; companion titles updated; availability points to reviews/, answers/, referee-workspace/. Title unchanged (the papers cite it).
+
+\title{Two causal-set papers written with an AI research partner:\\ methodology note}
+\author{Roberto Bada\\ \small SapereIA, Barcelona, Spain\\ \small Institute of Cosmos Sciences, University of Barcelona (ICCUB), Barcelona, Spain\\ \small \texttt{roberto@sapereia.com}}
+\date{Version 2, 1 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note describes how two papers on the kinematics of causal sets~\cite{Toolkit,Embedding} were produced by one physicist, new to the field, working with an AI system as a research partner: first drafts in six days, then two days of revision against a referee played by a separate session of the same AI system, over four rounds and a closing check. We describe the division of labor, the research notebook that carried the work across sessions, the verification rules that stood in for slower human checks, the errors that the process made and caught, how the referee iteration was organized and what it changed, and the limits of what a single project of this kind can show. The full notebook, including the mistake log, the abandoned lines, every referee report and every answer, is public. The note is meant to let readers judge the physics papers' reliability and to let others reuse or criticize the method; the physics itself is in the papers.
+\end{abstract}
+
+\section{Purpose}
+The author works in gravitational-wave research with the Institute of Cosmos Sciences of the University of Barcelona (ICCUB) and is a member of the LIGO--Virgo--KAGRA Collaboration; neither the papers nor this note are products of that collaboration. As a co-founder of SapereIA he studies how AI systems can help advance scientific knowledge. The project was set up partly to test one question: can a physicist, new to a field, and an AI system working as a colleague reach results that are new, checked and publishable, in days rather than months? Causal set theory was chosen because it was outside the author's expertise, has a compact literature, and admits numerical tests on a laptop and a small cluster.
+
+The physics papers state the use of AI in their acknowledgments and cite this note; they do not discuss it further, because a methods discussion of this kind is out of place in a physics journal article. This note is where it belongs.
+
+\section{Setup}
+\paragraph{System.} The AI system was Claude Opus~5.5 (Anthropic), used through the Claude Code command-line tool, which can read and write files, run code locally, and prepare jobs for a computing cluster. Cluster jobs were submitted and retrieved by the author. The AI system is not an author of the papers.
+
+\paragraph{Sessions and notebook.} The work ran over twenty sessions of a few hours each between 24 and 31 October 2026, as a conversation recorded in a version-controlled research notebook. The notebook has a fixed structure, read at the start of every session:
+\begin{itemize}[itemsep=1pt]
+\item an index of ideas with a status each (seed, exploring, developed, parked, known, killed) and a list of open questions;
+\item one file per idea, in which derivations, numbers and objections were written as soon as they appeared;
+\item a journal entry per session (what was done, decisions, mistakes, next steps);
+\item a \emph{mistake log}: each error, and the working rule adopted to prevent it (53 entries at the time of writing; Table~\ref{tab:mistakes});
+\item a \emph{graveyard}: killed ideas and dropped approaches, each with the reason; and a list of claims given back after they were found in the literature;
+\item a literature file, with why each reference matters, and a notation file.
+\end{itemize}
+Every claim in the notebook carries a label: \emph{established} (mainstream, experimentally backed), \emph{literature} (published, not necessarily accepted), or \emph{ours} (our own construction or speculation). The project ran under written constraints set by the author (for example, no background structures and local Lorentz invariance) that every proposed model had to respect.
+
+\paragraph{Output.} About 8000 lines of simulation code in 82 Python scripts, about 30 cluster jobs, ten internal drafts before the split into two papers, five versions of each paper after it, a written review of every draft, and the two papers that this note accompanies. Table~\ref{tab:timeline} lists when the results that entered the papers appeared.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}llp{0.7\linewidth}@{}}
+\toprule
+Day & Sessions & Results that entered the papers \\
+\midrule
+24 Oct & 1 & starting idea: discrete spacetime from counting \\
+25 Oct & 2--6 & rectangle identity and depth drift~\cite{Toolkit}; first embedding test; first cluster runs \\
+26 Oct & 7 & fixed-$n$ propagator target~\cite{Toolkit} \\
+27 Oct & 8--11 & phases at $N=400$; literature crawl; null-pair fraction; $3+1$ estimator; reproduction of Johnston 2025~\cite{Embedding} \\
+28 Oct & 12--13 & large-$n$ cluster runs; low-count diagnosis; likelihood fit, ablation, second shape~\cite{Embedding} \\
+29 Oct & 14--15 & second shape at equal density; final literature checks; public release; split into two papers; internal referee loop and the runs it triggered \\
+30 Oct & 16--18 & timing against the benchmark; answers to external referee rounds 1--2: ten universes per size, the residual as a nearly flat direction of the likelihood~\cite{Embedding}; benchmark against Hu--Meyer--Meyer, pooled curvature estimator, FRW kernel, selection bias of sprinkled pairs, comparison with the ordering fraction~\cite{Toolkit} \\
+31 Oct & 19--20 & answers to external referee rounds 3--4, closing check: relaxations to convergence~\cite{Embedding}; held-out test at $N=800$, position-based selection in one region~\cite{Toolkit}; final wording \\
+\bottomrule
+\end{tabular}
+\caption{When each result appeared. A session is one sitting of a few hours.}\label{tab:timeline}
+\end{table}
+
+\section{Roles}
+The author brought in the paper that started the distance work (Bogu\~n\'a and Krioukov's causal-overlap method), proposed the questions and several of the ideas that ended up working, set the physical constraints, and decided which lines to pursue or drop. Two examples: the suggestion to use each distance estimate only where it is accurate (a ``switch'', which was the main $3+1$ result until the likelihood fit superseded it), and the questions that led to the low-count diagnosis and to the test in a second region~\cite{Embedding}. He also designed the external referee setup of Sec.~\ref{sec:external} and took the decisions it called for (which journal for each paper, which comments to decline). The AI system searched and read the literature, carried out the derivations, wrote and ran the simulation code (on a laptop and, through job scripts, on the ICCUB cluster), and drafted the text. The author followed and checked the derivations, and read and approved the final texts; he did not review the code line by line. The numerical claims therefore rest on the checks of Sec.~\ref{sec:checks} and on the public code, not on independent human review of the code.
+
+\section{Verification rules}\label{sec:checks}
+Speed is worth something only if the results hold. The working rules, most of them written into the mistake log after a specific failure, fall into five groups.
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\item \emph{Known answers first.} Every tool is run on a case with a known answer (flat space, de Sitter, the continuum limit) before anything else. The published numbers of a method we compare against are reproduced before any comparison is made.
+\item \emph{Statistics.} Errors are run-to-run spreads over independent seeds, not per-event errors from correlated samples. Any parameter chosen while looking at data is re-tested on fresh seeds; every comparison is paired (same universes for every method); multi-term methods are ablated before the gain is attributed to a term; a perfect fit is checked for whether there was anything to fit. Ratios are formed from pooled sums, not averaged per sample, and samples are selected by position only, never by picking one representative per configuration. Optimizers are run to convergence before two optima are compared.
+\item \emph{Geometry and limits.} A first result is rerun in a second geometry before it is interpreted, and the opposite limits (no coupling, zero size, infinite size) are checked before a mechanism is claimed. Samplers are checked (acceptance rates) before their output is called physics.
+\item \emph{Literature.} Citations are verified; nothing unverified is recorded without a mark. Before a claim enters a draft as new, the full citation lists of the closest papers are read and the citing papers' full texts searched; ``not found in a brief search'' is not reported as ``new''. A paper is quoted before we say what it does not do. Every competing construction cited in the introduction is implemented and run on the same data before a ``most accurate'' claim is made.
+\item \emph{Computation.} Jobs are sized for the slowest loaded node and checkpoint their results; a short test precedes every new code on the cluster; the whole import tree is shipped with each job. Numbers are copied from the output files, not from memory.
+\end{enumerate}
+
+\section{Errors made and caught}
+Errors were frequent, and most were the AI system's. Table~\ref{tab:mistakes} groups the 53 entries of the mistake log, and separates the twelve added after the split into two papers. Examples that changed the papers:
+\begin{itemize}[itemsep=1pt]
+\item a ``hysteresis'' at the phase transition that came from Monte Carlo chains with acceptance below $10^{-3}$, i.e., a frozen sampler (withdrawn; kept in an appendix of~\cite{Toolkit});
+\item a detector believed to be new that turned out to be Clough and Evans's (now credited; our contribution narrowed to its calibration and a missing statistic);
+\item a likelihood fit first presented as resting on a new term of ours, until removing each term in turn showed that the gain comes from the related-pair term, which is Casasola's, and that our term makes it worse (now credited, our term moved to the appendix of~\cite{Embedding});
+\item a statement that Bogu\~n\'a and Krioukov had only an approximate inversion, when their exact one was in their Eq.~(22) (corrected; our claim narrowed to unequal depths);
+\item a likelihood gap read as a ``local optimum'' before the optimizer had converged; run to convergence, the gap closed and the residual turned out to lie along a nearly flat direction of the likelihood~\cite{Embedding};
+\item a curvature estimator that read low because it averaged per-pair ratios, and sprinkled pairs that read low because the elements nearest to given points were selected (a Palm bias of the empty neighbourhood); both corrected by pooling over position-based selections~\cite{Toolkit}.
+\end{itemize}
+In each case the error was found by one of the rules above, by the author's questions, by a literature pass or by a referee comment (Sec.~\ref{sec:external}), and was recorded with the rule it produced.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}p{0.25\linewidth}ccp{0.48\linewidth}@{}}
+\toprule
+Group & Entries & since 29 Oct & Typical example \\
+\midrule
+Claims beyond the computation & 16 & 3 & an analogy stretched past its calculation; a mechanism asserted without checking a limit; a result that was the shape of the box; a property of a method inferred from a test on another \\
+Statistics and numerical method & 17 & 6 & correlated samples read as significant; ratios of counts read as unbiased; a frozen sampler or an unconverged optimizer read as physics; a selection that depends on the configuration \\
+Code and computing & 9 & 1 & a lookup table that did not cover the use case; cluster jobs sized on a quiet node; a helper fed data in the wrong column convention \\
+Literature and credit & 6 & 1 & a guessed identifier; novelty claimed after a shallow search; a cited competitor left unbenchmarked \\
+Process and communication & 5 & 1 & a draft that followed chronology instead of a storyline; numbers quoted from memory instead of the output file \\
+\bottomrule
+\end{tabular}
+\caption{Entries of the mistake log (51 numbered rules and two sub-rules), grouped by kind; the third column counts the entries added after the split into two papers on 29 October (rules 40--51). Classification by the author of this note.}\label{tab:mistakes}
+\end{table}
+
+\section{Writing and internal review}
+Drafts were written to tell one storyline, built from what advanced the work rather than in chronological order; abandoned lines go to an appendix. Each draft received a written review against an explicit bar (a credible arXiv preprint; later, the standard of Physical Review D), listing what a referee would push on and what was missing. On 29 October the combined draft was split into the two papers. The AI system then alternated, over four rounds, between referee passes against the norms of the target journal and author revisions. These referees were separate instances of the same model; they saw the drafts, the data files and a prompt written by the authoring instance, which pointed them to the files and checks, but not the author's reasoning; the review was therefore independent of the authoring context but not blind. Several of their points required new runs (an oracle test run on the benchmark method itself rather than on our own estimator, per-pair and per-element errors, baselines for the $1+1$ distance estimator, a comparison of the propagator target with the ordering fraction), and claims were weakened or corrected in both papers: the propagator target turned out to be no stronger than the ordering fraction as a diagnostic, a headline percentage of the $3+1$ paper moved when the oracle was rerun on matched universes, and a caveat on position errors was added. The verdicts went from major revision for both papers to minor revision, and stopped changing in the fourth round.
+
+\section{External referee iteration}\label{sec:external}
+Because the internal referees were prompted by the authoring instance, the author set up a second, more independent review before submission. It ran from 30 to 31 October, in four rounds and a closing check.
+
+\paragraph{Setup.} The referee was a separate Claude Code session (same model) in its own working folder, outside the notebook, with one subfolder per submission target (a \emph{track}): the $3+1$ paper for Physical Review D, the $1+1$ paper for Physical Review D, and the $1+1$ paper for Classical and Quantum Gravity. Each track had three folders: \texttt{manuscripts/} (the PDFs, and from the third version on a \texttt{latexdiff} against the previous one), \texttt{reviews/} (the referee's reports) and \texttt{answers/} (point-by-point answers, one per revision). A project file defined the referee's role and procedure: act as an independent journal referee, never edit the manuscripts, check derivations by hand rather than trust the text, check every earlier comment against the new manuscript text and not only against the answer, and look for problems the revision introduced. It also fixed the rubrics: for Physical Review D, the APS referee criteria (soundness, novelty and significance sufficient for this journal rather than a less selective one, conclusions supported, clarity); for Classical and Quantum Gravity, the journal's stated aim and the IOP criteria (originality, significance, soundness, conclusions supported, clarity, referencing, fit with the readership, and the research data policy). The referee kept its own persistent memory: a notes file (what it had verified, the open concerns for each paper, its own lessons) and a machine-readable history of every round, in which each comment keeps its identifier across rounds and carries a status (open, resolved, partial, declined, deferred, n/a). The referee worked from the PDFs and the answer letters; the code repository was private during the rounds.
+
+The author carried the files between the two sessions by hand: the authoring session wrote each new version, its diff and its answer letter; the author placed them in the referee's folders, started the referee, and brought the report back. Each session also wrote the paste-ready instruction for the other. During the rounds the authoring session did not see the referee's notes or history, and the referee had no access to the notebook.
+
+\paragraph{Rounds.} Table~\ref{tab:rounds} lists the recommendations and the comments raised in each round, counted from the referee's history file. After the first round the author dropped the Physical Review D track of the $1+1$ paper, whose referee had recommended major revision with ``a real chance of rejection on significance'', and kept Classical and Quantum Gravity, where the same paper drew major revision with acceptance likely after fixes.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.19\linewidth}>{\raggedright\arraybackslash}p{0.43\linewidth}@{}}
+\toprule
+Round & $3+1$, PRD & $1+1$, CQG & New runs \\
+\midrule
+1 (30 Oct) & minor-to-major (14) & major (14) & 10 universes per size, optimizer and multi-start tests, ablation against Casasola's near-cone set~\cite{Embedding}; Hu--Meyer--Meyer benchmark, pooled estimator, FRW kernel, Benincasa--Dowker and chain-abundance noise~\cite{Toolkit} \\
+2 (30 Oct) & minor (7) & minor (10) & likelihood along the path between two optima, relaxations, recommended variant~\cite{Embedding}; selection of sprinkled pairs, order-only window, FRW with the pooled estimator, noise in one region~\cite{Toolkit} \\
+3 (30 Oct) & minor (4) & minor (7) & relaxations rerun to convergence~\cite{Embedding}; one-region comparison rerun with a position-based selection and a matched flat control; held-out $N=800$ test filled in~\cite{Toolkit} \\
+4 (31 Oct) & accept (3) & minor, accept once made (5) & height of flat orders at $N=400$, $800$; lever arm of the flat control~\cite{Toolkit} \\
+Closing check & all confirmed & all confirmed & --- \\
+\midrule
+Total & 28: 27 resolved, 1 declined & 36: 32 resolved, 4 other & \\
+\bottomrule
+\end{tabular}
+\caption{External referee rounds. Recommendation of each report, with the number of new comments in parentheses; dates are those of the reports. The declined $3+1$ comment asked to reconcile a table of the benchmark paper; candidate computations did not reproduce it and the author chose not to contact its author. The four other $1+1$ comments: an optional locality test, not run (the referee accepted the fallback stated in the Discussion); one comment partly resolved and carried into a later one; the journal's style, deferred to the final version; and the data DOI, to be minted at submission.}\label{tab:rounds}
+\end{table}
+
+\paragraph{What the referee caught.} Most comments were about the match between claims and evidence, and several of them were errors the authoring session had made and its own rules had not caught:
+\begin{itemize}[itemsep=1pt]
+\item abstracts that had gone stale while the body changed (``roughly halves'' after the median reduction had become 33--40\,\%; ``become rarer only slowly'', when the share of low-count pairs falls as about $n^{-0.7}$ and it is the errors that fall slowly, a phrase that survived three rounds before the referee noticed it);
+\item statistical biases: the referee proposed that the shortfall of sprinkled pairs came from selecting the elements nearest to given points, which the authoring session then confirmed and fixed; and after a fix, a second test in the same paper still drew its pairs in the biased way;
+\item claims about the optimizer: the ``local optimum'' reading, and later directional statements (``the global maximum lies near the more accurate map'') resting on sign counts whose margins were as small as the gain from continuing one fit;
+\item missing comparisons: a competing construction cited but not run, which turned out to be more accurate at large separations, and an ablation against the nearest published likelihood;
+\item a data-availability statement saying ``openly available'' while the repository was private.
+\end{itemize}
+Corrections also went the other way. In round 4 the referee flagged as wrong a phrase from the abstract of the $1+1$ paper that it had itself proposed in round 3 (``on average over independent sprinklings''), after the authoring session's rerun had shown that per-region averages are biased; it had also overestimated how fast a share falls ($n^{-1/2}$ rather than the measured $n^{-0.3}$), and it read a timing discrepancy that the answer letter showed to be two different quantities.
+
+\paragraph{What changed.} Both papers made weaker headline claims and rested on more data. In the $3+1$ paper, ``all related pairs'' was withdrawn as a contribution (Casasola's near-cone set does slightly better), the local-optimum explanation was withdrawn, the removed fraction was re-measured on ten universes per size, and no direction of the likelihood valley is claimed. In the $1+1$ paper, the distance estimator is no longer called the most accurate (the Hu--Meyer--Meyer construction is more accurate above ten discreteness lengths); the curvature estimator is stated to be about three times less precise than the ordering fraction in de Sitter space and biased low within one region; the FRW formula is stated to leading order in the depth, and that prediction falls short of the measured drift by 26--35\,\%; the propagator identity moved to an appendix; and the paper was retitled. The iteration added eight rules to the mistake log (rules 44--51: converge before comparing optima; pool ratios; benchmark every cited competitor; a dip on a straight path is not a barrier; one representative per region is still a Palm selection; read a helper's input convention; audit every test for a bias once it is found; an inequality on an average says nothing about each term) and recorded several recurrences of older ones. For six of the eight, the referee pointed out the error or requested the test that exposed it; in the other two (rules 49 and 51) the authoring session caught its own error before delivery.
+
+\paragraph{Closing check.} After round 4 both reports said that no further review was needed. The referee checked the fifth versions against comments 19--21 ($3+1$) and 25--29 ($1+1$), including the renumbered references, and closed the loop. Its final message lists what remains at submission (a public repository and a data DOI), recommends a hand check of every reference, a rerun of a headline table from a fresh clone of the public repository and a reading by a human expert who has not seen the drafts, and proposes a pre-registered locality test for the $1+1$ curvature estimator as optional.
+
+\paragraph{Limits of the iteration.} The referee and the writer are the same model, and they share blind spots: the stale abstract phrase above passed three rounds. The referee said so itself and, in its final assessment, lowered its own acceptance estimates for this reason (from 75--85\,\% to about 65--80\,\% for the $3+1$ paper, and from 70--80\,\% to about 55--75\,\% for the $1+1$ paper). Those numbers are the model's judgement, not data, and are reported here only to show the calibration it applied. The referee did not run code, so errors confined to the code could reach it only through inconsistencies in the text; one did: a figure paragraph still described an older selection rule, which on inspection was the rule the figure's code used. The process is a structured self-review with a separate memory, not peer review; the journals' referees and readers are the real test.
+
+\section{What this does and does not show}
+One project is an anecdote, not a measurement: there is no control, and the speed depends on the author, the field and the problem. The papers have not yet been refereed by a journal or read by a causal-set expert, and a reader who wants to verify them should run the code rather than trust the process. What the project shows is narrower: with an AI system doing the reading, the algebra and the programming, under explicit rules against self-deception, a physicist from a neighboring field went from a first idea to a reproduction of a 2025 result, a diagnosis of the source of its residual error and a substantial improvement on it~\cite{Embedding}, and to a set of exact $1+1$ tools~\cite{Toolkit}, in about a week, provided that the literature search was redone before every claim of novelty. A referee played by a separate session of the same model, with its own memory and rubric, found real problems in drafts that had already passed an internal review, and most of what it found made the claims smaller. The main risks we saw are the ones the rules target: confident claims beyond the computation, statistical shortcuts that bias an estimator, and novelty claims that a deeper search overturns.
+
+\section*{Availability}
+The code and the full notebook (idea files, session journals, mistake log, graveyard, internal drafts and their reviews) are public at \url{https://github.com/presindev/causet-counting}, as a snapshot; only notes on the computing cluster's internal configuration are omitted. Every version of each paper is in \nolinkurl{paper/<paper>/}; the reports of both referee loops are in \nolinkurl{paper/<paper>/reviews/} (internal round 4, covering all three drafts, in \nolinkurl{paper/referee-rounds-2026-10-29/}); the answer letters in \nolinkurl{paper/<paper>/answers/}; and the external referee's role and procedure file, its notes and its round-by-round history in \nolinkurl{paper/referee-workspace/}, with its final message in \nolinkurl{paper/referee-final-2026-10-31.md}.
+
+\section*{Acknowledgements}
+This work was funded by SapereIA. Simulations were run on the Nyx cluster of ICCUB. The AI system drafted this note under the author's direction; the author takes full responsibility for its content.
+
+\begin{thebibliography}{9}\small
+\bibitem{Toolkit} R.~Bada, ``Spatial distance and curvature from an exact counting identity in two-dimensional causal sets'' (2026).
+\bibitem{Embedding} R.~Bada, ``Spatial embedding of $3+1$ causal sets: low-count spacelike pairs and a likelihood fit to interval counts'' (2026).
+\end{thebibliography}
+\end{document}

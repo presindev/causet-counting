@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this code or notebook, please cite the paper (preferred) or this repository."
+message: "If you use this code or notebook, please cite the papers (preferred) or this repository."
 title: "Geometry by counting in causal sets: research notebook and code"
 authors:
   - family-names: Bada
@@ -8,7 +8,7 @@ authors:
     email: roberto@sapereia.com
 repository-code: "https://github.com/presindev/causet-counting"
 license: MIT
-date-released: 2026-10-29
+date-released: 2026-11-01
 keywords:
   - causal sets
   - quantum gravity
@@ -16,9 +16,9 @@ keywords:
   - AI-assisted research
 preferred-citation:
   type: article
-  title: "Geometry by counting in causal sets: exact 1+1 tools, and spatial distances in 3+1"
+  title: "Spatial distance and curvature from an exact counting identity in two-dimensional causal sets"
   authors:
     - family-names: Bada
       given-names: Roberto
   year: 2026
-  notes: "arXiv identifier to be added"
+  notes: "Prepared for Classical and Quantum Gravity; companion: Spatial embedding of 3+1 causal sets: low-count spacelike pairs and a likelihood fit to interval counts (prepared for Physical Review D). arXiv identifiers to be added."

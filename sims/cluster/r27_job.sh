@@ -6,7 +6,7 @@
 # Checkpoint: n400_crystal.py writes <name>.partial.npz to $OUT every 20 records = 400 sweeps.
 # Submit from ~/exp/physics:  mkdir -p r27/logs r27/out && sbatch sims/cluster/r27_job.sh
 # Test first:                 sbatch -p short --time=00:30:00 --array=0,27 --export=ALL,NSWEEP=20 sims/cluster/r27_job.sh
-# Analyse (laptop):           .venv/bin/python sims/r27_n800_detector.py analyse cluster_fetch/r27/out
+# Analyse (laptop):           .venv/bin/python sims/r27_n800_detector.py analyse runs/cluster_fetch/r27/out
 #SBATCH --job-name=r27
 #SBATCH --account=<your-account>
 #SBATCH --partition=low

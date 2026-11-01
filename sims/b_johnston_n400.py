@@ -7,7 +7,7 @@ diamond) the n elements of an interval are again a random 2D order, k of them fo
     E[c_k | n] = C(n, k) / k!   and   E[K | n] = (1/2) L_n(mu/2)          (Laguerre polynomial; -> (1/2) J0(sqrt(2 mu n)) for n >> 1).
 n = |interval| is counted from the causal set itself.  Test: bin all related pairs by n and compare <K> with (1/2) L_n(mu/2).
 Control (lesson 10): random 2D orders (beta = 0) generated here, which must pass exactly.
-Usage: python3 sims/b_johnston_n400.py [n400_out_dir] [mu ...]
+Usage: python3 sims/b_johnston_n400.py [runs/n400_out] [mu ...]
 """
 import sys, glob, os
 import numpy as np
@@ -47,7 +47,7 @@ def compare(u, v, mu, edges):
 
 
 if __name__ == "__main__":
-    folder = sys.argv[1] if len(sys.argv) > 1 else "n400_out"
+    folder = sys.argv[1] if len(sys.argv) > 1 else "runs/n400_out"
     mus = [float(m) for m in sys.argv[2:]] or [0.05]
     edges = np.array([0, 10, 25, 50, 75, 100, 150, 200, 300, 400])
     rng = np.random.default_rng(7)

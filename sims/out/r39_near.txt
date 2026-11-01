@@ -1,0 +1,4 @@
+n 3000 (seed 1001): related pairs 472635, near-cone share 0.465; setup 0.1 s; one evaluation: all 0.016 s, near 0.007 s, ratio 0.443
+n 6000 (seed 1001): related pairs 1875623, near-cone share 0.366; setup 0.4 s; one evaluation: all 0.068 s, near 0.025 s, ratio 0.369
+n 10000 (seed 1001): related pairs 5221179, near-cone share 0.303; setup 1.7 s; one evaluation: all 0.187 s, near 0.054 s, ratio 0.288
+n 15000 (seed 1001): related pairs 11317767, near-cone share 0.265; setup 5.3 s; one evaluation: all 0.424 s, near 0.107 s, ratio 0.253

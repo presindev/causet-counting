@@ -354,3 +354,28 @@ conference abstract books, Bombelli 1987 and Meyer 1988 theses, Myrheim 1978, Br
 - G. Szegő, *Orthogonal Polynomials*, AMS Colloq. Publ. 23 (1939) — Hilb-type asymptotic of L_n behind the Bessel form of Eq. (lag) **(unverified this session)**.
 - OEIS A002720 — n! L_n(−1), all increasing subsequences (already used in session 10).
 - Referee flags to re-check at submission: HMM25 (J. Math. Phys. 66 (2025) with arXiv:2601.03280; checked session 13), Madsen arXiv:2610.36695 (checked session 12).
+
+## Session 17 (2026-10-30): external referee round 1 — references checked
+- **Eichhorn, Surya, Versteegen, "Induced spatial geometry from causal structure", CQG 36, 105005 (2019), doi:10.1088/1361-6382/ab114b, arXiv:1809.06192**
+  (arXiv record + ADS bibcode; full text read via ar5iv, first 100k characters) — distance on a hypersurface/antichain from the volume of the smallest common future,
+  d̃ = 2(V/ζ_n)^{1/n}, then minimized over paths with a mesoscale cutoff ℓ; "discrete asymptotic silence": no null-related elements ⇒ small distances overestimated;
+  2D and 3D simulations. Same phenomenon as the +40 % bias of Johnston's detour on close pairs. Cited in both v2 drafts. — 005
+- **Major, Rideout, Surya, "On recovering continuum topology from a causal set", J. Math. Phys. 48, 032501 (2007), arXiv:gr-qc/0604124** (arXiv record) — thickened
+  antichains, homology recovered. With MRS06 (CQG 23, 4743, already listed). Cited in both v2 drafts. — 005
+- **Khetrapal, Surya, "Boundary term contribution to the volume of a small causal diamond", CQG 30, 065005 (2013), arXiv:1212.0629** (arXiv abstract; journal ref
+  from the citation in Buck–Dowker–Jubb–Surya 1502.05388) — Myrheim's surface term ∝ R_00 at O(T²). Cited in 1+1 v2 next to RSS13. — 005
+- **Hu, Meyer, Meyer, J. Math. Phys. 66, 122502 (2025), arXiv:2601.03280 (full text read, Sec. 2)** — 1+1: p ≺ a, b ≺ q with all four proper times equal to s ⇒
+  η(b−a, b−a) = (2h)² = B² − 4s², B = τ_pq (Cayley–Menger). Exact geometry, no causal-set estimator; the conclusion leaves the finite-density error open.
+  JMP header dated 26 Dec 2025; arXiv submitted 31 Dec 2025 (hence 2601). Implemented from counts in `sims/r36_rect_ablation_hmm.py`: best above 10ℓ. — 005
+- **2D-orders phase observables:** Glaser–O'Connor–Surya 1706.06432 (action scaling; known); **Glaser–Surya, "The Hartle–Hawking wave function in 2D causal set
+  quantum gravity", arXiv:1410.8775** (CQG 33, 065003 (2016), INSPIRE-verified session 18); **Glaser, "The Ising model coupled to 2d orders", CQG 35, 084001 (2018), doi:10.1088/1361-6382/aab139, arXiv:1802.02519** (INSPIRE-verified session 18)
+  (volume/page not confirmed); **Glaser, "Computer simulations of causal sets", arXiv:2306.09904** (review). Cited in 1+1 v2 Sec. V. — 005
+- Re-verified via the arXiv API: Madsen 2610.36695, Barton–Borza–Röhrig 2606.04910, Eichhorn–Mack–Le–Wagner 2605.27514.
+
+- **Session 18:** Johnston 2025 (PRD 111, 106020) Sec. VII item (iv) read in full text: Table IV = correlation of (P_x − P_y)² Minkowski norms over all pairs incl. spacelike; our 8 candidate statistics give 0.85–0.97 vs his 0.977 at n = 1000 (unresolved). Cunningham 2018 now cited in the 1+1 paper (order-only boundary, for the curvature window on non-convex regions).
+
+## Point-process background for the 1+1 sprinkled-pair results (session 19)
+- **G. Last and M. Penrose, *Lectures on the Poisson Process*, IMS Textbooks (Cambridge University Press, 2017)**, ISBN 978-1-107-08801-6 (hb) /
+  978-1-107-45843-7 (pb). Verified (KIT and Bath pages). Mecke equation: Ch. 4 (Sec. 4.1, multivariate form for sums over pairs); Palm distributions and the
+  Mecke–Slivnyak theorem: Ch. 9. **Why it matters:** the 1+1 paper (v3, v4) uses the Mecke formula for the unbiased use of sprinkled pairs and the Palm
+  picture for the nearest-element bias, *without a citation*. Cited in 1+1 v5 (session 20) as Ref. [33], at the Mecke formula in Sec. IV.

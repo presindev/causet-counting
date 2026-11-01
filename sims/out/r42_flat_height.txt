@@ -1,0 +1,2 @@
+N = 400: height of 2000 random 2D orders: mean 35.7, sd 2.2, range 29-42 (2 sqrt N = 40.0)
+N = 800: height of 2000 random 2D orders: mean 51.8, sd 2.5, range 45-62 (2 sqrt N = 56.6)

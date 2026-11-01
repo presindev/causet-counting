@@ -1,0 +1,62 @@
+N = 1000: 100 middle-band pairs x 12 seeds, ell = 0.0224; bias of d^2 in % (s.e. over seeds), median |rel. error of d|, share of pairs with an estimate
+  d/ell 0-2:
+    rect_deep      d2 bias   +4.5 (14.5)   median err 0.158   coverage 1.00
+    rect_deep_raw  d2 bias   +5.1 (14.6)   median err 0.158   coverage 1.00
+    bk             d2 bias  +10.3 (23.1)   median err 0.206   coverage 0.87
+    bk_c_rect      d2 bias   +6.3 (21.4)   median err 0.214   coverage 0.87
+    bk_c_raw       d2 bias  +22.0 (25.0)   median err 0.214   coverage 0.87
+    direct         d2 bias +933.3 (607.0)   median err 0.998   coverage 1.00
+    hmm_best       d2 bias -2307.2 (2590.0)   median err 1.288   coverage 1.00
+    hmm_avg        d2 bias +12896.7 (11004.1)   median err 2.445   coverage 1.00
+    hmm_shallow    d2 bias  -70.8 (726.7)   median err 1.004   coverage 1.00
+  d/ell 2-10:
+    rect_deep      d2 bias   +1.2 ( 4.5)   median err 0.095   coverage 1.00
+    rect_deep_raw  d2 bias   +2.8 ( 4.9)   median err 0.097   coverage 1.00
+    bk             d2 bias   +9.5 ( 4.0)   median err 0.131   coverage 0.84
+    bk_c_rect      d2 bias   +1.2 ( 3.4)   median err 0.129   coverage 0.84
+    bk_c_raw       d2 bias  +16.4 ( 4.1)   median err 0.138   coverage 0.84
+    direct         d2 bias  +85.7 ( 3.2)   median err 0.272   coverage 1.00
+    hmm_best       d2 bias  +32.3 ( 4.3)   median err 0.134   coverage 1.00
+    hmm_avg        d2 bias  +47.1 ( 4.9)   median err 0.136   coverage 1.00
+    hmm_shallow    d2 bias  +22.5 ( 3.1)   median err 0.098   coverage 1.00
+  d/ell 10-inf:
+    rect_deep      d2 bias   -3.9 ( 3.9)   median err 0.082   coverage 1.00
+    rect_deep_raw  d2 bias   +0.6 ( 4.4)   median err 0.080   coverage 0.99
+    bk             d2 bias  +13.2 ( 3.1)   median err 0.126   coverage 0.68
+    bk_c_rect      d2 bias   -2.3 ( 2.9)   median err 0.127   coverage 0.68
+    bk_c_raw       d2 bias  +16.9 ( 3.2)   median err 0.131   coverage 0.68
+    direct         d2 bias  +24.9 ( 2.7)   median err 0.095   coverage 0.98
+    hmm_best       d2 bias   +4.6 ( 2.2)   median err 0.028   coverage 0.98
+    hmm_avg        d2 bias   +4.7 ( 2.2)   median err 0.029   coverage 0.98
+    hmm_shallow    d2 bias   +4.1 ( 2.3)   median err 0.028   coverage 0.98
+N = 4000: 100 middle-band pairs x 12 seeds, ell = 0.0112; bias of d^2 in % (s.e. over seeds), median |rel. error of d|, share of pairs with an estimate
+  d/ell 0-2:
+    rect_deep      d2 bias  +36.8 ( 7.0)   median err 0.130   coverage 1.00
+    rect_deep_raw  d2 bias  +37.1 ( 6.9)   median err 0.130   coverage 1.00
+    bk             d2 bias  +48.5 ( nan)   median err 0.287   coverage 0.75
+    bk_c_rect      d2 bias  +56.7 ( nan)   median err 0.231   coverage 0.75
+    bk_c_raw       d2 bias  +63.4 ( nan)   median err 0.221   coverage 0.75
+    direct         d2 bias +130.1 (81.2)   median err 0.461   coverage 1.00
+    hmm_best       d2 bias +1031.3 (702.7)   median err 1.358   coverage 1.00
+    hmm_avg        d2 bias +5969.1 (2161.6)   median err 5.151   coverage 1.00
+    hmm_shallow    d2 bias +117.4 ( 1.3)   median err 0.540   coverage 1.00
+  d/ell 2-10:
+    rect_deep      d2 bias   -0.4 ( 1.5)   median err 0.059   coverage 1.00
+    rect_deep_raw  d2 bias   -0.1 ( 1.5)   median err 0.059   coverage 1.00
+    bk             d2 bias   +5.8 ( 2.0)   median err 0.106   coverage 0.90
+    bk_c_rect      d2 bias   +1.6 ( 2.0)   median err 0.104   coverage 0.90
+    bk_c_raw       d2 bias  +11.4 ( 2.1)   median err 0.116   coverage 0.90
+    direct         d2 bias  +79.1 ( 4.8)   median err 0.282   coverage 1.00
+    hmm_best       d2 bias  +25.6 ( 9.5)   median err 0.157   coverage 1.00
+    hmm_avg        d2 bias  +67.3 (15.6)   median err 0.175   coverage 1.00
+    hmm_shallow    d2 bias  +21.8 ( 3.8)   median err 0.099   coverage 1.00
+  d/ell 10-inf:
+    rect_deep      d2 bias   -1.6 ( 1.4)   median err 0.039   coverage 1.00
+    rect_deep_raw  d2 bias   +0.3 ( 1.5)   median err 0.037   coverage 1.00
+    bk             d2 bias   +2.3 ( 1.4)   median err 0.075   coverage 0.82
+    bk_c_rect      d2 bias   -4.7 ( 1.0)   median err 0.073   coverage 0.82
+    bk_c_raw       d2 bias   +4.6 ( 1.4)   median err 0.072   coverage 0.82
+    direct         d2 bias  +13.7 ( 0.7)   median err 0.049   coverage 1.00
+    hmm_best       d2 bias   -0.4 ( 1.0)   median err 0.017   coverage 1.00
+    hmm_avg        d2 bias   +0.0 ( 0.8)   median err 0.017   coverage 1.00
+    hmm_shallow    d2 bias   +0.1 ( 0.6)   median err 0.015   coverage 1.00

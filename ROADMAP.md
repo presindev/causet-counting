@@ -93,13 +93,13 @@ which is a separate paper/note and does not block counting-full (session 13).**
 ## 8. Status after session 14 (2026-10-29)
 - r25 done (equal density: wall explains the whole slab gap). Roberto's paper items done; notebook public (github.com/presindev/causet-counting, `release/make_public.sh`).
 - Literature: 3+1 unequal-depth inversion and Google Scholar citers checked, nothing found; Johnston 2022 and Cunningham 2018 cited.
-- Boguñá e-mail sent; PRD assessment in `paper/REVIEW-PRD-2026-10-29.md` (refocus on 3+1 + per-pair error + one curved test, or CQG). Waiting: F_N, r27, r28, Boguñá.
+- Boguñá e-mail sent; PRD assessment in `paper/archive/REVIEW-PRD-2026-10-29.md` (refocus on 3+1 + per-pair error + one curved test, or CQG). Waiting: F_N, r27, r28, Boguñá.
 
 ## 9. Future task: the methodology note → a quantitative case study (agreed 2026-10-29, Roberto)
-Current state: `paper/methodology-note-v1.tex` (~5 pp.) is an experience report. It is fit to post on arXiv (cs.CY + cs.AI; needs an endorser) as the
+Current state: `paper/methodology-note/methodology-note-v1.tex` (~5 pp.) is an experience report. It is fit to post on arXiv (cs.CY + cs.AI; needs an endorser) as the
 citable explanation behind the AI acknowledgments of the two physics papers, but not as a journal paper: one case, no control, no measurements.
 Goal: a separate paper that turns the notebook's own record into data. Its asset is that the whole project is logged and public: 15 session journals,
-80+ timestamped commits, the mistake log (41 entries), the graveyard and "claims given back", ten reviewed drafts, four referee rounds (`paper/referee-rounds-2026-10-29/`).
+80+ timestamped commits, the mistake log (41 entries), the graveyard and "claims given back", ten reviewed drafts, four referee rounds (`paper/*/reviews/` and `paper/referee-rounds-2026-10-29/`).
 
 Plan (in order; item 1 alone is a few hours from the notebook and decides whether the rest is worth it):
 1. **Error provenance table.** For each of the 41 mistake-log entries: who introduced it (AI system / Roberto), who caught it (AI self-check, Roberto,

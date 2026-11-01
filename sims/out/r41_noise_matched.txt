@@ -1,0 +1,43 @@
+== mecke, dS diamond u, v in [-3.0, -0.95], rho = 4000 (2511 elements), 400 sprinklings (7 s); qualifying pairs per sprinkling 2420 (pilot) ==
+  ordering fraction (whole diamond): R +2.049, s.d. between sprinklings 0.797
+  depth drift, P =  10 (mean 10 pairs): R +1.517 +- 0.139, s.d. between sprinklings 2.777   (continuum fit of the same c's +2.095; rms about it 2.837)
+  depth drift, P =  30 (mean 30 pairs): R +1.608 +- 0.125, s.d. between sprinklings 2.496   (continuum fit of the same c's +2.096; rms about it 2.544)
+  depth drift, P = 100 (mean 101 pairs): R +1.670 +- 0.116, s.d. between sprinklings 2.316   (continuum fit of the same c's +2.096; rms about it 2.355)
+  depth drift, P = 300 (mean 302 pairs): R +1.686 +- 0.114, s.d. between sprinklings 2.272   (continuum fit of the same c's +2.096; rms about it 2.309)
+== mecke, dS diamond u, v in [-3.0, -0.95], rho = 10000 (6280 elements), 400 sprinklings (24 s); qualifying pairs per sprinkling 15144 (pilot) ==
+  ordering fraction (whole diamond): R +1.985, s.d. between sprinklings 0.458
+  depth drift, P =  10 (mean 10 pairs): R +1.914 +- 0.080, s.d. between sprinklings 1.605   (continuum fit of the same c's +2.103; rms about it 1.616)
+  depth drift, P =  30 (mean 30 pairs): R +1.912 +- 0.070, s.d. between sprinklings 1.404   (continuum fit of the same c's +2.103; rms about it 1.417)
+  depth drift, P = 100 (mean 101 pairs): R +1.954 +- 0.067, s.d. between sprinklings 1.343   (continuum fit of the same c's +2.104; rms about it 1.351)
+  depth drift, P = 300 (mean 302 pairs): R +1.935 +- 0.067, s.d. between sprinklings 1.335   (continuum fit of the same c's +2.104; rms about it 1.346)
+== mecke, flat diamond u, v in [-3.0, -0.95], rho = 1194 (2509 elements), 400 sprinklings (6 s); qualifying pairs per sprinkling 408 (pilot) ==
+  ordering fraction (whole diamond): R +0.013, s.d. between sprinklings 0.804
+  depth drift, P =  10 (mean 10 pairs): R -0.191 +- 0.051, s.d. between sprinklings 1.013   (continuum fit of the same c's +0.000; rms about it 1.031)
+  depth drift, P =  30 (mean 29 pairs): R -0.142 +- 0.045, s.d. between sprinklings 0.909   (continuum fit of the same c's +0.000; rms about it 0.920)
+  depth drift, P = 100 (mean 98 pairs): R -0.162 +- 0.044, s.d. between sprinklings 0.885   (continuum fit of the same c's +0.000; rms about it 0.899)
+  depth drift, P = 300 (mean 293 pairs): R -0.162 +- 0.044, s.d. between sprinklings 0.871   (continuum fit of the same c's +0.000; rms about it 0.885)
+== uniform, flat diamond u, v in [-3.0, -0.95], rho = 1194 (2509 elements), 400 sprinklings (7 s); r40 sequential uniform draw ==
+  ordering fraction (whole diamond): R +0.013, s.d. between sprinklings 0.804
+  depth drift, P =  10 (mean 10 pairs): R -0.217 +- 0.048, s.d. between sprinklings 0.963   (continuum fit of the same c's +0.000; rms about it 0.987)
+  depth drift, P =  30 (mean 30 pairs): R -0.169 +- 0.044, s.d. between sprinklings 0.889   (continuum fit of the same c's +0.000; rms about it 0.905)
+  depth drift, P = 100 (mean 100 pairs): R -0.163 +- 0.042, s.d. between sprinklings 0.843   (continuum fit of the same c's +0.000; rms about it 0.859)
+  depth drift, P = 300 (mean 300 pairs): R -0.168 +- 0.042, s.d. between sprinklings 0.839   (continuum fit of the same c's +0.000; rms about it 0.856)
+== mecke, flat diamond u, v in [-3.0, -0.95], rho = 2986 (6279 elements), 400 sprinklings (24 s); qualifying pairs per sprinkling 2512 (pilot) ==
+  ordering fraction (whole diamond): R +0.026, s.d. between sprinklings 0.500
+  depth drift, P =  10 (mean 10 pairs): R -0.060 +- 0.031, s.d. between sprinklings 0.614   (continuum fit of the same c's +0.000; rms about it 0.617)
+  depth drift, P =  30 (mean 30 pairs): R -0.044 +- 0.027, s.d. between sprinklings 0.548   (continuum fit of the same c's +0.000; rms about it 0.550)
+  depth drift, P = 100 (mean 100 pairs): R -0.051 +- 0.027, s.d. between sprinklings 0.538   (continuum fit of the same c's +0.000; rms about it 0.540)
+  depth drift, P = 300 (mean 297 pairs): R -0.054 +- 0.026, s.d. between sprinklings 0.527   (continuum fit of the same c's +0.000; rms about it 0.530)
+== uniform, flat diamond u, v in [-3.0, -0.95], rho = 2986 (6279 elements), 400 sprinklings (22 s); r40 sequential uniform draw ==
+  ordering fraction (whole diamond): R +0.026, s.d. between sprinklings 0.500
+  depth drift, P =  10 (mean 10 pairs): R -0.098 +- 0.030, s.d. between sprinklings 0.609   (continuum fit of the same c's -0.000; rms about it 0.616)
+  depth drift, P =  30 (mean 30 pairs): R -0.085 +- 0.027, s.d. between sprinklings 0.538   (continuum fit of the same c's -0.000; rms about it 0.545)
+  depth drift, P = 100 (mean 100 pairs): R -0.078 +- 0.026, s.d. between sprinklings 0.519   (continuum fit of the same c's +0.000; rms about it 0.525)
+  depth drift, P = 300 (mean 300 pairs): R -0.072 +- 0.026, s.d. between sprinklings 0.514   (continuum fit of the same c's +0.000; rms about it 0.519)
+r41: ratio formed after pooling sum(beta), sum(alpha) over ALL sprinklings (all kept pairs, P ~ 300), vs per-region mean; bootstrap over sprinklings (2000)
+mecke_dS_10000.npy       pooled +2.041 +- 0.069  continuum +2.104  offset -0.063   per-region mean +1.935 +- 0.067 (offset -0.169)
+mecke_dS_4000.npy        pooled +1.964 +- 0.119  continuum +2.096  offset -0.132   per-region mean +1.686 +- 0.114 (offset -0.410)
+mecke_flat_1193.npy      pooled +0.008 +- 0.044  continuum +0.000  offset +0.008   per-region mean -0.162 +- 0.044 (offset -0.162)
+mecke_flat_2985.npy      pooled +0.012 +- 0.026  continuum +0.000  offset +0.012   per-region mean -0.054 +- 0.026 (offset -0.054)
+uniform_flat_1193.npy    pooled -0.099 +- 0.040  continuum +0.000  offset -0.099   per-region mean -0.168 +- 0.042 (offset -0.168)
+uniform_flat_2985.npy    pooled -0.046 +- 0.025  continuum +0.000  offset -0.046   per-region mean -0.072 +- 0.026 (offset -0.072)

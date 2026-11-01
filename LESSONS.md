@@ -123,3 +123,38 @@ Mistakes made in this notebook and the rule that prevents each one. Claude reads
 43. **A few slowly changing points are a plateau, not a limit.** (Session 10 wrote "the 2-stem converges in the window" from |q| = 1.91, 1.89, 1.86 at N = 9–11;
     at N = 12 it fell to 1.70, and the weak-β row next to it had a model that predicted N = 12 correctly.) → Call something converged only with a model of the
     approach (an exponent, a predicted next value) that the next point then confirms; otherwise write "changing slowly over N = a–b".
+44. **Converge the optimizer before reading meaning into a likelihood gap.** (Session 15 wrote in the 3+1 draft that the residual was "a local optimum, not a floor
+    of the likelihood", from a gap of 105–549 between Adam-400 fits from the intrinsic and the true start. Session 17, on the external referee's request: L-BFGS closed
+    the gap to ≤ 5 units while the correlations stayed 0.9885 vs 0.9965 — the likelihood is flat there; Adam had not converged.) → Before comparing optima, run
+    each fit to convergence (a second-order method or a stopping test), and compare the converged values.
+45. **A mean of per-sample ratios is a biased estimator; pool numerator and denominator first.** (The 1+1 curvature estimator R = −16β/α per pair read low by
+    −1.9 at ρ = 4000 in flat space; v1 said an offset "cannot be excluded". Slope and intercept of one fit have anticorrelated errors. Pooling ⟨β⟩, ⟨α⟩ over
+    pairs removed it. A first hypothesis, correlated regressor noise, was tested with a split sample and failed.) → For any estimator that is a ratio of noisy
+    fitted quantities, test it on a null case with many samples, and form the ratio after averaging.
+46. **Benchmark against the nearest competitor even when its authors give it only as exact geometry.** (Session 15 placed Hu–Meyer–Meyer in the 1+1 outlook;
+    implemented from counts in session 17 at the referee's request, it beats our estimator above 10ℓ, and our "most accurate" claim had to be narrowed.)
+    → Before claiming "most accurate", implement every related construction cited in the introduction on the same pairs, in the most favourable form we can find.
+- Recurrences in session 17 (no new rule): lesson 37 (a contribution — "all related pairs" — listed without its ablation; Casasola's near-cone set does as well);
+  lesson 8 / 43 (the 3+1 headline 80 % at n = 3000 rested on two universes; with ten it is 74 %).
+47. **A dip on the straight line between two optima is not a barrier.** (Session 18: the aligned straight path between the converged intrinsic and truth-started
+    3+1 maps dropped lnL by ~5×10³; relaxed from the midpoint, L-BFGS landed within O(1) of both ends at intermediate accuracy: a curved valley. Averaging two
+    maps with partly independent errors shortens every distance.) → Before calling two optima separated, relax from points on the path, to convergence (a
+    300-iteration cap left one relaxation 7×10³ short and looked like a barrier).
+48. **"One element chosen at random per region" is still a Palm selection.** (Session 18: the referee's nearest-element hypothesis for the 1+1 sprinkled-pair
+    shortfall was right; drawing one pair uniformly from target windows only halved it, because a 1/N_window weight removes ~1 element from the window.)
+    → For estimators over sprinkled elements, sum over *all* elements/pairs of a selection that depends only on their positions (Mecke), or thin them with
+    a fixed probability; never pick one representative per configuration.
+49. **Read a helper's input convention before reusing it.** (Session 18: `spatial_dist` skips column 0 because it expects (t, x); fed 3-column spatial maps it
+    dropped a coordinate and gave C = 0.76 for a map at 0.991. Caught because it contradicted the recorded value.) → Check one reused helper against a stored
+    number before a batch run.
+- Recurrence in session 18: lesson 46 / 33 in the 1+1 noise claim (single pair vs one diamond was not the comparison a user faces; in one region the ordering
+  fraction is 3× less noisy).
+50. **Once a bias mechanism is found, audit every other test in the paper for it.** (Session 19: v3 of the 1+1 paper identified the single-uniform-draw
+    bias in one section and, two paragraphs later, drew the P pairs of its one-region comparison exactly that way; the referee asked how the pairs were drawn.
+    The rerun with a position-based selection happened to give the same result, so the claim survived, but by luck, not by design.) → After naming a
+    mechanism, grep the scripts for every place that selects samples the same way and rerun or justify each.
+51. **An inequality on an average says nothing about each term.** (Session 19: I wrote that the straight midpoint makes every pair "more timelike than in
+    either map"; the triangle inequality only bounds it by the average of the two. Caught on rereading before delivery.) → When paraphrasing a bound,
+    write down a two-number counterexample to the stronger reading before using it.
+- Recurrence in session 20: lesson 50 (v4 changed the 1+1 fit window to the I(c,a)/I(c,b) rule; the Fig. 3 paragraph kept describing the old rectangle
+  rule, and the code did use the old rule — caught by the referee). When a rule changes, grep the text for every description of the old rule, not only the code.

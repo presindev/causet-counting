@@ -5,7 +5,7 @@ Session 11 found that at N = 400 the embedding detector (s4b_detector.py, sample
 Suspected cause: in a layered order the largest pasts are the top one or two layers. Fix tested here: sample="spread", events evenly
 spaced in height over the upper 70 % of the order, then a random M of those that share common pasts.
 Calibrate first (lessons 4, 10): random 2D orders at N = 100, 200, 400 with the new sample; then the N = 400 Monte Carlo final states
-(n400_out, n400_fetch) by layer count, both samples, M = 40 and 80, several random draws per universe for the spread sample.
+(runs/n400_out, runs/n400_fetch) by layer count, both samples, M = 40 and 80, several random draws per universe for the spread sample.
 Part 2 (after part 1 showed the spread sample's stress is noisy but its r+ separates, and that a bilayer gives an all-zero interval
 matrix that MDS "fits" perfectly): a combined rule on three numbers per universe,
     stress_top (old sample), r+_spread (median over draws), zero (largest share of zero-length pairs over both samples),

@@ -1,0 +1,2 @@
+  10 universes: relaxed midpoint lnL - fit [+0.34, +6.44] mean +2.18; - truth [-0.66, +0.16] mean -0.12; iterations 88-836
+  C fit 0.99544 (80.7 %), midpoint 0.99737 (88.9 %), truth 0.99837 (93.1 %); C midpoint between the two in 10/10; distance to fit 0.27, to truth 0.26 ell

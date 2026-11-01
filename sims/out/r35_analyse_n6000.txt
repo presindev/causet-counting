@@ -1,0 +1,25 @@
+n = 6000: 10 universes (seeds 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010)
+  johnston  C 0.9764  (1 - C = 0.0236)
+  start      C 0.9842  gain +0.0078 (0.0010)  removed  33.0 %   per universe: min   9.5  median  35.2  max  45.4  s.d. 11.1  wins 10/10
+  fit        C 0.9953  gain +0.0189 (0.0007)  removed  80.0 %   per universe: min  76.2  median  80.1  max  85.4  s.d.  3.1  wins 10/10
+  fit_lbfgs  C 0.9954  gain +0.0190 (0.0007)  removed  80.6 %   per universe: min  76.4  median  81.2  max  86.2  s.d.  3.2  wins 10/10
+  jstart     C 0.9952  gain +0.0188 (0.0007)  removed  79.6 %   per universe: min  68.5  median  81.1  max  87.2  s.d.  5.3  wins 10/10
+  pstart     C 0.9954  gain +0.0190 (0.0007)  removed  80.5 %   per universe: min  76.2  median  80.8  max  85.9  s.d.  3.1  wins 10/10
+  truth      C 0.9984  gain +0.0220 (0.0008)  removed  93.1 %   per universe: min  91.1  median  93.0  max  94.1  s.d.  0.8  wins 10/10
+  exact_all  C 0.9956  gain +0.0191 (0.0007)  removed  81.1 %   per universe: min  77.0  median  81.5  max  86.5  s.d.  3.1  wins 10/10
+  exact_near C 0.9959  gain +0.0194 (0.0007)  removed  82.4 %   per universe: min  78.4  median  82.9  max  88.3  s.d.  3.2  wins 10/10
+  gauss_near C 0.9955  gain +0.0191 (0.0007)  removed  81.0 %   per universe: min  76.7  median  80.9  max  87.0  s.d.  3.3  wins 10/10
+  joint      C 0.9956  gain +0.0192 (0.0007)  removed  81.4 %   per universe: min  76.5  median  81.8  max  87.7  s.d.  3.5  wins 10/10
+    paired exact_near - exact_all: +0.00030 (0.00003), positive in 10/10
+    paired gauss_near - fit: +0.00024 (0.00004), positive in 10/10
+    paired exact_all - fit: +0.00027 (0.00002), positive in 10/10
+    paired fit_lbfgs - fit: +0.00016 (0.00002), positive in 10/10
+    paired jstart - fit_lbfgs: -0.00025 (0.00049), positive in 5/10
+    paired joint - fit_lbfgs: +0.00019 (0.00007), positive in 8/10
+  lnL(truth start) - lnL(arm), mean [min, max]: fit 177.8 [103.7, 415.4]  fit_lbfgs 2.3 [0.2, 6.5]  jstart 2.9 [0.6, 5.4]  pstart 4.0 [0.8, 9.7]
+  best-lnL of three starts: C 0.9955, removed 81.0 %
+  near-cone share of related pairs 0.37; time error rms (ell): Johnston 0.062, joint 0.066
+  johnston   |dd|/ell q50 0.18 q90 0.59 q99 2.35;  misclassified pairs 1.13 % [0.92, 1.34]
+  fit        |dd|/ell q50 0.12 q90 0.27 q99 0.47;  misclassified pairs 0.48 % [0.45, 0.51]
+  fit_lbfgs  |dd|/ell q50 0.12 q90 0.27 q99 0.45;  misclassified pairs 0.48 % [0.45, 0.51]
+wrote ../paper/figs/fig_3p1_errloc.pdf

@@ -37,7 +37,8 @@ Two colleagues, equal footing:
 
 - Paper drafts (`paper/`, LaTeX via `tectonic -X compile`): one storyline built from what actually advanced the
   thinking, not a chronological soup of the chat; dead ends go to a short "paths dropped" appendix. Old drafts
-  move to `paper/archive/`. Each draft gets an honest review file.
+  move to `paper/archive/`. Each draft gets an honest review file. Layout: one folder per paper (`paper/<name>/`, figures shared
+  in `paper/figs/`), reviews and referee reports in `paper/<name>/reviews/`. Fetched cluster output goes under `runs/` (gitignored).
 - Compute: Roberto has access to the cluster (ICCUB, SLURM) for bigger experiments — see `compute.md`. Keep laptop runs short.
 - Project constraints: see `INDEX.md` (C1–C8, updated 2026-10-25). Respect them when proposing models.
 

@@ -211,7 +211,7 @@ stress quartiles are fluctuation-level differences; classical reweighting misses
 β = 0.4 is noise-limited. **Cluster job:** N = 200, 10⁶ samples (≈ 2–3 core-hours) to sharpen β ≤ 0.24.
 
 ## A1 — quantum reweighting at N = 200 on the cluster (2026-10-25, session 4; `sims/a1_sample.py`, `sims/a1_analyse.py`)
-10⁶ uniform 2D orders (50 seeds × 2·10⁴, ε = 0.21), raw data in `data/a1/`. σ_S = 12.0, so the mean phase is $e^{-72\beta^2}$
+10⁶ uniform 2D orders (50 seeds × 2·10⁴, ε = 0.21), raw data in `runs/data/a1/`. σ_S = 12.0, so the mean phase is $e^{-72\beta^2}$
 (measured 0.487 at β = 0.1, 0.059 at β = 0.2). Usable up to β ≈ 0.2. Errors: jackknife over seeds.
 - **Stress quartile record:** the quantum weight drifts a little toward manifold-like Q1: at β = 0.15, Q1 0.261 ± 0.003 vs Q4 0.242 ± 0.003.
   Classical drifts about the same amount (0.258 / 0.237). The 1,600-sample laptop hint (Q1 → 0.42) was **noise** (lesson 10b confirmed).
@@ -480,6 +480,30 @@ Why a count of events measures proper time, and how the likelihood embedding use
 9. **Spacelike pairs** have an empty interval ($N\equiv0$, no information). Their distances come out by triangulation through related partners; Johnston uses
    detours, Boguñá–Krioukov the overlap of pasts and futures. Spacelike pairs only a few $\ell$ apart are where his error sits (r30).
 
+## Session 17: external referee round 1 (2026-10-30; `sims/r35`–`r38`, outputs `runs/r35/`, `sims/out/r36_*`, `r37_*`, `r38_*`)
+A separate Claude session refereed v1 of both papers (3+1 for PRD; 1+1 for PRD and CQG; Roberto chose CQG only for 1+1). Results of the checks it asked for:
+- **3+1, 10 universes per size (r35, seeds 1001–1010, laptop).** Fit removes 72 % (n = 1000) and 74 % (n = 3000; per universe 64–81 %, s.d. 6) of Johnston's
+  residual, 10/10 wins each `[ours]`. v1's "79–83 % at every size" leaned on 2 universes at n = 3000 (lesson 8 recurrence). n = 6000: see the v2 draft.
+- **Casasola ablation.** Exact Poisson + soft wall on near-cone pairs (τ̂² < 6ℓ²) vs all related pairs, same start: near-cone *better*, +0.0004 in C at
+  n = 3000 (10/10). "All related pairs" is not a contribution (lesson 37 recurrence). The near-cone share is 64 / 47 / 37 % at n = 1000 / 3000 / 6000.
+- **Optimizer.** Adam-400 is not converged (L-BFGS +46 lnL at n = 3000), but C moves +1e-4. Converged fits from three starts agree within a few lnL units;
+  the truth-started fit (C = 0.9965) has lnL only ~1 higher than the intrinsic one (0.9885). **The residual is a flat direction of the likelihood, not a
+  local optimum**; v1's sentence was wrong (lesson 44). Only more information (not more optimization) can reduce it.
+- **Joint t, x fit.** +0.0004 in C; time error unchanged (0.074 → 0.076 ℓ). Johnston's t is fine.
+- **1+1 Hu–Meyer–Meyer from counts (r36).** HMM's exact construction d² = τ_pq² − 4s² (p ≺ a, b ≺ q at equal s), read from counts with the
+  shallowest Poisson-matched (p, q): beats ours above 10ℓ (median error 0.015 vs 0.039 at N = 4000, unbiased), loses at 2–10ℓ (+22 % biased; 0.099 vs 0.059).
+  Reason: at large d a direct count of the tile wins (relative variance 2ℓ²/d²). Claim narrowed (lesson 46).
+- **1+1 ablation (r36).** Poisson correction irrelevant at the deepest c (N_C large); at BK's equal-depth c it removes their bias (+10 → +1 %) but not their
+  error (0.129 vs 0.095). The gain is the freedom to use the deepest c.
+- **Curvature offset (r37).** Real for the v1 estimator: flat, v1 window, mean of per-pair R = −1.94 ± 0.23 (ρ = 4000), −0.52 ± 0.13 (10⁴), 1000 sprinklings.
+  Not the 1 − e^{−λ_C} factor (λ_C ≳ 30); not correlated regressor noise (split-sample test: offset grows). It is a **ratio bias**: −16β/α per pair, β and α
+  anticorrelated. Pooled −16⟨β⟩/⟨α⟩ with the count-defined window (N_C ≥ 20, all depths): flat −0.03 ± 0.02, dS 1.97 ± 0.11 vs continuum-fit target
+  2.07 (ρ = 4000, inserted pairs). Sprinkled pairs still read low (dS 1.70 ± 0.11), cause unknown (lesson 45).
+- **Noise vs established estimators (r37, ρ = 4000).** Ordering fraction of one dS diamond (τ_D = 0.7, ~10³ elements), calibrated on the exact continuum:
+  s.d. 3.2, unbiased. Our depth drift, one pair: 3.5. Benincasa–Dowker nonlocal 2D (ε = 0.01): 23–30. **Our estimator is not less noisy than chain abundances.**
+- **FRW kernel (r38, sympy).** 1 − d²_est/d² = (τ²/16)[R − (τ/3) dR/dτ + O(τ²)] for any a = e^σ: the drift reads R one third of the way down
+  (first moment of a triangular weight) `[ours]`; checked against the exact power-law volumes (p = 1, −2, ½).
+
 ## Log
 - 2026-10-25 — created after Roberto's question and his reading of Boguñá–Krioukov 2024.
 - 2026-10-25 (session 3) — S4a flat 2D: BK estimator quoted and checked; rectangle identity; distances to 3–5 %.
@@ -511,6 +535,34 @@ Why a count of events measures proper time, and how the likelihood embedding use
 - 2026-10-29 (session 15) — split paper + referee loop: r30 low-count oracle on Johnston's own detours (truth on k < 10: 97 % / 94 % of his residual at
   n = 1500 / 3000; rest 3–4 %); r29 per-pair errors on Table II universes (n = 3000: median 0.22 → 0.11 ℓ, q90 0.80 → 0.28 ℓ; n = 6000 0.17 → 0.11, 0.57 → 0.26);
   r33 position rms dominated by the tenth of elements with fewest related partners (not time, not scale); r34 truth-start lnL higher (+105–549) ⇒ start's
-  local optimum; causal fidelity 0.5–0.7 % misclassified vs 1.3–2.1 % for Johnston. Paper: `paper/embedding-3p1-v1.tex` (~90 %, PRD).
-  1+1 side (r31): rectangle estimator unbiased for d² above 2ℓ, beats BK equal-depth and the past–future interval. Paper: `paper/toolkit-1p1-v1.tex` (~80 %, CQG).
+  local optimum; causal fidelity 0.5–0.7 % misclassified vs 1.3–2.1 % for Johnston. Paper: `paper/embedding-3p1/embedding-3p1-v1.tex` (~90 %, PRD).
+  1+1 side (r31): rectangle estimator unbiased for d² above 2ℓ, beats BK equal-depth and the past–future interval. Paper: `paper/toolkit-1p1/toolkit-1p1-v1.tex` (~80 %, CQG).
 - 2026-10-30 (session 16) — the 3+1 counting argument ($V=\pi\tau^4/24$ → Poisson → likelihood) written out step by step for Roberto.
+- 2026-10-30 (session 17) — external referee round 1: r35–r38 (above). 3+1: ~¾ of the residual, flat likelihood (v1 'local optimum' retracted), near-cone pairs suffice. 1+1: HMM wins > 10ℓ; curvature offset = ratio bias, pooled estimator; FRW kernel τ/3; not less noisy than chain abundances. Drafts v2 in `paper/*/`.
+
+## Session 18 (2026-10-30): referee round 2 results
+- [ours] 3+1 likelihood geometry (r39): truth-started optimum higher by O(1) (9/10, 10/10 universes); the intrinsic and truth-started maps are joined by a
+  curved valley (straight path dips 10³–10⁴ from shrinkage; midpoint relaxations land at intermediate accuracy within O(1)); continued L-BFGS gains lnL
+  without gaining C. More optimization of Eq. (5) will not help in practice; extra information is needed.
+- [ours] 3+1 recommended variant: Casasola's exact Poisson form on near-cone pairs; near-cone share ∝ n^(−1/2) (0.47 → 0.27 from n = 3000 to 15000).
+- [ours] 1+1 curvature: the sprinkled-pair shortfall was Palm selection (nearest element); pooling over all pairs of a position-only selection (Mecke) is
+  unbiased. In a causally convex region the window is order-only. FRW: estimator = continuum fit, ≈ 30 % above leading-order Eq. (12) over τ ≲ 0.8.
+  For one region the ordering fraction is ≥ as precise (dS: 3× less noisy); the drift's value is geometric, not statistical.
+
+## Session 19 (2026-10-31): external referee round 3
+- **3+1 valley** `[ours]`: the truth-start vs intrinsic lnL margins (0.9, 2.3) equal the continuation gain of the intrinsic fit (+0.5, +2.4), so the
+  sign counts do not say which map the likelihood prefers; directional sentences deleted. Relaxations from s = 0.25, 0.5, 0.75 to convergence (r39 relaxlong_s):
+  removed fraction 78 / 86 / 92 % (n = 3000), 83 / 89 / 93 % (n = 6000), monotone in s in 10/10 universes, lnL within O(1) of both ends; relaxed midpoint
+  0.15ℓ (0.11ℓ) from the straight midpoint, recovering 5.0e3 (7.3e3) in lnL. Valley, no barrier found.
+- **1+1 one-region comparison** (r41): the v3 pairs were drawn one at a time (the single-uniform-draw mechanism of lesson 48). Rerun with a position-based
+  thinning: same per-region low bias (−0.43 ± 0.12, −0.15 ± 0.07 dS); pooled over sprinklings it disappears (flat +0.01 ± 0.04, +0.01 ± 0.03). So it is the
+  ratio bias of one region, not selection. Flat control at matched element count: ordering fraction slightly more precise (0.80 vs 0.89, 0.50 vs 0.54).
+  Conclusion stated in the 1+1 Discussion: the curvature result is analytic and conceptual; the locality test (referee 24) is the open practical question.
+
+## Session 20 (2026-10-31): external referee round 4, loop closed
+- **Papers:** 3+1 PRD accepted by the referee, 1+1 CQG accepted after comments 25–29; v5 of both is the version to submit (only the Zenodo DOI to fill).
+- **1+1 flat control** `[ours]`: the de Sitter vs flat contrast in precision (×3 vs "slightly") is mostly the τ² lever arm, ≈ 3.9× longer in flat space at
+  matched element count (exact volumes, pair at η ≈ −1.15, diamond u, v ∈ [−3, −0.95]), not curvature.
+- **N = 800 flag test:** the full embedding test (stress + z) rejects 4/20 continuum-like states (z false positive also has stress 0.134 > 0.081). Flat height
+  of random 2D orders: 51.8 ± 2.5 (N = 800), 35.7 ± 2.2 (N = 400) (`sims/r42_flat_height.py`); the 27-layer false positive is about half the flat height.
+- **Open, optional:** locality test of the depth drift vs matched ordering-fraction diamonds on ΔR (design in `paper/referee-final-2026-10-31.md`; pre-register before running).
